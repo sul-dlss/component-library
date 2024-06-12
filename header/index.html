@@ -9,7 +9,55 @@
     />
     <style>
       :root {
+        --font-family-serif: "Source Serif 4", serif;
+        --stanford-black: #2e2d29;
+        --sul-link-color-rgb: 0, 108, 184;
+        --stanford-palo-alto-dark: #014240;
+        --stanford-digital-blue: #006cb8;
         --bs-dark-rgb: 1, 66, 64;
+        --bs-border-radius: 0;
+        --bs-font-sans-serif: "Source Sans 3", "Source Sans Pro",
+          "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --bs-link-color: var(--stanford-digital-blue);
+        --bs-link-color-rgb: var(--sul-link-color-rgb);
+        --bs-link-hover-color: var(--stanford-digital-blue);
+        --bs-link-hover-color-rgb: var(--sul-link-color-rgb);
+        --bs-link-decoration: none;
+        --bs-link-hover-decoration: underline;
+        --bs-dropdown-link-active-color: var(--stanford-palo-alto-dark);
+        --bs-info-text-emphasis: #002b4a;
+        --bs-info-bg-subtle: #cce2f1;
+        --bs-info-border-subtle: #99c4e3;
+        --bs-secondary-rgb: var(--bs-dark-rgb);
+        --btn-secondary-bg: var(--stanford-palo-alto-dark);
+        --btn-secondary-hover-bg: color-mix(
+          in srgb,
+          var(--stanford-palo-alto-dark) 85%,
+          white
+        );
+        --btn-secondary-hover-border-color: color-mix(
+          in srgb,
+          var(--stanford-palo-alto-dark) 90%,
+          white
+        );
+        --btn-secondary-active-bg: color-mix(
+          in srgb,
+          var(--stanford-palo-alto-dark) 80%,
+          white
+        );
+      }
+
+      .su-brand-bar__logo {
+        --stanford-stripe-color: var(--stanford-black);
+        color: var(--stanford-stripe-color);
+        display: block;
+        font-size: 1rem;
+        font-family: var(--font-family-serif);
+        font-weight: 400;
+        font-variant-ligatures: discretionary-ligatures;
+        font-feature-settings: "liga";
+        margin-top: 0.125rem;
+        white-space: nowrap;
       }
     </style>
   </head>
@@ -84,14 +132,13 @@
                   <li class="nav-item">
                     <a class="nav-link" href="/search_history">History</a>
                   </li>
-                  <li class="nav-item">
-                    <a
-                      href="#feedback"
-                      class="nav-link"
-                      data-action="feedback#toggle"
-                      >Feedback</a
-                    >
-                  </li>
+                  <a
+                    href="#feedback"
+                    class="nav-link"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#feedback"
+                    >Feedback</a
+                  >
                 </ul>
               </div>
             </div>
@@ -101,9 +148,9 @@
         <div
           data-feedback-target="container"
           id="feedback"
-          style="display: none"
+          class="collapse show"
         >
-          <div class="container mt-3">
+          <div class="container pt-3">
             <div class="row justify-content-center">
               <form
                 class="col-md-8"
