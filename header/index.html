@@ -25,6 +25,7 @@
         --bs-link-decoration: none;
         --bs-link-hover-decoration: underline;
         --bs-dropdown-link-active-color: var(--stanford-palo-alto-dark);
+        /* --bs-nav-link-color: white; */
         --bs-info-text-emphasis: #002b4a;
         --bs-info-bg-subtle: #cce2f1;
         --bs-info-border-subtle: #99c4e3;
@@ -68,6 +69,10 @@
         overflow: hidden;
         text-indent: 100%;
         white-space: nowrap;
+      }
+
+      .navbar {
+        --bs-navbar-color: white;
       }
 
       #feedback {
@@ -136,10 +141,7 @@
       </div>
       <div class="bg-dark">
         <div class="container">
-          <nav
-            class="navbar navbar-expand-md navbar-dark topbar"
-            role="navigation"
-          >
+          <nav class="navbar navbar-expand-md topbar" role="navigation">
             <div class="container-fluid">
               <a
                 class="mb-0 navbar-brand navbar-logo"
@@ -293,10 +295,12 @@
             <div
               class="col-md-8 d-flex justify-content-center justify-content-md-start align-items-center"
             >
-              <span class="h1"><a href="/">Website at Stanford</a></span>
+              <span class="h1 text-center text-md-start"
+                ><a href="/">Website at Stanford</a></span
+              >
             </div>
             <nav
-              class="col-md-4 nav-links d-flex justify-content-end"
+              class="navbar navbar-expand col-md-4 d-flex justify-content-md-end justify-content-center"
               aria-label="browse"
             >
               <ul class="navbar-nav">
