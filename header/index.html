@@ -73,6 +73,7 @@
 
       .navbar {
         --bs-navbar-color: white;
+        --bs-navbar-hover-color: rgba(255, 255, 255, 1);
       }
 
       #feedback {
@@ -84,7 +85,6 @@
 
       a {
         text-decoration: var(--bs-link-decoration);
-        font-weight: 450;
         &:hover,
         &:focus-visible {
           text-decoration: var(--bs-link-hover-decoration);
@@ -93,6 +93,32 @@
 
       .bg-dark a {
         --bs-link-color-rgb: 255, 255, 255;
+      }
+
+      .al-masthead {
+        .navbar-nav {
+          --bs-nav-link-font-weight: 700;
+          li.active a {
+            color: $navbar-dark-color;
+          }
+
+          li {
+            display: inline-block;
+            position: relative;
+          }
+
+          li:not(:last-child) {
+            margin-right: 1rem;
+          }
+
+          li:not(:first-child)::before {
+            color: white;
+            content: "•";
+            position: absolute;
+            left: -1.165rem;
+            top: 0.25rem;
+          }
+        }
       }
     </style>
     <script
