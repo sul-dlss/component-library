@@ -76,15 +76,9 @@
       }
 
       #feedback {
-        background-color: var(--bs-body-bg);
-
         label {
           text-align: right;
           font-weight: bold;
-        }
-
-        a {
-          --bs-link-color-rgb: var(--sul-link-color-rgb);
         }
       }
 
@@ -139,151 +133,149 @@
           >Stanford University</a
         >
       </div>
-      <div class="bg-dark">
+      <nav class="navbar navbar-expand-md bg-dark" role="navigation">
         <div class="container">
-          <nav class="navbar navbar-expand-md topbar" role="navigation">
-            <a
-              class="mb-0 navbar-brand navbar-logo"
-              href="https://library.stanford.edu"
-              >Stanford Libraries</a
-            >
-            <button
-              class="navbar-toggler navbar-toggler-right"
-              type="button"
-              data-toggle="collapse"
-              data-bs-toggle="collapse"
-              data-target="#user-util-collapse"
-              data-bs-target="#user-util-collapse"
-              aria-controls="user-util-collapse"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+          <a
+            class="mb-0 navbar-brand navbar-logo"
+            href="https://library.stanford.edu"
+            >Stanford Libraries</a
+          >
+          <button
+            class="navbar-toggler navbar-toggler-right"
+            type="button"
+            data-toggle="collapse"
+            data-bs-toggle="collapse"
+            data-target="#user-util-collapse"
+            data-bs-target="#user-util-collapse"
+            aria-controls="user-util-collapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-            <div
-              class="collapse navbar-collapse justify-content-md-end"
-              id="user-util-collapse"
-            >
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a id="bookmarks_nav" class="nav-link" href="/bookmarks">
-                    Bookmarks
-                    <span
-                      class="badge badge-secondary bg-secondary"
-                      data-role="bookmark-counter"
-                      >0</span
-                    >
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/search_history">History</a>
-                </li>
-                <a
-                  href="#feedback"
-                  class="nav-link"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#feedback"
-                  >Feedback</a
-                >
-              </ul>
-            </div>
-          </nav>
-        </div>
-
-        <div data-feedback-target="container" id="feedback" class="collapse">
-          <div class="container pt-3">
-            <div class="row justify-content-center">
-              <form
-                class="col-md-8"
-                action="/feedback"
-                accept-charset="UTF-8"
-                method="post"
+          <div
+            class="collapse navbar-collapse justify-content-md-end"
+            id="user-util-collapse"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a id="bookmarks_nav" class="nav-link" href="/bookmarks">
+                  Bookmarks
+                  <span
+                    class="badge badge-secondary bg-secondary"
+                    data-role="bookmark-counter"
+                    >0</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/search_history">History</a>
+              </li>
+              <a
+                href="#feedback"
+                class="nav-link"
+                data-bs-toggle="collapse"
+                data-bs-target="#feedback"
+                >Feedback</a
               >
-                <div class="alert alert-info" role="alert">
-                  Reporting from:
-                  https://sul-arclight-prod-a.stanford.edu/catalog?group=true&amp;q=
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div id="feedback" class="collapse">
+        <div class="container pt-3">
+          <div class="row justify-content-center">
+            <form
+              class="col-md-8"
+              action="/feedback"
+              accept-charset="UTF-8"
+              method="post"
+            >
+              <div class="alert alert-info" role="alert">
+                Reporting from:
+                https://sul-arclight-prod-a.stanford.edu/catalog?group=true&amp;q=
+              </div>
+              <div class="mb-3 row">
+                <label class="col-md-3 col-form-label" for="message"
+                  >Message</label
+                >
+                <div class="col-md-9">
+                  <textarea
+                    class="form-control"
+                    rows="5"
+                    required="required"
+                    data-form-type="other"
+                    name="message"
+                    id="message"
+                  ></textarea>
                 </div>
-                <div class="mb-3 row">
-                  <label class="col-md-3 col-form-label" for="message"
-                    >Message</label
-                  >
-                  <div class="col-md-9">
-                    <textarea
-                      class="form-control"
-                      rows="5"
-                      required="required"
-                      data-form-type="other"
-                      name="message"
-                      id="message"
-                    ></textarea>
-                  </div>
+              </div>
+              <div class="mb-3 row">
+                <label class="col-md-3 col-form-label" for="name"
+                  >Your name</label
+                >
+                <div class="col-md-9">
+                  <input
+                    class="form-control"
+                    required="required"
+                    data-form-type="other"
+                    type="text"
+                    name="name"
+                    id="name"
+                  />
                 </div>
-                <div class="mb-3 row">
-                  <label class="col-md-3 col-form-label" for="name"
-                    >Your name</label
-                  >
-                  <div class="col-md-9">
-                    <input
-                      class="form-control"
-                      required="required"
-                      data-form-type="other"
-                      type="text"
-                      name="name"
-                      id="name"
-                    />
-                  </div>
-                </div>
-                <div class="mb-3 row">
-                  <label class="col-md-3 col-form-label" for="email"
-                    >Your email</label
-                  >
-                  <div class="col-md-9">
-                    <input
-                      class="form-control"
-                      required="required"
-                      data-form-type="other"
-                      type="email"
-                      name="email"
-                      id="email"
-                    />
-                    <p class="text-secondary mt-2 mb-0">
-                      This site is protected by reCAPTCHA and the Google
-                      <a href="https://policies.google.com/privacy"
-                        >Privacy Policy</a
-                      >
-                      and
-                      <a href="https://policies.google.com/terms"
-                        >Terms of Service</a
-                      >
-                      apply.
-                    </p>
-                  </div>
-                </div>
-                <div class="mb-3 row">
-                  <div class="col-md-9 offset-md-3">Recaptcha stuff</div>
-                </div>
-                <div class="mb-3 row">
-                  <div class="col-md-9 offset-md-3">
-                    <input
-                      type="submit"
-                      name="commit"
-                      value="Send"
-                      class="btn btn-secondary"
-                      data-disable-with="Send"
-                    />
-                    <button
-                      name="button"
-                      type="button"
-                      data-action="feedback#cancel"
-                      class="btn btn-outline-secondary"
+              </div>
+              <div class="mb-3 row">
+                <label class="col-md-3 col-form-label" for="email"
+                  >Your email</label
+                >
+                <div class="col-md-9">
+                  <input
+                    class="form-control"
+                    required="required"
+                    data-form-type="other"
+                    type="email"
+                    name="email"
+                    id="email"
+                  />
+                  <p class="text-secondary mt-2 mb-0">
+                    This site is protected by reCAPTCHA and the Google
+                    <a href="https://policies.google.com/privacy"
+                      >Privacy Policy</a
                     >
-                      Cancel
-                    </button>
-                  </div>
+                    and
+                    <a href="https://policies.google.com/terms"
+                      >Terms of Service</a
+                    >
+                    apply.
+                  </p>
                 </div>
-              </form>
-            </div>
+              </div>
+              <div class="mb-3 row">
+                <div class="col-md-9 offset-md-3">Recaptcha stuff</div>
+              </div>
+              <div class="mb-3 row">
+                <div class="col-md-9 offset-md-3">
+                  <input
+                    type="submit"
+                    name="commit"
+                    value="Send"
+                    class="btn btn-secondary"
+                    data-disable-with="Send"
+                  />
+                  <button
+                    name="button"
+                    type="button"
+                    data-action="feedback#cancel"
+                    class="btn btn-outline-secondary"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -293,7 +285,7 @@
             <div
               class="col-md-8 d-flex justify-content-center justify-content-md-start align-items-center"
             >
-              <span class="h1 text-center text-md-start"
+              <span class="h1 my-4 text-center text-md-start"
                 ><a href="/">Website at Stanford</a></span
               >
             </div>
