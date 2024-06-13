@@ -2,6 +2,6 @@
 Reference implementation of components for DLSS
 
 * [Header](header/)
-* [Alert](alert/)
+* [Alert](alerts/)
 * [Footer](footer/)
 * [Button](button/)
