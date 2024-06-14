@@ -15,77 +15,8 @@
     <script>
       hljs.highlightAll();
     </script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
-      :root {
-        /* https://identity.stanford.edu/design-elements/color/primary-colors/ */
-        --stanford-cardinal: #8c1515;
-        --stanford-black: #2e2d29; /* "100% black" in Stanford brand identity*/
-        --bs-font-sans-serif: "Source Sans 3", "Source Sans Pro",
-          "Helvetica Neue", Helvetica, Arial, sans-serif;
-        --bs-link-decoration: none;
-        --bs-link-hover-decoration: underline;
-      }
 
-      a,
-      .btn-link {
-        text-decoration: var(--bs-link-decoration);
-        font-weight: 450;
-      }
-
-      footer a {
-        --bs-link-color-rgb: 255, 255, 255;
-        --bs-link-hover-color-rgb: 255, 255, 255;
-      }
-
-      #pre-footer {
-        background-color: var(--stanford-black);
-      }
-
-      #su-footer {
-        background-color: var(--stanford-cardinal);
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-
-        ul {
-          a {
-            font-size: min(calc(0.825rem + 0.3vw), 1.25rem);
-          }
-        }
-
-        .copyright {
-          font-size: 0.8125rem;
-        }
-      }
-
-      @media (max-width: 575.98px) {
-        #su-footer {
-          ul a {
-            font-weight: 600;
-          }
-
-          .copyright {
-            font-size: 0.9375rem;
-          }
-        }
-      }
-
-      .su-logo {
-        display: inline-block;
-        font-family: Stanford, "Source Serif 4", serif;
-        font-variant-ligatures: discretionary-ligatures;
-        font-feature-settings: "liga";
-        font-weight: 400;
-        font-size: 2.125rem;
-        line-height: 0.75;
-        text-decoration: none;
-      }
-
-      .su-logo-university {
-        font-size: 1.5rem;
-        padding-left: 0.5rem;
-      }
-    </style>
+    <link href="../styles/sul.css" rel="stylesheet" />
   </head>
   <body>
     <h1 class="m-5">Footer</h1>
@@ -262,62 +193,6 @@
     <pre
       class="m-5"
     ><code class="d-block language-html" style="white-space: pre-wrap; ">
-&lt;style&gt;
-footer a {
-  --bs-link-color-rgb: 255, 255, 255;
-  --bs-link-hover-color-rgb: 255, 255, 255;
-}
-
-#pre-footer {
-  background-color: var(--stanford-black);
-}
-
-#su-footer {
-  background-color: var(--stanford-cardinal);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  ul {
-    a {
-      font-size: min(calc(0.825rem + 0.3vw), 1.25rem);
-    }
-  }
-
-  .copyright {
-    font-size: 0.8125rem;
-  }
-}
-
-@media (max-width: 575.98px) {
-  #su-footer {
-    ul a {
-      font-weight: 600;
-    }
-
-    .copyright {
-      font-size: 0.9375rem;
-    }
-  }
-}
-
-.su-logo {
-  display: inline-block;
-  font-family: Stanford, "Source Serif 4", serif;
-  font-variant-ligatures: discretionary-ligatures;
-  font-feature-settings: "liga";
-  font-weight: 400;
-  font-size: 2.125rem;
-  line-height: 0.75;
-  text-decoration: none;
-}
-
-.su-logo-university {
-  font-size: 1.5rem;
-  padding-left: 0.5rem;
-}
-&lt;/style&gt;
-
-
 &lt;footer role=&quot;contentinfo&quot;&gt;
   &lt;section id=&quot;pre-footer&quot; class=&quot;pt-3 pb-2&quot;&gt;
     &lt;div class=&quot;container&quot;&gt;

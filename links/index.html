@@ -12,46 +12,11 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
+    <link href="../styles/sul.css" rel="stylesheet" />
+
     <script>
       hljs.highlightAll();
     </script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
-      :root {
-        --sul-link-color-rgb: 0, 108, 184; /* Digital blue #006CB8; */
-        --stanford-digital-blue: #006cb8;
-        --sul-link-font-weight: 450;
-
-        --bs-font-sans-serif: "Source Sans 3", "Source Sans Pro",
-          "Helvetica Neue", Helvetica, Arial, sans-serif;
-        --bs-link-color: var(--stanford-digital-blue); /* for .btn-link */
-        --bs-link-color-rgb: var(--sul-link-color-rgb);
-        --bs-link-hover-color: var(--stanford-digital-blue); /* for .btn-link */
-        --bs-link-hover-color-rgb: var(--sul-link-color-rgb);
-        --bs-link-decoration: none;
-        --bs-link-hover-decoration: underline;
-      }
-
-      a {
-        /* for some reason this doesn't work: */
-        /* --bs-body-font-weight: var(--sul-link-font-weight) */
-        font-weight: var(--sul-link-font-weight);
-      }
-
-      .btn-link {
-        --bs-btn-font-weight: var(--sul-link-font-weight);
-      }
-
-      /* This may be unnecessary in Bootstrap 5.4+ https://github.com/twbs/bootstrap/pull/39098 */
-      a,
-      .btn-link {
-        text-decoration: var(--bs-link-decoration);
-        &:hover,
-        &:focus-visible {
-          text-decoration: var(--bs-link-hover-decoration);
-        }
-      }
-    </style>
   </head>
   <body class="m-5">
     <h1>Links</h1>
@@ -59,44 +24,6 @@
     <button class="btn btn-link">Test button with link style</button>
 
     <pre><code class="d-block language-html" style="white-space: pre-wrap; ">
-&lt;style&gt;
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
-:root {
-  --sul-link-color-rgb: 0, 108, 184; /* Digital blue #006CB8; */
-  --stanford-digital-blue: #006cb8;
-  --sul-link-font-weight: 450;
-
-  --bs-font-sans-serif: "Source Sans 3", "Source Sans Pro",
-    "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --bs-link-color: var(--stanford-digital-blue); /* for .btn-link */
-  --bs-link-color-rgb: var(--sul-link-color-rgb);
-  --bs-link-hover-color: var(--stanford-digital-blue); /* for .btn-link */
-  --bs-link-hover-color-rgb: var(--sul-link-color-rgb);
-  --bs-link-decoration: none;
-  --bs-link-hover-decoration: underline;
-}
-
-a {
-  /* for some reason this doesn't work: */
-  /* --bs-body-font-weight: var(--sul-link-font-weight) */
-  font-weight: var(--sul-link-font-weight);
-}
-
-.btn-link {
-  --bs-btn-font-weight: var(--sul-link-font-weight);
-}
-
-/* This may be unnecessary in Bootstrap 5.4+ https://github.com/twbs/bootstrap/pull/39098 */
-a,
-.btn-link {
-  text-decoration: var(--bs-link-decoration);
-  &:hover,
-  &:focus-visible {
-    text-decoration: var(--bs-link-hover-decoration);
-  }
-}
-&lt;/style&gt;
-
 &lt;a href=&quot;#&quot;&gt;test link&lt;/a&gt;&lt;br /&gt;
 &lt;button class=&quot;btn btn-link&quot;&gt;test button with link style&lt;/button&gt;
 
