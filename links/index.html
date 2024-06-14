@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <script>
+      hljs.highlightAll();
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+      :root {
+        --sul-link-color-rgb: 0, 108, 184; /* Digital blue #006CB8; */
+        --stanford-digital-blue: #006cb8;
+
+        --bs-font-sans-serif: "Source Sans 3", "Source Sans Pro",
+          "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --bs-link-color: var(--stanford-digital-blue); /* for .btn-link */
+        --bs-link-color-rgb: var(--sul-link-color-rgb);
+        --bs-link-hover-color: var(--stanford-digital-blue); /* for .btn-link */
+        --bs-link-hover-color-rgb: var(--sul-link-color-rgb);
+        --bs-link-decoration: none;
+        --bs-link-hover-decoration: underline;
+      }
+
+      a,
+      .btn-link {
+        text-decoration: var(--bs-link-decoration);
+        font-weight: 450;
+        &:hover,
+        &:focus-visible {
+          text-decoration: var(--bs-link-hover-decoration);
+        }
+      }
+    </style>
+  </head>
+  <body class="m-5">
+    <h1>Links</h1>
+    <a href="#">Test link</a><br />
+    <button class="btn btn-link">Test button with link style</button>
+
+    <pre><code class="d-block language-html" style="white-space: pre-wrap; ">
+&lt;style&gt;
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+:root {
+  --sul-link-color-rgb: 0, 108, 184; /* Digital blue #006CB8; */
+  --stanford-digital-blue: #006cb8;
+
+  --bs-font-sans-serif: "Source Sans 3", "Source Sans Pro",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --bs-link-color: var(--stanford-digital-blue); /* for .btn-link */
+  --bs-link-color-rgb: var(--sul-link-color-rgb);
+  --bs-link-hover-color: var(--stanford-digital-blue); /* for .btn-link */
+  --bs-link-hover-color-rgb: var(--sul-link-color-rgb);
+  --bs-link-decoration: none;
+  --bs-link-hover-decoration: underline;
+}
+
+a,
+.btn-link {
+  text-decoration: var(--bs-link-decoration);
+  font-weight: 450;
+  &:hover,
+  &:focus-visible {
+    text-decoration: var(--bs-link-hover-decoration);
+  }
+}
+&lt;/style&gt;
+
+&lt;a href=&quot;#&quot;&gt;test link&lt;/a&gt;&lt;br /&gt;
+&lt;button class=&quot;btn btn-link&quot;&gt;test button with link style&lt;/button&gt;
+
+</code></pre>
+  </body>
+</html>
