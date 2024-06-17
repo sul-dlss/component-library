@@ -37,7 +37,7 @@ footer a {
 
 .su-logo {
   display: inline-block;
-  font-family: Stanford, "Source Serif 4", serif;
+  font-family: var(--font-family-serif);
   font-variant-ligatures: discretionary-ligatures;
   font-feature-settings: "liga";
   font-weight: 400;
