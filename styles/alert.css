@@ -8,3 +8,9 @@
     line-height: var(--bs-body-line-height);
   }
 }
+
+.alert-warning {
+  a {
+    color: var(--bs-body-color);
+  }
+}
