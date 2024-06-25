@@ -7,3 +7,4 @@ Reference implementation of components for DLSS
 * [Header](header/)
 * [Links](links/)
 * [Selected Item](selected_item/)
+* [Toast](toast/)
