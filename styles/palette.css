@@ -2,10 +2,13 @@
   /* https://identity.stanford.edu/design-elements/color/primary-colors/ */
   --stanford-cardinal: #8c1515;
   --stanford-black: #2e2d29;
+  --stanford-80-black: #585754;
+  --stanford-30-black: #c0c0bf;
+  --stanford-10-black: #eaeaea;
 
   /* https://identity.stanford.edu/design-elements/color/accent-colors/ */
   --stanford-poppy-rgb: 233, 131, 0;
-  --stanford-poppy-dark: #D1660F;
+  --stanford-poppy-dark: #d1660f;
   --stanford-palo-alto-dark-rgb: 1, 66, 64;
 
   /* https://identity.stanford.edu/design-elements/color/web/ */
@@ -16,4 +19,5 @@
   --stanford-digital-green: #008566;
   --stanford-digital-red: #b1040e;
   --stanford-digital-blue: #006cb8;
+  --stanford-digital-blue-dark: #00548f;
 }
