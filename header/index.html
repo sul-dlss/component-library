@@ -153,6 +153,7 @@
                     class="form-control"
                     required="required"
                     data-form-type="other"
+                    autocomplete="name"
                     type="text"
                     name="name"
                     id="name"
@@ -168,6 +169,7 @@
                     class="form-control"
                     required="required"
                     data-form-type="other"
+                    autocomplete="email"
                     type="email"
                     name="email"
                     id="email"
@@ -238,5 +240,13 @@
         </div>
       </div>
     </header>
+
+    <p>
+      Note: the <code>data-form-type="other"</code> attribute is a workaround
+      for a bug in Dashlane password manager. See
+      <a href="https://github.com/sul-dlss/vt-arclight/issues/495"
+        >https://github.com/sul-dlss/vt-arclight/issues/495</a
+      >
+    </p>
   </body>
 </html>
