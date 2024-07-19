@@ -23,4 +23,16 @@
   --stanford-digital-red-dark: rgb(var(--stanford-digital-red-dark-rgb));
   --stanford-digital-blue: rgb(var(--stanford-digital-blue-rgb));
   --stanford-digital-blue-dark: rgb(var(--stanford-digital-blue-dark-rgb));
+
+  /* unofficial colors */
+  --stanford-digital-red-darker: color-mix(
+    in srgb,
+    var(--stanford-digital-red-dark) 90%,
+    black
+  );
+  --stanford-digital-blue-darker: color-mix(
+    in srgb,
+    var(--stanford-digital-blue-dark) 90%,
+    black
+  );
 }
