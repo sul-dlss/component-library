@@ -1,5 +1,6 @@
 .su-brand-bar__logo {
   --stanford-stripe-color: var(--stanford-black);
+  --bs-link-hover-decoration: none;
   color: var(--stanford-stripe-color);
   display: block;
   font-size: 1rem;
@@ -66,5 +67,8 @@
 
   .h1 {
     font-size: 2.25rem;
+    a {
+      --bs-link-hover-decoration: none;
+    }
   }
 }
