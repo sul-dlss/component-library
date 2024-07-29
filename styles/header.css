@@ -1,5 +1,5 @@
 .su-brand-bar__logo {
-  --stanford-stripe-color: var(--stanford-black);
+  --stanford-stripe-color: var(--stanford-cardinal);
   --bs-link-hover-decoration: none;
   color: var(--stanford-stripe-color);
   display: block;
