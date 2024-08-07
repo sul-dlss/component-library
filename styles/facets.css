@@ -16,6 +16,8 @@
     border-inline: none;
     border-block-end: none;
 
+    margin-bottom: 0; /* this is necessary to override Blacklight */
+
     .facet-select {
       color: var(--bs-body-color);
     }
@@ -26,6 +28,19 @@
         var(--stanford-70-black) 10%,
         transparent
       );
+
+      /* these rules are to override blacklights style of the element, which uses !important */
+      /* https://github.com/projectblacklight/blacklight/blob/f0b6afec6ec69f0ffe9c1a376164c50e001ce821/app/assets/stylesheets/blacklight/_facets.scss#L114-L115 */
+
+      /* .card top border  */
+      border-color: var(--bs-card-border-color) !important;
+
+      .card-header {
+        background-color: var(--bs-card-cap-bg) !important;
+        .btn {
+          color: var(--bs-body-color);
+        }
+      }
 
       .selected {
         font-weight: bold;
