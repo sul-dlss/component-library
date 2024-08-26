@@ -1,10 +1,9 @@
 :root {
   --sul-link-font-weight: 450;
   --sul-link-color-rgb: var(--stanford-digital-blue-rgb);
-
-  --bs-link-color: rgb(var(--sul-link-color-rgb), 1); /* for .btn-link */
+  --bs-link-color: rgb(var(--sul-link-color-rgb) 1); /* for .btn-link */
   --bs-link-color-rgb: var(--sul-link-color-rgb);
-  --bs-link-hover-color: rgb(var(--sul-link-color-rgb), 1); /* for .btn-link */
+  --bs-link-hover-color: rgb(var(--sul-link-color-rgb) 1); /* for .btn-link */
   --bs-link-hover-color-rgb: var(--sul-link-color-rgb);
   --bs-link-decoration: none;
   --bs-link-hover-decoration: underline;
@@ -12,6 +11,7 @@
 
 a {
   /* for some reason this doesn't work: */
+
   /* --bs-body-font-weight: var(--sul-link-font-weight) */
   font-weight: var(--sul-link-font-weight);
 }
@@ -26,6 +26,10 @@ a {
   --bs-link-decoration: underline dotted var(--underline-color) 1px;
 }
 
+.bg-dark a {
+  --bs-link-color-rgb: 255, 255, 255;
+}
+
 /* This may be unnecessary in Bootstrap 5.4+ https://github.com/twbs/bootstrap/pull/39098 */
 a:not(.btn),
 .btn-link {
@@ -36,8 +40,4 @@ a:not(.btn),
   &:focus-visible {
     text-decoration: var(--bs-link-hover-decoration);
   }
-}
-
-.bg-dark a {
-  --bs-link-color-rgb: 255, 255, 255;
 }

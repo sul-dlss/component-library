@@ -1,12 +1,12 @@
-.btn:hover {
-  text-decoration: underline;
-}
-
 .btn {
   --bs-btn-disabled-color: var(--stanford-80-black);
   --bs-btn-disabled-bg: var(--stanford-10-black);
   --bs-btn-disabled-border-color: var(--stanford-30-black);
   --bs-btn-disabled-opacity: 1;
+}
+
+.btn:hover {
+  text-decoration: underline;
 }
 
 .btn-primary {

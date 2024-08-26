@@ -16,6 +16,12 @@ choose a secondary color like "cardinal" or "digital green".
 
 See <https://identity.stanford.edu/design-elements/color/web/>
 
+## Linting
+```
+npm install
+npx stylelint "**/*.css"
+```
+
 
 ## Releasing
 

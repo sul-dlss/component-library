@@ -4,6 +4,7 @@
   --bs-badge-font-weight: var(--bs-body-font-weight);
   --bs-badge-padding-y: 0;
   --bs-badge-padding-x: 0.65em;
+
   gap: 0.35rem;
   display: inline-flex;
 
@@ -22,6 +23,7 @@
 
     &:hover {
       --bs-btn-close-color: var(--stanford-digital-red);
+
       background: var(--bs-btn-close-color);
       mask-image: var(--bs-btn-close-bg);
     }

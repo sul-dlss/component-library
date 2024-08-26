@@ -9,6 +9,7 @@ footer a {
 
 #su-footer {
   --bs-dark-rgb: var(--stanford-cardinal-rgb);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -23,7 +24,7 @@ footer a {
   }
 }
 
-@media (max-width: 575.98px) {
+@media (width <= 575.98px) {
   #su-footer {
     ul a {
       font-weight: 600;
