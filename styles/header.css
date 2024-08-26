@@ -43,6 +43,8 @@
 }
 
 .masthead {
+  --bs-nav-link-color: white;
+
   .navbar-nav {
     --bs-nav-link-font-weight: 700;
 
