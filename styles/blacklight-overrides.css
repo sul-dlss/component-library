@@ -1,0 +1,33 @@
+.applied-filter .btn-outline-secondary {
+  --bs-btn-border-color: var(--stanford-fog-light);
+  --bs-btn-color: var(--stanford-black);
+  --bs-btn-bg: var(--stanford-fog-light);
+  --bs-btn-hover-bg: var(--stanford-fog-light);
+  --bs-btn-hover-color: var(--stanford-black);
+  --bs-btn-hover-border-color: var(--stanford-fog-light);
+  --bs-btn-active-border-color: var(--stanford-fog-light);
+  --bs-btn-active-color: var(--stanford-black);
+  --bs-btn-padding-y: .25rem;
+}
+
+.applied-filter .remove:hover {
+  --bs-btn-hover-border-color: var(--stanford-fog-light);
+  --bs-btn-hover-bg: var(--stanford-fog-light);
+  --bs-btn-hover-color: var(--stanford-digital-red);
+  text-decoration: none;
+}
+
+.applied-filter .constraint-value {
+  border-radius: 99px 0px 0px 99px;
+  padding-right: .25rem;
+}
+
+.applied-filter .remove {
+  border-radius: 0px 99px 99px 0px;
+}
+
+.constraint-value, .remove {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
