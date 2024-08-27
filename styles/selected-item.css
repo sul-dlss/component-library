@@ -1,3 +1,4 @@
+/* A selected-item is for a multiple select form element */
 .selected-item {
   --bs-badge-color: black;
   --bs-badge-font-size: var(--bs-body-font-size);
@@ -27,5 +28,34 @@
       background: var(--bs-btn-close-color);
       mask-image: var(--bs-btn-close-bg);
     }
+  }
+}
+
+/* An applied-filter is for a selected blacklight facet */
+.applied-filter {
+  --bs-border-radius: 99px;
+
+  .constraint-value {
+    --bs-btn-hover-color: var(--stanford-black);
+    --btn-hover-decoration: none;
+
+    padding-right: 0.25rem; /* Keeping the default left padding */
+  }
+
+  .remove {
+    --bs-btn-hover-color: var(--stanford-digital-red);
+  }
+
+  .constraint-value,
+  .remove {
+    /* overriding .btn-outline-secondary, which is in the default Blacklight markup */
+    --bs-btn-border-color: var(--stanford-fog-light);
+    --bs-btn-color: var(--stanford-black);
+    --bs-btn-bg: var(--stanford-fog-light);
+    --bs-btn-hover-bg: var(--stanford-fog-light);
+    --bs-btn-hover-border-color: var(--stanford-fog-light);
+    --bs-btn-active-border-color: var(--stanford-fog-light);
+    --bs-btn-active-color: var(--stanford-black);
+    --bs-btn-padding-y: 0.25rem;
   }
 }
