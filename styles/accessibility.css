@@ -1,5 +1,4 @@
-.nav-link:focus-visible, /* we need the class to override bootstrap's defaults */
-:focus-visible {
+.nav-link:focus-visible, :focus-visible, .btn:focus-visible {
   outline: 2px solid white; /* Outer color */
   box-shadow: 0 0 0 4px var(--stanford-black); /* Inner color */
 }
