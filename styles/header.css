@@ -17,13 +17,21 @@
 /* stylelint-enable selector-class-pattern */
 
 .navbar-logo {
+  --logo-width: 258px;
+
   height: 41px;
-  width: 258px;
+  width: var(--logo-width);
   background: transparent no-repeat url("StanfordLibraries-logo-whitetext.svg")
-    0 0 / 258px auto;
+    center center / var(--logo-width) auto;
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
+}
+
+@media (width <= 575.98px) {
+  .navbar-logo {
+    --logo-width: 170px;
+  }
 }
 
 .bg-dark.navbar,
