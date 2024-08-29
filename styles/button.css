@@ -6,6 +6,7 @@
   --bs-btn-disabled-opacity: 1;
   --bs-btn-padding-y: 0.25rem;
   --bs-btn-padding-x: 0.5rem;
+  --bs-btn-focus-box-shadow: white;
 }
 
 .btn:hover {
@@ -54,4 +55,9 @@
   --bs-btn-hover-bg: white;
   --bs-btn-active-bg: white;
   --bs-btn-bg: white;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--bs-btn-focus-box-shadow); /* Outer color */
+  box-shadow: 0 0 0 4px var(--stanford-black); /* Inner color */
 }
