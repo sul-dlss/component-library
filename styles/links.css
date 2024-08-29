@@ -40,4 +40,8 @@ a:not(.btn),
   &:focus-visible {
     text-decoration: var(--bs-link-hover-decoration);
   }
+
+  &:focus-visible {
+    border-radius: 0.375rem;
+  }
 }
