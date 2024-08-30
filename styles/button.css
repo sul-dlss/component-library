@@ -3,6 +3,8 @@
   --bs-btn-disabled-bg: var(--stanford-10-black);
   --bs-btn-disabled-border-color: var(--stanford-30-black);
   --bs-btn-disabled-opacity: 1;
+  --bs-btn-padding-y: 0.25rem;
+  --bs-btn-padding-x: 0.5rem;
 }
 
 .btn:hover {
