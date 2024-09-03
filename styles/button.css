@@ -2,13 +2,14 @@
   --bs-btn-disabled-color: var(--stanford-80-black);
   --bs-btn-disabled-bg: var(--stanford-10-black);
   --bs-btn-disabled-border-color: var(--stanford-30-black);
+  --btn-hover-decoration: var(--bs-link-hover-decoration);
   --bs-btn-disabled-opacity: 1;
   --bs-btn-padding-y: 0.25rem;
   --bs-btn-padding-x: 0.5rem;
 }
 
 .btn:hover {
-  text-decoration: underline;
+  text-decoration: var(--btn-hover-decoration);
 }
 
 .btn-primary {
