@@ -1,18 +1,18 @@
 :root {
   --bs-danger-rgb: var(--stanford-digital-red-dark-rgb);
-  --bs-danger-bg-subtle: rgb(var(--bs-danger-rgb) 0.1);
-  --bs-danger-border-subtle: rgb(var(--bs-danger-rgb) 1);
-  --bs-danger-text-emphasis: rgb(var(--bs-danger-rgb) 1);
+  --bs-danger-bg-subtle: rgb(var(--bs-danger-rgb), 0.1);
+  --bs-danger-border-subtle: rgb(var(--bs-danger-rgb), 1);
+  --bs-danger-text-emphasis: rgb(var(--bs-danger-rgb), 1);
   --bs-success-rgb: var(--stanford-digital-green-dark-rgb);
-  --bs-success-bg-subtle: rgb(var(--bs-success-rgb) 0.1);
-  --bs-success-border-subtle: rgb(var(--bs-success-rgb) 1);
-  --bs-success-text-emphasis: rgb(var(--bs-success-rgb) 1);
+  --bs-success-bg-subtle: rgb(var(--bs-success-rgb), 0.1);
+  --bs-success-border-subtle: rgb(var(--bs-success-rgb), 1);
+  --bs-success-text-emphasis: rgb(var(--bs-success-rgb), 1);
   --bs-warning-rgb: var(--stanford-poppy-rgb);
-  --bs-warning-bg-subtle: rgb(var(--bs-warning-rgb) 0.1);
-  --bs-warning-border-subtle: rgb(var(--bs-warning-rgb) 1);
-  --bs-warning-text-emphasis: rgb(var(--bs-warning-rgb) 1);
+  --bs-warning-bg-subtle: rgb(var(--bs-warning-rgb), 0.1);
+  --bs-warning-border-subtle: rgb(var(--bs-warning-rgb), 1);
+  --bs-warning-text-emphasis: rgb(var(--bs-warning-rgb), 1);
   --bs-info-rgb: var(--stanford-digital-blue-dark-rgb);
-  --bs-info-bg-subtle: rgb(var(--bs-info-rgb) 0.1);
-  --bs-info-border-subtle: rgb(var(--bs-info-rgb) 1);
-  --bs-info-text-emphasis: rgb(var(--bs-info-rgb) 1);
+  --bs-info-bg-subtle: rgb(var(--bs-info-rgb), 0.1);
+  --bs-info-border-subtle: rgb(var(--bs-info-rgb), 1);
+  --bs-info-text-emphasis: rgb(var(--bs-info-rgb), 1);
 }
