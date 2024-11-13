@@ -26,7 +26,7 @@ npx stylelint "**/*.css"
 
 ## Releasing
 
-Currently we don't have a way to host these, so the best way to release is cut a release here and then unpack the styles directory into your Rails application `public/sul-components/<release_tag>/styles`. Then link to the primary style in the `<head>` of the HTML:
+Currently these are hosted via jsDelivr which creates hosted versions of every release. The best way to update the component library is to cut a release here and then link to the primary style in the `<head>` of the HTML. `https://cdn.jsdelivr.net/gh/sul-dlss/component-library@[version]/styles/sul.css`:
 ```html
-<link rel="stylesheet" href="/sul-components/<release_tag>/styles/sul.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2024-09-04/styles/sul.css" />
 ```
