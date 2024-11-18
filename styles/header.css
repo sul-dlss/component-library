@@ -54,14 +54,6 @@
     li:not(:last-child) {
       margin-right: 1rem;
     }
-
-    li:not(:first-child)::before {
-      color: white;
-      content: "•";
-      position: absolute;
-      left: -1.165rem;
-      top: 0.25rem;
-    }
   }
 
   .h1 {
