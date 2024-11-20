@@ -24,7 +24,7 @@ footer a {
   }
 }
 
-@media (width <= 575.98px) {
+@media (width < 576px) {
   #su-footer {
     ul a {
       font-weight: 600;
@@ -33,6 +33,12 @@ footer a {
     .copyright {
       font-size: 0.9375rem;
     }
+  }
+}
+
+@media (width < 768px) {
+  .prefooter-logo {
+    min-height: 30px;
   }
 }
 
