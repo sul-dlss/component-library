@@ -1,3 +1,6 @@
+:root {
+  --sul-logo-color: white;
+}
 /* stylelint-disable selector-class-pattern */
 .su-brand-bar__logo {
   --stanford-stripe-color: var(--stanford-cardinal);
@@ -16,14 +19,18 @@
 }
 /* stylelint-enable selector-class-pattern */
 
-.navbar-logo {
-  height: 41px;
-  width: 258px;
-  background: transparent no-repeat url("StanfordLibraries-logo-whitetext.svg")
-    0 0 / 258px auto;
+.navbar-logo,
+.prefooter-logo {
+  --bs-navbar-brand-padding-y: 0;
+
+  background-color: var(--sul-logo-color);
+  mask-image: url("StanfordLibraries-logo.svg");
+  mask-repeat: no-repeat;
+  mask-position: 0 center;
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
+  width: 280px;
 }
 
 .bg-dark.navbar,
