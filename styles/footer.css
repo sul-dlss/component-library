@@ -5,6 +5,9 @@ footer a {
 
 #pre-footer {
   background-color: var(--stanford-black);
+  .prefooter-logo {
+    width: 300px;
+  }
 }
 
 #su-footer {
