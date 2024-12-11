@@ -18,6 +18,10 @@
 
     <style>
       /* provide by Blacklight */
+      .sidenav {
+        --bl-facet-remove-color: var(--bs-secondary-color);
+        --bl-facet-remove-hover-color: var(--bs-danger);
+      }
       @media (min-width: 992px) {
         .facets-toggleable-md {
           .facets-collapse {
@@ -41,11 +45,17 @@
         display: table-row;
       }
       .facet-values .remove {
-        color: var(--bs-secondary-color);
+        color: var(--bl-facet-remove-color);
         font-weight: bold;
         padding-left: 0.5rem;
         text-decoration: none;
       }
+
+      .facet-values .remove:hover {
+        color: var(--bl-facet-remove-hover-color);
+        text-decoration: none;
+      }
+
       .facet-values .facet-count {
         display: table-cell;
         vertical-align: top;
@@ -195,9 +205,22 @@
                     <li>
                       <span class="facet-label"
                         ><span class="selected">book</span
-                        ><a class="remove" rel="nofollow" href="/report"
-                          ><span class="remove-icon" aria-hidden="true">✖</span
-                          ><span class="sr-only visually-hidden"
+                        ><a class="remove" rel="nofollow" href="/report">
+                          <span class="blacklight-icons blacklight-icons-remove"
+                            ><svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-x fs-4"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+                              ></path>
+                            </svg>
+                          </span>
+                          <span class="sr-only visually-hidden"
                             >[remove]</span
                           ></a
                         ></span
