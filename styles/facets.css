@@ -1,0 +1,79 @@
+.facets {
+  padding-block-end: 0.5rem;
+
+  .facets-heading {
+    font-size: 1.75rem;
+    padding: 0.5rem;
+  }
+
+  .card {
+    --bs-border-radius: 0;
+    --bs-card-bg: transparent;
+    --bs-card-cap-bg: transparent;
+    --bs-card-spacer-y: 0.5rem;
+    --bs-card-spacer-x: 0.5rem;
+
+    border-inline: none;
+    border-block-end: none;
+    margin-bottom: 0; /* this is necessary to override Blacklight */
+
+    .facet-select {
+      color: var(--bs-body-color);
+      display: inline-block;
+      width: 100%;
+    }
+
+    .card-header {
+      --bs-card-border-width: 0;
+
+      .btn {
+        --bs-btn-font-size: 1.125rem;
+      }
+    }
+
+    .facet-values {
+      border-spacing: 0.25rem;
+    }
+
+    &.facet-limit-active {
+      --bs-card-cap-bg: var(--stanford-fog-light);
+
+      /* these rules are to override blacklights style of the element, which uses !important */
+
+      /* https://github.com/projectblacklight/blacklight/blob/f0b6afec6ec69f0ffe9c1a376164c50e001ce821/app/assets/stylesheets/blacklight/_facets.scss#L114-L115 */
+
+      /* .card top border  */
+      border-color: var(--bs-card-border-color) !important;
+
+      .card-header {
+        background-color: var(--bs-card-cap-bg) !important;
+
+        .btn {
+          --bs-btn-font-weight: 600;
+
+          color: var(--bs-body-color);
+        }
+      }
+
+      .remove {
+        text-decoration: none;
+
+        .bi {
+          width: 1em;
+          height: 1em;
+        }
+
+        &:hover {
+          color: var(--stanford-digital-red);
+        }
+      }
+
+      .selected {
+        /* override blacklight 8.3 */
+        --bs-success-rgb: var(--bs-body-color);
+
+        font-weight: bold;
+      }
+    }
+  }
+}
