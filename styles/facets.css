@@ -1,4 +1,9 @@
 .facets {
+  /* TODO: This variable goes away in BL 9 */
+
+  /* it's switching to accordion https://github.com/projectblacklight/blacklight/commit/b78152df1b173dc6f3616632778f67d2eb26d9ca */
+  --bl-facet-limit-body-padding: 0.5rem;
+
   padding-block-end: 0.5rem;
 
   .facets-heading {
@@ -35,6 +40,10 @@
       .facet-label {
         /* TODO: use a variable https://github.com/projectblacklight/blacklight/pull/3468 */
         text-indent: initial;
+
+        /* TODO: use a variable https://github.com/projectblacklight/blacklight/pull/3468 */
+        padding-left: 0;
+        flex-grow: 1; /* Necessary for selected values */
       }
     }
 
