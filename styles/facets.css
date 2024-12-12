@@ -32,7 +32,10 @@
     }
 
     .facet-values {
-      border-spacing: 0.25rem;
+      .facet-label {
+        /* TODO: use a variable https://github.com/projectblacklight/blacklight/pull/3468 */
+        text-indent: initial;
+      }
     }
 
     &.facet-limit-active {

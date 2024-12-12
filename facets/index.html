@@ -17,7 +17,8 @@
     ></script>
 
     <style>
-      /* provide by Blacklight */
+      /* provide by Blacklight 8.7 */
+      /* see https://github.com/projectblacklight/blacklight/blob/v8.7.0/app/assets/stylesheets/blacklight/_facets.scss */
       .sidenav {
         --bl-facet-remove-color: var(--bs-secondary-color);
         --bl-facet-remove-hover-color: var(--bs-danger);
@@ -35,43 +36,68 @@
         }
       }
 
-      .facet-values {
-        display: table;
-        table-layout: fixed;
-        width: 100%;
-        margin-bottom: 0;
-      }
-      .facet-values li {
-        display: table-row;
-      }
-      .facet-values .remove {
-        color: var(--bl-facet-remove-color);
-        font-weight: bold;
-        padding-left: 0.5rem;
-        text-decoration: none;
-      }
-
-      .facet-values .remove:hover {
-        color: var(--bl-facet-remove-hover-color);
-        text-decoration: none;
-      }
-
-      .facet-values .facet-count {
-        display: table-cell;
-        vertical-align: top;
-        text-align: right;
-        width: 5em;
+      .facet-field-heading button::after {
+        content: "❯";
+        float: right;
+        transform: rotate(90deg);
       }
 
       .facet-field-heading button.collapsed::after {
         transform: rotate(0deg);
         transition: transform 0.1s ease;
       }
-      .facet-field-heading button::after {
-        content: "❯";
-        float: right;
-        transform: rotate(90deg);
+
+      .facet-values {
+        margin-bottom: 0;
+
+        a {
+          text-decoration: none;
+        }
+
+        li {
+          display: flex;
+          align-items: flex-start;
+          padding: 3px 0;
+
+          &[role="treeitem"] {
+            display: block;
+          }
+
+          .selected {
+            color: var(--bl-facet-active-item-color);
+          }
+        }
+
+        .remove {
+          color: var(--bl-facet-remove-color);
+          font-weight: bold;
+          padding-left: 0.5rem;
+          text-decoration: none;
+
+          &:hover {
+            /* color: $danger; */
+            color: var(--bl-facet-remove-hover-color);
+            text-decoration: none;
+          }
+        }
+
+        .facet-label {
+          hyphens: auto;
+          overflow-wrap: break-word;
+          padding-left: 15px;
+          padding-right: 1em;
+          text-indent: -15px;
+        }
+
+        .facet-count {
+          margin-left: auto;
+        }
+
+        .facet-checkbox {
+          width: 1.25rem;
+        }
       }
+
       /* end blacklight provided styles */
     </style>
 
@@ -137,7 +163,7 @@
                           href="/report?f%5BobjectType_ssim%5D%5B%5D=adminPolicy"
                           >adminPolicy</a
                         ></span
-                      ><span class="facet-count" style="width: 7ch">169</span>
+                      ><span class="facet-count">169</span>
                     </li>
                     <li>
                       <span class="facet-label"
@@ -224,9 +250,7 @@
                             >[remove]</span
                           ></a
                         ></span
-                      ><span class="selected facet-count" style="width: 4ch"
-                        >963</span
-                      >
+                      ><span class="selected facet-count">963</span>
                     </li>
                   </ul>
                 </div>
@@ -270,7 +294,7 @@
                           href="/report?f%5Bcontent_file_mimetypes_ssim%5D%5B%5D=image%2Fjp2"
                           >image/jp2</a
                         ></span
-                      ><span class="facet-count" style="width: 6ch">1,078</span>
+                      ><span class="facet-count">1,078</span>
                     </li>
                     <li>
                       <span class="facet-label"
