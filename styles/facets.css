@@ -4,6 +4,10 @@
   /* it's switching to accordion https://github.com/projectblacklight/blacklight/commit/b78152df1b173dc6f3616632778f67d2eb26d9ca */
   --bl-facet-limit-body-padding: 0.5rem;
 
+  /* Hack for BL 8.7.  These two lines can be removed when switching to Blacklight 9 */
+  --bs-success-rgb: var(--bs-body-color);
+  --bl-facet-active-item-color: rgb(var(--bs-success-rgb));
+
   padding-block-end: 0.5rem;
 
   .facets-header {
@@ -86,9 +90,6 @@
       }
 
       .selected {
-        /* override blacklight 8.3 */
-        --bs-success-rgb: var(--bs-body-color);
-
         font-weight: bold;
       }
     }
