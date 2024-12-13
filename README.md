@@ -10,6 +10,7 @@ Reference implementation of components for DLSS
 * [Selected Facet](selected_facet/)
 * [Toast](toast/)
 * [Facet list](facets/)
+* [Dropdown](dropdown/)
 
 
 A note about color.  The primary color will always be "digital blue".  A site may
