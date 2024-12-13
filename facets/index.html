@@ -26,6 +26,13 @@
         --bl-facet-margin-bottom: 1rem;
       }
 
+      .facets-header {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+      }
+
       @media (min-width: 992px) {
         .facets-toggleable-md {
           .facets-collapse {
@@ -39,15 +46,27 @@
         }
       }
 
-      .facet-field-heading button::after {
-        content: "❯";
-        float: right;
-        transform: rotate(90deg);
-      }
+      .facet-field-heading {
+        border-bottom: 0;
 
-      .facet-field-heading button.collapsed::after {
-        transform: rotate(0deg);
-        transition: transform 0.1s ease;
+        button {
+          font-weight: 500;
+
+          &::after {
+            content: "❯";
+            float: right;
+            transform: rotate(90deg);
+          }
+
+          &.collapsed {
+            border-bottom: 0;
+
+            &::after {
+              transform: rotate(0deg);
+              transition: transform 0.1s ease;
+            }
+          }
+        }
       }
 
       .facet-limit {
