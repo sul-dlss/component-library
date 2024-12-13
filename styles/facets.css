@@ -6,6 +6,11 @@
 
   padding-block-end: 0.5rem;
 
+  .facets-header {
+    /* TODO: this can become a variable when https://github.com/projectblacklight/blacklight/pull/3471 is merged */
+    padding-block: 0;
+  }
+
   .facets-heading {
     font-size: 1.75rem;
     padding: 0.5rem;
