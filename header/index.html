@@ -29,25 +29,31 @@
   <body>
     <h1>Headers</h1>
     <h2>With navigation links</h2>
-    <nav id="skip-link" aria-label="Skip links">
-      <a
-        class="visually-hidden-focusable rounded-bottom py-2 px-3"
-        data-turbolinks="false"
-        href="#search_field"
-        >Skip to search</a
-      >
-      <a
-        class="visually-hidden-focusable rounded-bottom py-2 px-3"
-        data-turbolinks="false"
-        href="#main-container"
-        >Skip to main content</a
-      >
-      <a
-        class="visually-hidden-focusable rounded-bottom py-2 px-3"
-        data-turbolinks="false"
-        href="#documents"
-        >Skip to first result</a
-      >
+    <nav
+      id="skip-link"
+      class="visually-hidden-focusable"
+      aria-label="Skip links"
+    >
+      <div class="container-xl">
+        <a
+          class="d-inline-flex m-1 py-2 px-3"
+          data-turbolinks="false"
+          href="#search_field"
+          >Skip to search</a
+        >
+        <a
+          class="d-inline-flex m-1 py-2 px-3"
+          data-turbolinks="false"
+          href="#main-container"
+          >Skip to main content</a
+        >
+        <a
+          class="d-inline-flex m-1 py-2 px-3"
+          data-turbolinks="false"
+          href="#documents"
+          >Skip to first result</a
+        >
+      </div>
     </nav>
     <header>
       <div class="identity-bar">
