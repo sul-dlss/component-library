@@ -42,6 +42,13 @@
 
       .btn {
         --bs-btn-font-size: 1.125rem;
+
+        /* TODO: setting --bs-btn-font-weight variable should work for Blacklight 9 */
+
+        /* Blacklight 8 sets font-weight on .facet-field-heading button: */
+
+        /* https://github.com/projectblacklight/blacklight/blob/8afe948ab55b980bd66c201d8f0896aedb10b8a5/app/assets/stylesheets/blacklight/_bootstrap_overrides.scss#L6; */
+        font-weight: 400;
       }
     }
 
@@ -70,8 +77,12 @@
         background-color: var(--bs-card-cap-bg) !important;
 
         .btn {
-          --bs-btn-font-weight: 600;
+          /* TODO: setting --bs-btn-font-weight variable should work for Blacklight 9 */
 
+          /* Blacklight 8 sets font-weight on .facet-field-heading button: */
+
+          /* https://github.com/projectblacklight/blacklight/blob/8afe948ab55b980bd66c201d8f0896aedb10b8a5/app/assets/stylesheets/blacklight/_bootstrap_overrides.scss#L6; */
+          font-weight: 600;
           color: var(--bs-body-color);
         }
       }
