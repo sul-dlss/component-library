@@ -61,3 +61,11 @@
   outline: 2px solid var(--bs-btn-focus-box-shadow); /* Outer color */
   box-shadow: 0 0 0 4px var(--stanford-black); /* Inner color */
 }
+
+.btn-primary + .dropdown-menu, .btn-outline-primary + .dropdown-menu {
+  --bs-dropdown-link-active-bg: var(--stanford-digital-blue);
+}
+
+.btn-secondary + .dropdown-menu, .btn-outline-secondary + .dropdown-menu {
+  --bs-dropdown-link-active-bg: var(--stanford-cardinal);
+}
