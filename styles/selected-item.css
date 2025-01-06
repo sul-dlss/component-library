@@ -39,7 +39,7 @@
     --bs-btn-hover-color: var(--stanford-black);
     --btn-hover-decoration: none;
 
-    padding-right: 0.25rem; /* Keeping the default left padding */
+    padding-inline: 0.75rem 0.25rem; /* Keeping the default top/bottom padding */
   }
 
   .remove {
