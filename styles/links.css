@@ -22,7 +22,6 @@ a {
 
 .su-underline {
   --underline-color: var(--bs-gray-500);
-  --bs-link-hover-decoration: var(--bs-link-decoration);
   --bs-link-decoration: underline dotted var(--underline-color) 1px;
 }
 
@@ -39,6 +38,7 @@ a:not(.btn),
   &:hover,
   &:focus-visible {
     text-decoration: var(--bs-link-hover-decoration);
+    --bs-link-color-rgb: var(--stanford-digital-blue-dark-rgb);
   }
 
   &:focus-visible {
