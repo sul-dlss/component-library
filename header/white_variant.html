@@ -12,11 +12,8 @@
 
     <style>
       :root {
-        --stanford-sky-dark-rgb: 1, 104, 149;
-      }
-
-      .sky-dark {
-        --bs-dark-rgb: var(--stanford-sky-dark-rgb);
+        --identity-bar-bg-color: var(--stanford-cardinal);
+        --identity-bar-color: white;
       }
     </style>
 
@@ -51,15 +48,17 @@
     <header>
       <div class="identity-bar">
         <div class="container">
-          <a class="su-brand-bar__logo" href="https://www.stanford.edu"
+          <a
+            class="su-brand-bar__logo"
+            href="https://www.stanford.edu"
             >Stanford University</a
           >
         </div>
       </div>
-      <nav class="navbar navbar-expand-md bg-dark sky-dark">
+      <nav class="navbar navbar-expand-md">
         <div class="container">
           <a
-            class="mb-0 navbar-brand navbar-logo"
+            class="mb-0 navbar-brand navbar-logo polychrome"
             href="https://library.stanford.edu"
             >Stanford University Libraries</a
           >
@@ -206,22 +205,29 @@
           </div>
         </div>
       </div>
-      <div class="masthead bg-dark sky-dark">
+      <div class="masthead border-bottom">
         <div class="container">
           <div
-            class="d-flex flex-wrap align-items-center justify-content-between pt-3 pb-1 pb-md-3 gap-3"
+            class="d-flex flex-wrap align-items-end justify-content-between pt-3 pb-1 pb-md-3 gap-3"
           >
-            <div class="h1 my-0">
-              <a href="/">Application Title: Lorem ipsum</a>
+            <div>
+              <div class="h1 my-0">
+                <a href="/">Application Title: Lorem ipsum</a>
+              </div>
+              <span class="h4 d-block my-1"
+                >Application Subtitle: Lorem ipsum dolor sit amet</span
+              >
             </div>
-            <div class="navbars ms-md-auto bg-dark">
+            <div class="navbars ms-md-auto">
               <nav
                 class="collapse navbar-collapse align-items-start justify-content-md-end navbar-expand-md d-md-flex flex-column flex-md-row"
                 aria-label="browse"
                 id="user-util-collapse"
               >
-                <hr class="d-md-none text-white vw-100 my-0" />
-                <ul class="navbar-nav justify-content-md-end gap-0 gap-md-4 w-100 fw-semibold">
+                <hr class="d-md-none vw-100 my-0" />
+                <ul
+                  class="navbar-nav justify-content-md-end gap-0 gap-md-4 w-100 fw-semibold"
+                >
                   <li class="nav-item">
                     <a class="nav-link" href="/item1">Option</a>
                   </li>
@@ -305,7 +311,7 @@
                     </ul>
                   </li>
                 </ul>
-                <hr class="d-md-none text-white vw-100 my-0" />
+                <hr class="d-md-none vw-100 my-0" />
                 <ul class="navbar-nav d-md-none gap-0 w-100">
                   <li class="nav-item">
                     <a id="bookmarks_nav" class="nav-link" href="/bookmarks">
