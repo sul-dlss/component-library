@@ -1,16 +1,7 @@
 # DLSS design component library
 
-Reference implementation of components for DLSS
-
-- [Alert](alerts/)
-- [Button](button/)
-- [Footer](footer/)
-- [Header](header/)
-- [Links](links/)
-- [Selected Item](selected_item/)
-- [Selected Facet](selected_facet/)
-- [Toast](toast/)
-- [Facet list](facets/)
+Reference implementation of components for DLSS. A live version is hosted via
+GitHub Pages at <https://sul-dlss.github.io/component-library/>.
 
 A note about color. The primary color will always be "digital blue". A site may
 choose a secondary color like "cardinal" or "digital green".
@@ -54,6 +45,22 @@ npm run lint
 ```
 
 This also runs in CI.
+
+## Deploying
+
+The site is built and deployed to GitHub Pages automatically on every push to
+`main`, by a workflow that merges changes into the `gh-pages` branch.
+
+When PRs are opened, the `pages-preview` workflow will commit a preview of the
+site to a subdirectory on the `gh-pages` branch so that it is available to
+view on the web. The URL for the preview will be:
+
+```
+https://sul-dlss.github.io/component-library/preview-[PR-number]
+```
+
+When the PR is merged, the subdirectory will be cleaned up via another commit
+to the `gh-pages` branch.
 
 ## Releasing
 
