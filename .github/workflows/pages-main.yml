@@ -9,10 +9,11 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Allow only one concurrent deployment to main.
+# Prevent race conditions between main and preview deploys by setting the same
+# concurrency group and forcing them to queue.
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   # Build site and commit to gh-pages branch
@@ -23,14 +24,14 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Rebase gh-pages branch
+      - name: Update gh-pages branch from main
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git fetch origin -a
           git checkout main
           git checkout gh-pages
-          git rebase origin main
+          git merge -s theirs main
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
