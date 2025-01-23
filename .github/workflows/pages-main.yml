@@ -1,0 +1,42 @@
+# Workflow for building and deploying the main branch to github pages
+name: pages-main
+
+on:
+  # Runs on pushes and pull requests targeting the default branch
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+    types: ["opened", "reopened", "synchronize", "closed"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Allow only one concurrent deployment to main.
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  # Build site and commit to gh-pages branch
+  build-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Rebase gh-pages branch
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git fetch origin -a
+          git checkout main
+          git checkout gh-pages
+          git rebase origin main
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          force: true
