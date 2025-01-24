@@ -20,9 +20,9 @@ See <https://identity.stanford.edu/design-elements/color/web/>
 ## HTML head link
 
 ```html
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2024-09-04/styles/icon.png" type="image/png">
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2024-09-04/styles/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2024-09-04/styles/icon.png">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-24/styles/icon.png" type="image/png">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-24/styles/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-24/styles/icon.png">
 ```
 
 # For developers
@@ -62,6 +62,6 @@ Currently these are hosted via jsDelivr which creates hosted versions of every r
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2024-09-04/styles/sul.css"
+  href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-24/styles/sul.css"
 />
 ```
