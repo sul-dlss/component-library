@@ -1,4 +1,4 @@
-# Workflow for building and deploying the main branch to github pages
+# Workflow for applying changes from the main branch to github pages
 name: pages-main
 
 on:
@@ -16,22 +16,30 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build site and commit to gh-pages branch
-  build-commit:
+  # Add changes from main to the gh-pages branch and commit
+  update-from-main:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Update gh-pages branch from main
+      - name: Copy contents to subdirectory
+        run: |
+          echo "Copying contents to main/"
+          mkdir main
+          shopt -s extglob
+          cp -r !(main) main/
+      - name: Checkout gh-pages branch
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git fetch origin -a
-          git checkout main
           git checkout gh-pages
-          git merge main
+      - name: Commit changes from main
+        run: |
+          yes | cp -r main/ .
+          rm -rf main
+          git add .
+          git commit -m "Update from main" -m "${{ github.sha }}"
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
