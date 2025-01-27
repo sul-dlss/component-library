@@ -8,6 +8,19 @@ choose a secondary color like "cardinal" or "digital green".
 
 See <https://identity.stanford.edu/design-elements/color/web/>
 
+## Components
+
+- [Alert](alerts/)
+- [Button](button/)
+- [Footer](footer/)
+- [Header](header/)
+- [Links](links/)
+- [Selected Item](selected_item/)
+- [Selected Facet](selected_facet/)
+- [Toast](toast/)
+- [Facet list](facets/)
+- [Pagination](pagination/)
+
 ## HTML head link
 
 ```html
