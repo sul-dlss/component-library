@@ -31,7 +31,7 @@
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  width: 280px;
+  width: 250px;
 }
 
 /* The .navbars selector is because adding .navbar to the nav in the masthead
