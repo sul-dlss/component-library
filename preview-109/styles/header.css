@@ -55,8 +55,7 @@
  * causes popper to incorrectly position the dropdowns offscreen, so we need
  * to target that navigation with a different selector. */
 .navbar,
-.navbars,
-.masthead {
+.navbars {
   --bs-navbar-color: var(--stanford-black);
   --bs-nav-link-color: var(--stanford-black);
   --bs-link-color-rgb: var(--stanford-black-rgb);
@@ -110,6 +109,15 @@
 }
 
 .masthead {
+  --bs-link-color-rgb: var(--stanford-black-rgb);
+  --bs-link-hover-color-rgb: var(--stanford-black-rgb);
+
+  &.bg-dark,
+  .bg-dark & {
+    --bs-link-color-rgb: 255, 255, 255;
+    --bs-link-hover-color-rgb: 255, 255, 255;
+  }
+
   /* No w-{breakpoint}-{value} helper, so we have to do this */
   .navbars {
     width: 100%;
