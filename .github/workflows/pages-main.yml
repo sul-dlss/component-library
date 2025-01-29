@@ -25,9 +25,7 @@ jobs:
       - name: Copy contents to subdirectory
         run: |
           echo "Copying contents to main/"
-          mkdir main
-          shopt -s extglob
-          cp -r !(main) main/
+          cp -rT . main/
       - name: Checkout gh-pages branch
         run: |
           git config --local user.email "action@github.com"
@@ -36,7 +34,7 @@ jobs:
           git checkout gh-pages
       - name: Commit changes from main
         run: |
-          yes | cp -ar main/* .
+          yes | cp -rT main .
           rm -rf main
           git add .
           git commit -m "Update from main" -m "${{ github.sha }}"
