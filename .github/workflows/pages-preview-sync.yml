@@ -1,0 +1,73 @@
+# Workflow for updating preview branches on github pages
+name: pages-preview-sync
+
+on:
+  # Runs on updated pull requests targeting the default branch that change HTML or CSS
+  pull_request:
+    branches: ["main"]
+    types: ["synchronize"]
+    paths:
+      - "**/*.html"
+      - "**/*.css"
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Prevent race conditions between main and preview deploys by setting the same
+# concurrency group and forcing them to queue.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+env:
+  # Name of the directory where the preview will be built
+  PREVIEW_DIR: preview-${{ github.event.number }}
+  # Unique directory for this run
+  PREVIEW_RUN_DIR: preview-${{ github.event.number }}-${{ github.run_number }}
+
+jobs:
+  # When the PR is updated, overwrite the existing preview directory
+  sync-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Copy contents to subdirectory
+        run: |
+          echo "Copying contents to $PREVIEW_RUN_DIR"
+          mkdir $PREVIEW_RUN_DIR
+          shopt -s extglob
+          cp -r !($PREVIEW_RUN_DIR) $PREVIEW_RUN_DIR/
+      - name: Checkout gh-pages branch
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git fetch origin -a
+          git checkout gh-pages
+      - name: Overwrite preview directory
+        id: update-preview
+        run: |
+          rm -rf $PREVIEW_DIR
+          mv $PREVIEW_RUN_DIR $PREVIEW_DIR
+      - name: Check if there were changes to commit
+        id: check-changes
+        run: |
+          if [ -z "$(git diff)" ]
+          then
+            echo "No changes to commit"
+            echo "changes=0" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected; updating preview"
+            echo "changes=1" >> $GITHUB_OUTPUT
+          fi
+      - name: Commit updated preview directory
+        if: steps.check-changes.outputs.changes > 0
+        run: |
+          git add $PREVIEW_DIR
+          git commit -m "Update preview for PR ${{ github.event.number }}"
+      - name: Push changes
+        if: steps.check-changes.outputs.changes > 0
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages

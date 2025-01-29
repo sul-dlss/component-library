@@ -1,0 +1,59 @@
+# Workflow for building and deploying PRs to preview changes on github pages
+name: pages-preview-create
+
+on:
+  # Runs on opened/reopened pull requests targeting the default branch that change HTML or CSS
+  pull_request:
+    branches: ["main"]
+    types: ["opened", "reopened"]
+    paths:
+      - "**/*.html"
+      - "**/*.css"
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Prevent race conditions between main and preview deploys by setting the same
+# concurrency group and forcing them to queue.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+env:
+  # Name of the directory where the preview will be built
+  PREVIEW_DIR: preview-${{ github.event.number }}
+
+jobs:
+  # When the PR is opened or reopened, create a new preview directory
+  create-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Copy contents to subdirectory
+        run: |
+          echo "Copying contents to $PREVIEW_DIR"
+          mkdir $PREVIEW_DIR
+          shopt -s extglob
+          cp -r !($PREVIEW_DIR) $PREVIEW_DIR/
+      - name: Checkout gh-pages branch
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git fetch origin -a
+          git checkout gh-pages
+      - name: Commit new preview directory
+        id: create-preview
+        run: |
+          git add $PREVIEW_DIR
+          git commit -m "Add preview for PR ${{ github.event.number }}"
+          echo "preview_url=https://sul-dlss.github.io/${{ github.event.repository.name }}/$PREVIEW_DIR" >> $GITHUB_OUTPUT
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+      - name: Add PR comment with link to preview
+        uses: mshick/add-pr-comment@v2
+        with:
+          message-success: "A preview of this branch is available at ${{ steps.create-preview.outputs.preview_url }}."
