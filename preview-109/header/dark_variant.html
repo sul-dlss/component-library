@@ -337,12 +337,12 @@
       </div>
     </header>
 
-    <div class="container">
-      Note: the <code>data-form-type="other"</code> attribute is a workaround
-      for a bug in Dashlane password manager. See
-      <a href="https://github.com/sul-dlss/vt-arclight/issues/495"
-        >https://github.com/sul-dlss/vt-arclight/issues/495</a
-      >
-    </div>
+    <p>
+      Notes:
+      <ul>
+        <li>the <code>.navbar</code>, <code>.navbars</code>, and <code>.masthead</code> elements need a class of <code>.bg-dark</code> to set their text color to white.</li>
+        <li>the <code>.navbar</code> and <code>.masthead</code> elements need an additional custom class to choose their background color. this example uses "sky dark" by setting the variable on <code>:root</code> and then defining a style <code>.sky-dark</code> that sets <code>--bs-dark-rgb</code> (you can see this in the <code>&lt;head&gt;</code> of this page.)</li>
+      </ul>
+    </p>
   </body>
 </html>
