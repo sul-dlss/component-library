@@ -12,11 +12,8 @@
 
     <style>
       :root {
-        --stanford-sky-dark-rgb: 1, 104, 149;
-      }
-
-      .sky-dark {
-        --bs-dark-rgb: var(--stanford-sky-dark-rgb);
+        --identity-bar-bg-color: var(--stanford-cardinal);
+        --identity-bar-color: white;
       }
     </style>
 
@@ -51,15 +48,17 @@
     <header>
       <div class="identity-bar">
         <div class="container">
-          <a class="su-brand-bar__logo" href="https://www.stanford.edu"
+          <a
+            class="su-brand-bar__logo"
+            href="https://www.stanford.edu"
             >Stanford University</a
           >
         </div>
       </div>
-      <nav class="navbar navbar-expand-md bg-dark sky-dark">
+      <nav class="navbar navbar-expand-md">
         <div class="container">
           <a
-            class="mb-0 navbar-brand navbar-logo"
+            class="mb-0 navbar-brand navbar-logo polychrome"
             href="https://library.stanford.edu"
             >Stanford University Libraries</a
           >
@@ -206,13 +205,18 @@
           </div>
         </div>
       </div>
-      <div class="masthead bg-dark sky-dark">
+      <div class="masthead border-bottom">
         <div class="container">
           <div
-            class="d-flex flex-wrap align-items-center justify-content-between pt-3 pb-1 pb-md-3 gap-3"
+            class="d-flex flex-wrap align-items-end justify-content-between pt-3 pb-1 pb-md-3 gap-3"
           >
-            <div class="h1 my-0">
-              <a href="/">Application Title: Lorem ipsum</a>
+            <div>
+              <div class="h1 my-0">
+                <a href="/">Application Title: Lorem ipsum</a>
+              </div>
+              <span class="h4 d-block my-1"
+                >Application Subtitle: Lorem ipsum dolor sit amet</span
+              >
             </div>
             <div class="navbars ms-md-auto">
               <nav
@@ -220,7 +224,94 @@
                 aria-label="browse"
                 id="user-util-collapse"
               >
-                <hr class="d-md-none text-white vw-100 my-0" />
+                <hr class="d-md-none vw-100 my-0" />
+                <ul
+                  class="navbar-nav justify-content-md-end gap-0 gap-md-4 w-100 fw-semibold"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="/item1">Option</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/item2">Option</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Select an option
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="/option1"
+                          >Dropdown option 1</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/option2"
+                          >Dropdown option 2</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/option3"
+                          >Dropdown option 3: Lorem ipsum dolor sit amet</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/option4"
+                          >Dropdown option 4: Lorem ipsum dolor sit amet</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/option5"
+                          >Dropdown option 5: Lorem ipsum dolor sit amet</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Select an option
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="/option1"
+                          >Dropdown option 1</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/option2"
+                          >Dropdown option 2</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/option3"
+                          >Dropdown option 3: Lorem ipsum dolor sit amet</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/option4"
+                          >Dropdown option 4: Lorem ipsum dolor sit amet</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/option5"
+                          >Dropdown option 5: Lorem ipsum dolor sit amet</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <hr class="d-md-none vw-100 my-0" />
                 <ul class="navbar-nav d-md-none gap-0 w-100">
                   <li class="nav-item">
                     <a id="bookmarks_nav" class="nav-link" href="/bookmarks">
@@ -252,12 +343,12 @@
       </div>
     </header>
 
-    <div class="container">
-      Note: the <code>data-form-type="other"</code> attribute is a workaround
-      for a bug in Dashlane password manager. See
-      <a href="https://github.com/sul-dlss/vt-arclight/issues/495"
-        >https://github.com/sul-dlss/vt-arclight/issues/495</a
-      >
-    </div>
+    <p>
+      Notes:
+      <ul>
+        <li>the stanford identity bar needs to be changed to white on red by setting two variables on <code>:root</code>. see the <code>&lt;head&gt;</code> of this page.</li>
+        <li>the <code>.navbar-logo</code> element needs an additional class of <code>.polychrome</code> to use the version that colors the "Stanford" wordmark in cardinal red.</li>
+      </ul>
+    </p>
   </body>
 </html>
