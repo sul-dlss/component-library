@@ -75,6 +75,12 @@ https://sul-dlss.github.io/component-library/preview-[PR-number]
 When the PR is merged, the subdirectory will be cleaned up via another commit
 to the `gh-pages` branch.
 
+## Testing latest styles locally
+If you want to test everything that is currently in main, without having to cut a release, you can update your stylesheet to point to [https://sul-dlss.github.io/component-library/styles/sul.css](https://sul-dlss.github.io/component-library/styles/sul.css)
+```
+<link rel="stylesheet" href="https://sul-dlss.github.io/component-library/styles/sul.css" />
+```
+
 ## Releasing
 
 Currently these are hosted via jsDelivr which creates hosted versions of every release. The best way to update the component library is to cut a release here and then link to the primary style in the `<head>` of the HTML. `https://cdn.jsdelivr.net/gh/sul-dlss/component-library@[version]/styles/sul.css`:
