@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <link
@@ -9,6 +9,16 @@
     />
 
     <link href="../styles/sul.css" rel="stylesheet" />
+
+    <style>
+      iframe {
+        min-height: 50vh;
+
+        @media (min-width: 768px) {
+          min-height: 30vh;
+        }
+      }
+    </style>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -23,10 +33,47 @@
 
   <body>
     <h1>Headers</h1>
-    <h2>With navigation links</h2>
-    <iframe src="with_navigation_links.html" title="With navigation links" style="width: 100vw; height: 100vh"></iframe>
 
-    <h2 class="mt-5">Without navigation links</h2>
-    <iframe src="without_navigation_links.html" title="Without navigation links" style="width: 100vw; height: 100vh"></iframe>
+    <ul>
+      <li><a href="#dark-variant">Dark variant</a></li>
+      <li><a href="#light-variant">Light variant</a></li>
+      <li><a href="#white-variant">White variant</a></li>
+    </ul>
+
+    <p>
+      Notes:
+      <ul>
+        <li>the <code>data-form-type="other"</code> attribute used on the
+          feedback form is a workaround for a bug in Dashlane password manager. See
+          <a href="https://github.com/sul-dlss/vt-arclight/issues/495"
+            >https://github.com/sul-dlss/vt-arclight/issues/495</a
+          >
+        </li>
+        <li>for applications not using the application subtitle <code>span</code> element, it can simply be removed.</li>
+        <li>for applications not using the second row of nav links, the <code>.navbars</code> element can be removed.</li>
+        <li>the top row of nav links must be duplicated inside the masthead's navbar, or they will not appear on mobile.</li>
+      </ul>
+    </p>
+
+    <h2 id="dark-variant">Dark variant</h2>
+    <iframe
+      src="dark_variant.html"
+      title="Dark variant"
+      style="width: 100vw"
+    ></iframe>
+
+    <h2 id="light-variant" class="mt-5">Light variant</h2>
+    <iframe
+      src="light_variant.html"
+      title="Light variant"
+      style="width: 100vw"
+    ></iframe>
+
+    <h2 id="white-variant" class="mt-5">White variant</h2>
+    <iframe
+      src="white_variant.html"
+      title="White variant"
+      style="width: 100vw"
+    ></iframe>
   </body>
 </html>

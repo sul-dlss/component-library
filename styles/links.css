@@ -26,10 +26,6 @@ a {
   --bs-link-decoration: underline dotted var(--underline-color) 1px;
 }
 
-.bg-dark a {
-  --bs-link-color-rgb: 255, 255, 255;
-}
-
 /* This may be unnecessary in Bootstrap 5.4+ https://github.com/twbs/bootstrap/pull/39098 */
 a:not(.btn),
 .btn-link {
