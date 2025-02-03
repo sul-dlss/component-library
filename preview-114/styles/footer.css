@@ -5,6 +5,7 @@ footer a {
 
 #pre-footer {
   --sul-logo-color: white;
+
   background-color: var(--stanford-black);
 
   a {
