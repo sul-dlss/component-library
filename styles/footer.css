@@ -5,7 +5,12 @@ footer a {
 
 #pre-footer {
   --sul-logo-color: white;
+
   background-color: var(--stanford-black);
+
+  a {
+    font-weight: var(--bs-body-font-weight);
+  }
 }
 
 #su-footer {
