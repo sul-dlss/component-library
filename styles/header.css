@@ -124,6 +124,8 @@
 }
 
 .masthead {
+  --bs-border-color: var(--stanford-50-black);
+
   /* No w-{breakpoint}-{value} helper, so we have to do this */
   .navbars {
     width: 100%;
