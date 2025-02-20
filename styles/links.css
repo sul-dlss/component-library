@@ -21,7 +21,7 @@ a {
 }
 
 .su-underline {
-  --underline-color: var(--bs-gray-500);
+  --underline-color: var(--stanford-40-black);
   --bs-link-hover-decoration: var(--bs-link-decoration);
   --bs-link-decoration: underline dotted var(--underline-color) 1px;
 }
