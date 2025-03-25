@@ -80,11 +80,11 @@
   --bs-tertiary-bg: #f8f9fa;
   --bs-tertiary-bg-rgb: 248, 249, 250;
   --bs-heading-color: inherit;
-  --bs-link-color: rgb(var(--sul-link-color-rgb) 1);
-  --bs-link-color-rgb: var(--sul-link-color-rgb);
+  --bs-link-color: var(--stanford-digital-blue);
+  --bs-link-color-rgb: var(--stanford-digital-blue-rgb);
   --bs-link-decoration: none;
-  --bs-link-hover-color: rgb(var(--sul-link-color-rgb) 1);
-  --bs-link-hover-color-rgb: var(--sul-link-color-rgb);
+  --bs-link-hover-color: var(--stanford-digital-blue-dark);
+  --bs-link-hover-color-rgb: var(--stanford-digital-blue-dark-rgb);
   --bs-link-hover-decoration: underline;
   --bs-code-color: var(--stanford-digital-red-light);
   --bs-highlight-color: #212529;

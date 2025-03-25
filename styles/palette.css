@@ -28,7 +28,9 @@
   --stanford-sky-dark-rgb: 1, 104, 149;
 
   /* https://identity.stanford.edu/design-elements/color/web/ */
+  --stanford-digital-blue: #006cb8;
   --stanford-digital-blue-rgb: 0, 108, 184;
+  --stanford-digital-blue-dark: #00588c;
   --stanford-digital-blue-dark-rgb: 0, 84, 143;
   --stanford-digital-green-dark-rgb: 0, 111, 84;
   --stanford-digital-red-dark-rgb: 130, 0, 0;
@@ -36,8 +38,6 @@
   --stanford-digital-red: #b1040e;
   --stanford-digital-red-light: #e50808;
   --stanford-digital-red-dark: rgb(var(--stanford-digital-red-dark-rgb));
-  --stanford-digital-blue: rgb(var(--stanford-digital-blue-rgb));
-  --stanford-digital-blue-dark: rgb(var(--stanford-digital-blue-dark-rgb));
 
   /* unofficial colors */
   --stanford-digital-red-darker: color-mix(
