@@ -24,10 +24,10 @@
   --bs-gray-900: #212529;
   --bs-primary: #0d6efd;
   --bs-secondary: #6c757d;
-  --bs-success: #198754;
-  --bs-info: #0dcaf0;
-  --bs-warning: #ffc107;
-  --bs-danger: #dc3545;
+  --bs-success: rgb(var(--stanford-digital-green-dark-rgb));
+  --bs-info: rgb(var(--stanford-digital-blue-dark-rgb));
+  --bs-warning: rgb(var(--stanford-poppy-rgb));
+  --bs-danger: rgb(var(--stanford-digital-red-dark-rgb));
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: 13, 110, 253;
