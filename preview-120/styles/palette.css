@@ -38,8 +38,6 @@
   --stanford-digital-red: #b1040e;
   --stanford-digital-red-light: #e50808;
   --stanford-digital-red-dark: rgb(var(--stanford-digital-red-dark-rgb));
-  --stanford-digital-blue: rgb(var(--stanford-digital-blue-rgb));
-  --stanford-digital-blue-dark: rgb(var(--stanford-digital-blue-dark-rgb));
 
   /* unofficial colors */
   --stanford-digital-red-darker: color-mix(
