@@ -4,8 +4,11 @@
   --stanford-cardinal: rgb(var(--stanford-cardinal-rgb));
   --stanford-black: #2e2d29;
   --stanford-black-rgb: 46, 45, 41;
+  --stanford-90-black: #43423E;
+  --stanford-90-black-rgb: 67,66, 62;
   --stanford-80-black: #585754;
   --stanford-70-black: #6d6c69;
+  --stanford-60-black: #767674;
   --stanford-50-black: #979694;
   --stanford-40-black: #ababa9;
   --stanford-30-black: #c0c0bf;
@@ -17,6 +20,7 @@
   --stanford-poppy-rgb: 233, 131, 0;
   --stanford-poppy-dark: #d1660f;
   --stanford-palo-alto-dark-rgb: 1, 66, 64;
+  --stanford-palo-alto-dark: #175e54;
   --stanford-stone-dark-rgb: 84, 73, 72;
   --stanford-illuminating-dark-rgb: 254, 197, 29;
   --stanford-fog-light: #f4f4f4;
@@ -30,6 +34,7 @@
   --stanford-digital-red-dark-rgb: 130, 0, 0;
   --stanford-digital-green: #008566;
   --stanford-digital-red: #b1040e;
+  --stanford-digital-red-light: #e50808;
   --stanford-digital-red-dark: rgb(var(--stanford-digital-red-dark-rgb));
   --stanford-digital-blue: rgb(var(--stanford-digital-blue-rgb));
   --stanford-digital-blue-dark: rgb(var(--stanford-digital-blue-dark-rgb));
