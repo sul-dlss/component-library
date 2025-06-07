@@ -12,6 +12,7 @@
 /* for nav-link use --bs-nav-link-font-weight */
 :not(.nav-link) a {
   /* for some reason this doesn't work: */
+
   /* --bs-body-font-weight: var(--sul-link-font-weight) */
   font-weight: var(--sul-link-font-weight);
 }
