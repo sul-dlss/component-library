@@ -18,14 +18,13 @@
 
   color: var(--identity-bar-color);
   display: block;
-  font-size: 1rem;
-  font-family: var(--font-family-serif);
+  font-size: 1.25rem;
+  font-family: Stanford, var(--font-family-serif);
   font-weight: 400;
   font-variant-ligatures: discretionary-ligatures;
   font-feature-settings: "liga";
-  height: 1.875em;
-  padding-top: 0.125rem;
   white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
 }
 /* stylelint-enable selector-class-pattern */
 
