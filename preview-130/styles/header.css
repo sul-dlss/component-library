@@ -24,7 +24,6 @@
   font-variant-ligatures: discretionary-ligatures;
   font-feature-settings: "liga";
   white-space: nowrap;
-
   -webkit-font-smoothing: antialiased;
 }
 /* stylelint-enable selector-class-pattern */
