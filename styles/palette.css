@@ -4,8 +4,10 @@
   --stanford-cardinal: rgb(var(--stanford-cardinal-rgb));
   --stanford-black: #2e2d29;
   --stanford-black-rgb: 46, 45, 41;
+  --stanford-90-black: #43423e;
   --stanford-80-black: #585754;
   --stanford-70-black: #6d6c69;
+  --stanford-60-black: #767674;
   --stanford-50-black: #979694;
   --stanford-40-black: #ababa9;
   --stanford-30-black: #c0c0bf;
