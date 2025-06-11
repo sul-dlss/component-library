@@ -1,0 +1,116 @@
+.facets {
+  /* TODO: This variable goes away in BL 9 */
+
+  /* it's switching to accordion https://github.com/projectblacklight/blacklight/commit/b78152df1b173dc6f3616632778f67d2eb26d9ca */
+  --bl-facet-limit-body-padding: 0.5rem;
+
+  /* Hack for BL 8.7.  These two lines can be removed when switching to Blacklight 9 */
+  --bs-success-rgb: var(--bs-body-color);
+  --bl-facet-active-item-color: rgb(var(--bs-success-rgb));
+
+  padding-block-end: 0.5rem;
+
+  .facets-header {
+    /* TODO: this can become a variable when https://github.com/projectblacklight/blacklight/pull/3471 is merged */
+    padding-block: 0;
+  }
+
+  .facets-heading {
+    font-size: 1.75rem;
+    padding: 0.5rem;
+  }
+
+  .card {
+    --bs-border-radius: 0;
+    --bs-card-bg: transparent;
+    --bs-card-cap-bg: transparent;
+    --bs-card-spacer-y: 0.5rem;
+    --bs-card-spacer-x: 0.5rem;
+
+    border-inline: none;
+    border-block-end: none;
+    margin-bottom: 0; /* this is necessary to override Blacklight */
+
+    .facet-select {
+      color: var(--bs-body-color);
+      display: inline-block;
+      width: 100%;
+    }
+
+    .card-header {
+      --bs-card-border-width: 0;
+
+      .btn {
+        --bs-btn-font-size: 1.125rem;
+
+        /* TODO: setting --bs-btn-font-weight variable should work for Blacklight 9 */
+
+        /* Blacklight 8 sets font-weight on .facet-field-heading button: */
+
+        /* https://github.com/projectblacklight/blacklight/blob/8afe948ab55b980bd66c201d8f0896aedb10b8a5/app/assets/stylesheets/blacklight/_bootstrap_overrides.scss#L6; */
+        font-weight: 400;
+      }
+    }
+
+    .facet-values {
+      .facet-label {
+        /* TODO: use a variable https://github.com/projectblacklight/blacklight/pull/3468 */
+        text-indent: initial;
+
+        /* TODO: use a variable https://github.com/projectblacklight/blacklight/pull/3468 */
+        padding-left: 0;
+        flex-grow: 1; /* Necessary for selected values */
+      }
+    }
+
+    &.facet-limit {
+      /* Only needed for BL 8. https://github.com/projectblacklight/blacklight/pull/3262 removes these styles in BL9 */
+      .btn:focus-visible {
+        outline: 2px solid var(--bs-btn-focus-box-shadow); /* Outer color */
+        box-shadow: 0 0 0 4px var(--stanford-black); /* Inner color */
+      }
+    }
+
+    &.facet-limit-active {
+      --bs-card-cap-bg: var(--stanford-fog-light);
+
+      /* these rules are to override blacklights style of the element, which uses !important */
+
+      /* https://github.com/projectblacklight/blacklight/blob/f0b6afec6ec69f0ffe9c1a376164c50e001ce821/app/assets/stylesheets/blacklight/_facets.scss#L114-L115 */
+
+      /* .card top border  */
+      border-color: var(--bs-card-border-color) !important;
+
+      .card-header {
+        background-color: var(--bs-card-cap-bg) !important;
+
+        .btn {
+          /* TODO: setting --bs-btn-font-weight variable should work for Blacklight 9 */
+
+          /* Blacklight 8 sets font-weight on .facet-field-heading button: */
+
+          /* https://github.com/projectblacklight/blacklight/blob/8afe948ab55b980bd66c201d8f0896aedb10b8a5/app/assets/stylesheets/blacklight/_bootstrap_overrides.scss#L6; */
+          font-weight: 600;
+          color: var(--bs-body-color);
+        }
+      }
+
+      .remove {
+        text-decoration: none;
+
+        .bi {
+          width: 1em;
+          height: 1em;
+        }
+
+        &:hover {
+          color: var(--stanford-digital-red);
+        }
+      }
+
+      .selected {
+        font-weight: bold;
+      }
+    }
+  }
+}
