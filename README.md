@@ -80,14 +80,25 @@ If you want to test everything that is currently in main, without having to cut 
 ```
 <link rel="stylesheet" href="https://sul-dlss.github.io/component-library/styles/sul.css" />
 ```
+or
+```html
+<style>
+  @layer framework, component;
+  @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css)
+  layer(framework);
+  @import url(https://sul-dlss.github.io/component-library/styles/sulsul.css) layer(component);
+</style>
+```
 
 ## Releasing
 
 Currently these are hosted via jsDelivr which creates hosted versions of every release. The best way to update the component library is to cut a release here and then link to the primary style in the `<head>` of the HTML. `https://cdn.jsdelivr.net/gh/sul-dlss/component-library@[version]/styles/sul.css`:
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-24/styles/sul.css"
-/>
+<style>
+  @layer framework, component;
+  @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css)
+  layer(framework);
+  @import url(https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-06-11/styles/sul.css) layer(component);
+</style>
 ```
