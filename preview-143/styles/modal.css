@@ -1,0 +1,25 @@
+.modal {
+    label {
+        text-align: left;
+        font-weight: bold;
+    }
+    
+    .login-message {
+        font-size: 0.9rem;
+    }
+
+   .col-form-label.required:after {
+        content: "* Required";
+        color: var(--stanford-cardinal);
+        margin-left: 5px;
+        font-weight: normal;
+        font-size: 0.9rem;
+    }
+
+    --bs-modal-padding: 1.75rem;
+    --bs-modal-header-padding: 1.75rem;
+}
+
+.modal-content {
+    margin-top: 25%;
+}
