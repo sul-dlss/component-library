@@ -8,7 +8,7 @@
         font-size: 0.9rem;
     }
 
-   .col-form-label.required:after {
+   .col-form-label.required::after {
         content: "* Required";
         color: var(--stanford-cardinal);
         margin-left: 5px;
