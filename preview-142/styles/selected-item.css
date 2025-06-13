@@ -43,10 +43,10 @@
   }
 
   .remove {
-    --bs-btn-hover-color: var(--stanford-digital-red);
     display: flex;
     align-items: center;
     justify-content: center;
+    --bs-btn-hover-color: var(--stanford-digital-red);
   }
 
   .constraint-value,
