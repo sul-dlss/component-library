@@ -49,12 +49,14 @@
     background-position: 0 center;
   }
 
-  @media (max-width: 575.98px) {
+  @media (width < 575.98px) {
+    &.stacked-mobile {
+      --navbar-logo-width: 115px;
+      mask-image: url("StanfordLibraries-stacked-logo.svg");
+    }
+
     &.stacked-mobile.polychrome {
       background-image: url("StanfordLibraries-stacked-poly-logo.svg");
-    }
-    &.stacked-mobile {
-      mask-image: url("StanfordLibraries-stacked-logo.svg");
     }
   }
 }
