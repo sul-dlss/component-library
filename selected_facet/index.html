@@ -8,19 +8,49 @@
     />
     <link href="../styles/sul.css" rel="stylesheet" />
     <style>
-      /* provided by Blacklight */
-      .applied-filter .filter-name::after {
-        color: #adb5bd;
-        content: "❯";
-        font-size: 90%;
-        padding-left: 0.3em;
+      .constraints-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 0.25rem;
       }
 
+      .applied-filter {
+        --separator-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor'%3e%3cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/%3e%3c/svg%3e");
+      }
       .applied-filter .constraint-value {
         cursor: default;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+        max-width: clamp(288px, 30vw, 500px);
+      }
+      .applied-filter .constraint-value .filter-name:after {
+        background-color: var(--bs-btn-color);
+        content: "";
+        mask: var(--separator-icon);
+        mask-repeat: no-repeat;
+        display: inline-block;
+        height: 1.1rem;
+        width: 1.25rem;
+        vertical-align: text-bottom;
+        margin-right: -0.2rem;
+        margin-left: 0.25rem;
+        transition: background-color 0.15s ease-in-out;
+      }
+      .applied-filter .remove {
+        --bs-btn-hover-bg: var(--bl-constraint-remove-hover-bg);
+        --bs-btn-hover-border-color: var(
+          --bl-constraint-remove-hover-border-color
+        );
+        --bs-btn-active-bg: var(--bl-constraint-remove-hover-bg);
+        --bs-btn-active-border-color: var(
+          --bl-constraint-remove-hover-border-color
+        );
+      }
+
+      .remove .bi {
+        height: 1em;
+        width: 1em;
       }
 
       body {
@@ -31,6 +61,7 @@
   </head>
   <body class="p-4">
     <h1>Selected Facet</h1>
+
     <span
       class="btn-group applied-filter constraint filter filter-subject_ssim"
     >
