@@ -1,0 +1,59 @@
+/* A selected-item is for a multiple select form element */
+.selected-item {
+  --bs-badge-color: black;
+  --bs-badge-font-size: var(--bs-body-font-size);
+  --bs-badge-font-weight: var(--bs-body-font-weight);
+  --bs-badge-padding-y: 0;
+  --bs-badge-padding-x: 0.65em;
+
+  gap: 0.35rem;
+  display: inline-flex;
+
+  .selected-item-label {
+    border-inline-end: var(--bs-border-width) var(--bs-border-style)
+      var(--bs-border-color);
+    line-height: 1.45em;
+    padding-block: 0.1rem;
+    padding-inline-end: 0.45em;
+    text-wrap: nowrap;
+  }
+
+  .btn-close {
+    align-self: center;
+    font-size: 0.6rem;
+
+    &:hover {
+      --bs-btn-close-color: var(--stanford-digital-red);
+
+      background: var(--bs-btn-close-color);
+      mask-image: var(--bs-btn-close-bg);
+    }
+  }
+}
+
+/* An applied-filter is for a selected blacklight facet */
+.applied-filter {
+  --bs-border-radius: 99px;
+
+  .constraint-value {
+    --bs-btn-hover-color: var(--stanford-black);
+    --btn-hover-decoration: none;
+  }
+
+  .remove {
+    --bs-btn-hover-color: var(--stanford-digital-red);
+  }
+
+  .constraint-value,
+  .remove {
+    /* overriding .btn-outline-secondary, which is in the default Blacklight markup */
+    --bs-btn-border-color: var(--stanford-fog-light);
+    --bs-btn-color: var(--stanford-black);
+    --bs-btn-bg: var(--stanford-fog-light);
+    --bs-btn-hover-bg: var(--stanford-fog-light);
+    --bs-btn-hover-border-color: var(--stanford-fog-light);
+    --bs-btn-active-border-color: var(--stanford-fog-light);
+    --bs-btn-active-color: var(--stanford-black);
+    --bs-btn-padding-y: 0.25rem;
+  }
+}
