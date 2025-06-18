@@ -31,7 +31,7 @@
 .navbar-logo,
 .prefooter-logo {
   --bs-navbar-brand-padding-y: 0;
-  --navbar-logo-width: 250px;
+  --sul-logo-width: 250px;
 
   background-color: var(--sul-logo-color);
   mask-image: url("StanfordLibraries-logo.svg");
@@ -40,8 +40,8 @@
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  width: var(--navbar-logo-width);
-  height: var(--navbar-logo-height);
+  width: var(--sul-logo-width);
+  height: var(--sul-logo-height);
 
   &.polychrome {
     background-color: transparent;
@@ -53,8 +53,8 @@
 
   @media (width < 575.98px) {
     &.stacked-mobile {
-      --navbar-logo-width: 50%;
-      --navbar-logo-height: 40px;
+      --sul-logo-width: 50%;
+      --sul-logo-height: 40px;
 
       mask-image: url("StanfordLibraries-stacked-logo.svg");
     }
