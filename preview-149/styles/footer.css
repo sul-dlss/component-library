@@ -7,12 +7,15 @@
 
   .primary-menu {
     --sul-link-font-weight: 600;
+
     li {
       margin-bottom: 0.5rem;
     }
   }
+
   .secondary-menu {
     --sul-link-font-weight: 400;
+
     ul {
       margin-bottom: 0;
     }
