@@ -11,6 +11,12 @@
     }
   }
 
+  .primary-menu .prefooter-logo {
+    display: block;
+
+    --sul-logo-width: 16.25rem;
+  }
+
   .primary-menu {
     --sul-link-font-weight: 600;
 
