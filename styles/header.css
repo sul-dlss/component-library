@@ -57,10 +57,19 @@
       --sul-logo-height: 40px;
 
       mask-image: url("StanfordLibraries-stacked-logo.svg");
-    }
 
-    &.stacked-mobile.polychrome {
-      background-image: url("StanfordLibraries-stacked-poly-logo.svg");
+      &.polychrome {
+        background-image: url("StanfordLibraries-stacked-poly-logo.svg");
+      }
+    }
+  }
+
+  @media (width >= 992px) {
+    &.stacked-lg {
+      --sul-logo-width: 60cqw;
+      --sul-logo-height: calc(var(--sul-logo-width) * 0.3059);
+
+      mask-image: url("StanfordLibraries-stacked-logo.svg");
     }
   }
 }
