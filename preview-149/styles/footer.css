@@ -11,7 +11,7 @@
     }
   }
 
-  .d-md-block .prefooter-logo {
+  .d-md-none .prefooter-logo {
     display: block;
 
     --sul-logo-height: 2rem;
