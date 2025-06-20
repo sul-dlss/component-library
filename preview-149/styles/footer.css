@@ -13,6 +13,9 @@
   }
   .secondary-menu {
     --sul-link-font-weight: 400;
+    ul {
+      margin-bottom: 0;
+    }
   }
 }
 
