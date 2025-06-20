@@ -13,12 +13,14 @@
 
   .d-md-block .prefooter-logo {
     display: block;
+
     --sul-logo-height: 2rem;
     --sul-logo-width: 100%;
   }
 
   .primary-menu {
     --sul-link-font-weight: 600;
+
     li {
       margin-bottom: 0.5rem;
     }
