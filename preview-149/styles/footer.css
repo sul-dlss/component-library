@@ -5,6 +5,9 @@
 
   background-color: var(--stanford-fog-light);
 
+  #sul-footer-img {
+    container-type: size;
+  }
   .primary-menu {
     --sul-link-font-weight: 600;
 
