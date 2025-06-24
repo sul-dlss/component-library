@@ -32,6 +32,7 @@
 
     .accordion-button {
       font-size: 1.125rem;
+
       &[aria-expanded="true"] {
         --bs-btn-font-weight: 600;
       }
