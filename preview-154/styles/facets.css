@@ -17,14 +17,16 @@
     --bs-accordion-btn-padding-y: 0.5rem;
     --bs-accordion-body-padding-y: 0 0.5rem;
     --bs-link-color-rgb: var(--bs-accordion-color);
-    --bs-accordion-active-color: var(--bs-accordion-color);
   }
 
   .accordion-body {
     --bs-link-hover-color: none;
     --bs-link-hover-color-rgb: none;
-
     .selected { --bl-facet-active-item-color: none; }
+  }
+
+  .facet-limit-active {
+    --bs-accordion-active-color: var(--bs-btn-color);
   }
 
   .facet-limit {
