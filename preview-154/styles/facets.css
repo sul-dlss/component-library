@@ -25,8 +25,8 @@
     --bs-accordion-border-color: transparent;
     --bs-accordion-btn-bg: transparent;
     --bs-accordion-inner-border-radius: 0;
-    --bs-btn-hover-bg: var(--stanford-30-black);
-    --bs-accordion-active-bg: var(--stanford-30-black);
+    --bs-btn-hover-bg: var(--stanford-fog-light);
+    --bs-accordion-active-bg: var(--stanford-fog-light);
 
     border-top: 1px solid var(--stanford-30-black);
 
