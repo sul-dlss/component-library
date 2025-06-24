@@ -20,6 +20,12 @@
     --bs-accordion-active-color: var(--bs-accordion-color);
   }
 
+  .accordion-body {
+    --bs-link-hover-color: none;
+
+    .selected { --bl-facet-active-item-color: none; }
+  }
+
   .facet-limit {
     --bs-accordion-border-radius: 0;
     --bs-accordion-border-color: transparent;
