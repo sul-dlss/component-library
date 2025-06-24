@@ -10,24 +10,33 @@
 
   padding-block-end: 0.5rem;
 
-  /* Lines 14-30 are facet settings for BL9 */
+  /* Lines 14-39 are facet settings for BL9 */
   --bs-btn-font-weight: 400;
 
-  .accordion-item {
-    --bs-accordion-border-radius: 0;
-    --bs-accordion-border-color: transparent;
-    --bs-accordion-btn-bg: transparent;
-    --bs-accordion-inner-border-radius: 0;
-
-    border-top: 1px solid var(--stanford-30-black);
-  }
-
-   .accordion {
+  .accordion {
     --bs-accordion-btn-padding-y: 0.5rem;
     --bs-accordion-body-padding-y: 0 0.5rem;
     --bs-link-color-rgb: var(--bs-accordion-color);
     --bs-accordion-active-color: var(--bs-accordion-color);
-   }
+  }
+
+  .facet-limit {
+    --bs-accordion-border-radius: 0;
+    --bs-accordion-border-color: transparent;
+    --bs-accordion-btn-bg: transparent;
+    --bs-accordion-inner-border-radius: 0;
+    --bs-btn-hover-bg: var(--stanford-30-black);
+    --bs-accordion-active-bg: var(--stanford-30-black);
+
+    border-top: 1px solid var(--stanford-30-black);
+
+    .accordion-button {
+      font-size: 1.125rem;
+      &[aria-expanded="true"] {
+        --bs-btn-font-weight: 600;
+      }
+    }
+  }
 
   .facets-header {
     /* TODO: this can become a variable when https://github.com/projectblacklight/blacklight/pull/3471 is merged */
