@@ -22,6 +22,7 @@
 
   .accordion-body {
     --bs-link-hover-color: none;
+    --bs-link-hover-color-rgb: none;
 
     .selected { --bl-facet-active-item-color: none; }
   }
