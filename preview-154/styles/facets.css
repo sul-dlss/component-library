@@ -26,7 +26,7 @@
   }
 
   .facet-limit-active {
-    --bs-accordion-active-color: var(--bs-btn-color);
+    --bs-accordion-active-color: var(--stanford-black);
   }
 
   .facet-limit {
