@@ -15,7 +15,9 @@
 
   .accordion {
     --bs-accordion-btn-padding-y: 0.5rem;
-    --bs-accordion-body-padding-y: 0;
+    --bs-accordion-btn-padding-x: 0.5rem;
+    --bs-accordion-body-padding-y: 0.5rem 0.7rem;
+    --bs-accordion-body-padding-x: 0.5rem;
     --bs-link-color-rgb: var(--bs-accordion-color);
 
     .selected {
