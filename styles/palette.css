@@ -2,6 +2,7 @@
   /* https://identity.stanford.edu/design-elements/color/primary-colors/ */
   --stanford-cardinal-rgb: 143, 20, 20;
   --stanford-cardinal: rgb(var(--stanford-cardinal-rgb));
+  --stanford-cardinal-dark: #820000;
   --stanford-black: #2e2d29;
   --stanford-black-rgb: 46, 45, 41;
   --stanford-90-black-rgb: 67, 66, 62;
