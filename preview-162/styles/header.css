@@ -205,8 +205,9 @@
 }
 
 .badge[data-role="bookmark-counter"] {
-  background-color: var(--stanford-10-black);
   --bs-badge-color: var(--stanford-black);
   --bs-badge-padding-x: 0.75rem;
   --bs-badge-font-weight: 500;
+
+  background-color: var(--stanford-10-black);
 }
