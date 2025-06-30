@@ -18,4 +18,5 @@
   --bs-light-rgb: var(--stanford-fog-light-rgb);
   --bs-secondary-rgb: var(--stanford-cardinal-rgb);
   --bs-tertiary-bg: var(--stanford-fog-light);
+  --bs-body-color: var(--stanford-black);
 }
