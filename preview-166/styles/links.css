@@ -22,9 +22,8 @@ a {
 
 .su-underline {
   --underline-color: var(--stanford-50-black);
-  --bs-link-hover-color-rgb: var(--stanford-digital-blue-dark-rgb);
-  --bs-link-hover-decoration: var(--bs-link-decoration);
   --bs-link-decoration: underline dotted var(--underline-color) 1px;
+  --bs-link-hover-color-rgb: var(--stanford-digital-blue-dark-rgb);
   --bs-link-hover-decoration: underline;
 }
 
