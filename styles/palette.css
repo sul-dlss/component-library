@@ -34,7 +34,7 @@
   --stanford-digital-blue-rgb: 0, 108, 184;
   --stanford-digital-blue-dark-rgb: 0, 84, 143;
   --stanford-digital-green-dark-rgb: 0, 111, 84;
-  --stanford-digital-red-rgb: 177, 4, 14
+  --stanford-digital-red-rgb: 177, 4, 14;
   --stanford-digital-red-dark-rgb: 130, 0, 0;
   --stanford-digital-green: #008566;
   --stanford-digital-red: rgb(var(--stanford-digital-red-rgb));
