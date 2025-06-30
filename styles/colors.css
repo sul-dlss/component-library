@@ -17,4 +17,5 @@
   --bs-info-text-emphasis: rgb(var(--bs-info-rgb));
   --bs-light-rgb: var(--stanford-fog-light-rgb);
   --bs-secondary-rgb: var(--stanford-cardinal-rgb);
+  --bs-body-color: var(--stanford-black);
 }
