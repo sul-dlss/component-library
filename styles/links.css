@@ -21,9 +21,10 @@ a {
 }
 
 .su-underline {
-  --underline-color: var(--stanford-40-black);
-  --bs-link-hover-decoration: var(--bs-link-decoration);
+  --underline-color: var(--stanford-50-black);
   --bs-link-decoration: underline dotted var(--underline-color) 1px;
+  --bs-link-hover-color-rgb: var(--stanford-digital-blue-dark-rgb);
+  --bs-link-hover-decoration: underline;
 }
 
 /* This may be unnecessary in Bootstrap 5.4+ https://github.com/twbs/bootstrap/pull/39098 */
