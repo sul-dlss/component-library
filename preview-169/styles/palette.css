@@ -1,0 +1,58 @@
+:root {
+  /* https://identity.stanford.edu/design-elements/color/primary-colors/ */
+  --stanford-cardinal-rgb: 143, 20, 20;
+  --stanford-cardinal: rgb(var(--stanford-cardinal-rgb));
+  --stanford-cardinal-dark: #820000;
+  --stanford-black: #2e2d29;
+  --stanford-black-rgb: 46, 45, 41;
+  --stanford-90-black-rgb: 67, 66, 62;
+  --stanford-90-black: rgb(var(--stanford-90-black-rgb));
+  --stanford-80-black: #585754;
+  --stanford-70-black: #6d6c69;
+  --stanford-60-black: #767674;
+  --stanford-50-black: #979694;
+  --stanford-40-black: #ababa9;
+  --stanford-30-black: #c0c0bf;
+  --stanford-20-black: #d5d5d4;
+  --stanford-10-black: #eaeaea;
+  --stanford-10-black-rgb: 234, 234, 234;
+
+  /* https://identity.stanford.edu/design-elements/color/accent-colors/ */
+  --stanford-poppy-rgb: 233, 131, 0;
+  --stanford-poppy-dark: #d1660f;
+  --stanford-palo-alto-dark-rgb: 1, 66, 64;
+  --stanford-stone-dark-rgb: 84, 73, 72;
+  --stanford-illuminating-dark-rgb: 254, 197, 29;
+  --stanford-illuminating-light-rgb: 255, 231, 129;
+  --stanford-fog-light-rgb: 244, 244, 244;
+  --stanford-fog-light: rgb(var(--stanford-fog-light-rgb));
+  --stanford-sky-dark: #016895;
+  --stanford-sky-dark-rgb: 1, 104, 149;
+  --stanford-archway: #5d4b3c;
+
+  /* https://identity.stanford.edu/design-elements/color/web/ */
+  --stanford-digital-blue-rgb: 0, 108, 184;
+  --stanford-digital-blue-dark-rgb: 0, 84, 143;
+  --stanford-digital-green-dark-rgb: 0, 111, 84;
+  --stanford-digital-red-rgb: 177, 4, 14;
+  --stanford-digital-red-dark-rgb: 130, 0, 0;
+  --stanford-digital-red-light-rgb: 229, 8, 8;
+  --stanford-digital-green: #008566;
+  --stanford-digital-red: rgb(var(--stanford-digital-red-rgb));
+  --stanford-digital-red-dark: rgb(var(--stanford-digital-red-dark-rgb));
+  --stanford-digital-red-light: rgb(var(--stanford-digital-red-light-rgb));
+  --stanford-digital-blue: rgb(var(--stanford-digital-blue-rgb));
+  --stanford-digital-blue-dark: rgb(var(--stanford-digital-blue-dark-rgb));
+
+  /* unofficial colors */
+  --stanford-digital-red-darker: color-mix(
+    in srgb,
+    var(--stanford-digital-red-dark) 90%,
+    black
+  );
+  --stanford-digital-blue-darker: color-mix(
+    in srgb,
+    var(--stanford-digital-blue-dark) 90%,
+    black
+  );
+}
