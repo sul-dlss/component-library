@@ -212,6 +212,6 @@
   background-color: var(--stanford-10-black);
 }
 
-.bg-light .badge[data-role="bookmark-counter"] {
+.bg-light .bookmark-counter {
   background-color: var(--stanford-20-black);
 }
