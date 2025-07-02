@@ -204,7 +204,7 @@
   }
 }
 
-.badge[data-role="bookmark-counter"] {
+.bookmark-counter {
   --bs-badge-color: var(--stanford-black);
   --bs-badge-padding-x: 0.625rem;
   --bs-badge-font-weight: 500;
@@ -212,6 +212,6 @@
   background-color: var(--stanford-10-black);
 }
 
-.bg-light .badge[data-role="bookmark-counter"] {
+.bg-light .bookmark-counter {
   background-color: var(--stanford-20-black);
 }
