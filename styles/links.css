@@ -1,9 +1,9 @@
 :root {
   --sul-link-font-weight: 450;
   --sul-link-color-rgb: var(--stanford-digital-blue-rgb);
-  --bs-link-color: rgb(var(--sul-link-color-rgb) 1); /* for .btn-link */
+  --bs-link-color: rgb(var(--sul-link-color-rgb)); /* for .btn-link */
   --bs-link-color-rgb: var(--sul-link-color-rgb);
-  --bs-link-hover-color: rgb(var(--sul-link-color-rgb) 1); /* for .btn-link */
+  --bs-link-hover-color: rgb(var(--sul-link-color-rgb)); /* for .btn-link */
   --bs-link-hover-color-rgb: var(--sul-link-color-rgb);
   --bs-link-decoration: none;
   --bs-link-hover-decoration: underline;
