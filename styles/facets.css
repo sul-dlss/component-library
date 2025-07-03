@@ -31,10 +31,6 @@
     .selected { --bl-facet-active-item-color: none; }
   }
 
-  .facet-limit-active, .accordion {
-    --bs-accordion-active-color: var(--stanford-black);
-  }
-
   .facet-limit {
     --bs-accordion-border-radius: 0;
     --bs-accordion-border-color: transparent;
@@ -52,6 +48,13 @@
         --bs-btn-font-weight: 600;
       }
     }
+  }
+
+  .facet-limit-active .accordion-button {
+    --bs-accordion-active-color: var(--stanford-black);
+    --bs-accordion-btn-bg: var(--stanford-fog-light);
+    --bs-btn-hover-bg: var(--stanford-fog-light);
+    --bs-btn-active-bg: var(--stanford-fog-light);
   }
 
   .facets-header {
