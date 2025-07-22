@@ -19,7 +19,8 @@
 
   /* https://identity.stanford.edu/design-elements/color/accent-colors/ */
   --stanford-poppy-rgb: 233, 131, 0;
-  --stanford-poppy-dark: #d1660f;
+  --stanford-poppy-dark-rgb: 209, 102, 15;
+  --stanford-poppy-dark: rgb(var(--stanford-poppy-dark-rgb));
   --stanford-palo-alto-dark-rgb: 1, 66, 64;
   --stanford-stone-dark-rgb: 84, 73, 72;
   --stanford-illuminating-dark-rgb: 254, 197, 29;
