@@ -1,0 +1,217 @@
+:root {
+  --sul-logo-color: var(--stanford-black);
+  --identity-bar-color: var(--stanford-cardinal);
+  --identity-bar-bg-color: white;
+}
+
+.bg-dark {
+  --sul-logo-color: var(--bs-navbar-color);
+}
+
+.identity-bar {
+  background-color: var(--identity-bar-bg-color);
+}
+
+/* stylelint-disable selector-class-pattern */
+.su-brand-bar__logo {
+  --bs-link-hover-decoration: none;
+
+  color: var(--identity-bar-color);
+  display: block;
+  font-size: 1.25rem;
+  font-family: Stanford, var(--font-family-serif);
+  font-weight: 400;
+  font-variant-ligatures: discretionary-ligatures;
+  font-feature-settings: "liga";
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+}
+/* stylelint-enable selector-class-pattern */
+
+.navbar-logo,
+.prefooter-logo {
+  --bs-navbar-brand-padding-y: 0;
+  --sul-logo-width: 250px;
+
+  background-color: var(--sul-logo-color);
+  mask-image: url("StanfordLibraries-logo.svg");
+  mask-repeat: no-repeat;
+  mask-position: 0 center;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  width: var(--sul-logo-width);
+  height: var(--sul-logo-height);
+
+  &.polychrome {
+    background-color: transparent;
+    mask-image: none;
+    background-image: url("StanfordLibraries-logo-poly.svg");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+  }
+
+  @media (width < 575.98px) {
+    &.stacked-mobile {
+      --sul-logo-width: 50%;
+      --sul-logo-height: 40px;
+
+      mask-image: url("StanfordLibraries-stacked-logo.svg");
+
+      &.polychrome {
+        background-image: url("StanfordLibraries-stacked-poly-logo.svg");
+      }
+    }
+  }
+
+  @media (width >= 992px) {
+    &.stacked-lg {
+      --sul-logo-width: 60cqw;
+      --sul-logo-height: calc(var(--sul-logo-width) * 0.3059);
+
+      mask-image: url("StanfordLibraries-stacked-logo.svg");
+    }
+  }
+}
+
+/* Changing text color for dark-background navbar/masthead */
+
+/* The .navbars selector is because adding .navbar to the nav in the masthead
+ * causes popper to incorrectly position the dropdowns offscreen, so we need
+ * to target that navigation with a different selector. */
+.navbar,
+.navbars,
+.masthead {
+  --bs-link-color-rgb: var(--stanford-black-rgb);
+  --bs-link-hover-color-rgb: var(--stanford-black-rgb);
+  --bs-light-rgb: var(--stanford-10-black-rgb);
+
+  &.bg-dark {
+    --bs-link-color-rgb: 255, 255, 255;
+    --bs-link-hover-color-rgb: 255, 255, 255;
+  }
+}
+
+/* Navbar-specific overrides: links and hamburger/X icon colors */
+.navbar,
+.navbars {
+  --bs-navbar-color: var(--stanford-black);
+  --bs-nav-link-color: var(--stanford-black);
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17'%3e%3cpath stroke='rgba%28255, 255, 255, 0.1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='1' d='M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z' /%3e%3c/svg%3e");
+
+  .collapsed {
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  &.bg-dark {
+    --bs-navbar-color: white;
+    --bs-nav-link-color: var(--bs-navbar-color);
+    --bs-navbar-active-color: var(--bs-navbar-color);
+    --bs-navbar-hover-color: rgb(255 255 255 / 100%);
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='1' d='M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z' /%3e%3c/svg%3e");
+    --bs-navbar-toggler-border-color: rgb(255 255 255 / 10%);
+
+    .collapsed {
+      --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+  }
+}
+
+#feedback {
+  label {
+    text-align: right;
+    font-weight: bold;
+  }
+}
+
+/* HRs in the navbar have to be positioned vertically relative to the nav lists,
+ * but horizontally relative to the entire container. They aren't valid as
+ * children of a <ul>, so they have to be siblings, and they can't be inside
+ * an <li> because they would be counted as items in the list. Repositioning of
+ * other elements during opening of the menu makes them jump around, so we also
+ * have to disable animation of opening/closing the nav. */
+.navbar-collapse hr {
+  opacity: 0.5;
+  border-color: var(--bs-navbar-color);
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
+
+  .bg-dark & {
+    opacity: 0.75;
+  }
+
+  @media (width >= 576px) {
+    margin-left: calc(
+      (((100vw - 540px) / 2) * -1) - (var(--bs-gutter-x) * 0.5)
+    );
+  }
+}
+
+.masthead {
+  --bs-border-color: var(--stanford-50-black);
+
+  /* No w-{breakpoint}-{value} helper, so we have to do this */
+  .navbars {
+    width: 100%;
+
+    @media (width >= 768px) {
+      width: unset;
+      flex: 1 1 auto;
+    }
+  }
+
+  .navbar-collapse {
+    transition: none;
+
+    --bs-navbar-padding-y: 0;
+  }
+
+  .navbar-nav {
+    padding: 0.5rem 0;
+
+    --bs-nav-link-padding-y: 0.25rem;
+
+    @media (width >= 768px) {
+      padding: 0;
+
+      --bs-nav-link-padding-y: 0.5rem;
+    }
+
+    li {
+      display: inline-block;
+      position: relative;
+    }
+  }
+
+  .h1 {
+    font-size: 2.25rem;
+
+    a {
+      --bs-link-hover-decoration: none;
+    }
+  }
+}
+
+.navbar-collapse .dropdown-menu {
+  --bs-dropdown-padding-x: 0.125rem;
+  --bs-dropdown-padding-y: 0.125rem;
+  --bs-dropdown-item-padding-x: 0.5rem;
+  --bs-dropdown-item-padding-y: 0.125rem;
+
+  &.show {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+}
+
+.bookmark-counter {
+  --bs-badge-color: var(--stanford-black);
+  --bs-badge-padding-x: 0.625rem;
+  --bs-badge-font-weight: 500;
+
+  background-color: var(--stanford-10-black);
+}
+
+.bg-light .bookmark-counter {
+  background-color: var(--stanford-20-black);
+}
