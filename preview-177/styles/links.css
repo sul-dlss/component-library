@@ -1,0 +1,45 @@
+:root {
+  --sul-link-font-weight: 450;
+  --sul-link-color-rgb: var(--stanford-digital-blue-rgb);
+  --bs-link-color: rgb(var(--sul-link-color-rgb)); /* for .btn-link */
+  --bs-link-color-rgb: var(--sul-link-color-rgb);
+  --bs-link-hover-color: rgb(var(--sul-link-color-rgb)); /* for .btn-link */
+  --bs-link-hover-color-rgb: var(--sul-link-color-rgb);
+  --bs-link-decoration: none;
+  --bs-link-hover-decoration: underline;
+}
+
+a {
+  /* for some reason this doesn't work: */
+
+  /* --bs-body-font-weight: var(--sul-link-font-weight) */
+  font-weight: var(--sul-link-font-weight);
+}
+
+.btn-link {
+  --bs-btn-font-weight: var(--sul-link-font-weight);
+}
+
+.su-underline {
+  --underline-color: var(--stanford-50-black);
+  --bs-link-decoration: underline dotted var(--underline-color);
+  --bs-link-hover-color-rgb: var(--stanford-digital-blue-dark-rgb);
+  --bs-link-hover-decoration: underline;
+}
+
+/* This may be unnecessary in Bootstrap 5.4+ https://github.com/twbs/bootstrap/pull/39098 */
+a:not(.btn),
+.btn-link {
+  text-decoration: var(--bs-link-decoration);
+  -webkit-text-decoration: var(--bs-link-decoration);
+  text-underline-offset: 0.2rem;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: var(--bs-link-hover-decoration);
+  }
+
+  &:focus-visible {
+    border-radius: 0.375rem;
+  }
+}
