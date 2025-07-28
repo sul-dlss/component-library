@@ -41,9 +41,6 @@
   --stanford-poppy-dark-rgb: 209, 102, 15;
   --stanford-poppy-light: var(rgb(--stanford-poppy-light));
   --stanford-poppy-dark: rgb(var(--stanford-poppy-dark-rgb));
-  --stanford-stone-rgb: 127, 119, 118;
-  --stanford-stone-dark-rgb: 84, 73, 72;
-  --stanford-stone-light-rgb: 212, 209, 209;
   --stanford-illuminating-base-rgb: 254, 221, 92;
   --stanford-illuminating-light-rgb: 255, 231, 129;
   --stanford-illuminating-dark-rgb: 254, 197, 29;
