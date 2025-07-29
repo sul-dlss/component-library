@@ -26,11 +26,11 @@
   --stanford-palo-verde-rgb: 39, 153, 137;
   --stanford-palo-verde-light-rgb: 89, 179, 169;
   --stanford-palo-verde-dark-rgb: 1, 126, 124;
-  --stanford-palo-verde-light: var(rgb(--stanford-palo-verde-light-rgb));
+  --stanford-palo-verde-light: rgb(var(--stanford-palo-verde-light-rgb));
   --stanford-bay-rgb: 111, 162, 135;
   --stanford-bay-light-rgb: 138, 184, 167;
   --stanford-bay-dark-rgb: 65, 120, 101;
-  --stanford-bay-light: var(rgb(--stanford-bay-light-rgb));
+  --stanford-bay-light: rgb(var(--stanford-bay-light-rgb));
   --stanford-sky-rgb: 66, 152, 181;
   --stanford-sky-light-rgb: 103, 175, 210;
   --stanford-sky-dark-rgb: 1, 104, 149;
@@ -39,7 +39,7 @@
   --stanford-poppy-rgb: 233, 131, 0;
   --stanford-poppy-light-rgb: 249, 164, 74;
   --stanford-poppy-dark-rgb: 209, 102, 15;
-  --stanford-poppy-light: var(rgb(--stanford-poppy-light-rgb));
+  --stanford-poppy-light: rgb(var(--stanford-poppy-light-rgb));
   --stanford-poppy-dark: rgb(var(--stanford-poppy-dark-rgb));
   --stanford-illuminating-base-rgb: 254, 221, 92;
   --stanford-illuminating-light-rgb: 255, 231, 129;
@@ -47,11 +47,11 @@
   --stanford-archway-rgb: 93, 75, 60;
   --stanford-archway-light-rgb: 118, 98, 83;
   --stanford-archway-dark-rgb: 47, 36, 36;
-  --stanford-archway: var(rgb(--stanford-archway-rgb));
+  --stanford-archway: rgb(var(--stanford-archway-rgb));
   --stanford-stone-rgb: 127, 119, 118;
   --stanford-stone-light-rgb: 212, 209, 209;
   --stanford-stone-dark-rgb: 84, 73, 72;
-  --stanford-stone-light: var(rgb(--stanford-stone-light-rgb));
+  --stanford-stone-light: rgb(var(--stanford-stone-light-rgb));
   --stanford-fog-rgb: 218, 215, 203;
   --stanford-fog-light-rgb: 244, 244, 244;
   --stanford-fog-dark-rgb: 182, 177, 169;
