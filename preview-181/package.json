@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "http-server",
+    "lint": "stylelint **/*.css",
+    "build:palette": "node ./scripts/generate-color-palette.js"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "stylelint": "^16.8.2",
+    "stylelint-config-standard-scss": "^13.1.0"
+  }
+}
