@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "http-server",
-    "lint": "stylelint **/*.css"
+    "lint": "stylelint **/*.css",
+    "build:palette": "node ./scripts/generate-color-palette.js"
   },
   "devDependencies": {
     "http-server": "^14.1.1",
