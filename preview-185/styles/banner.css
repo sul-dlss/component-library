@@ -1,7 +1,7 @@
 .banner {
   --bs-banner-bg: none;
-  --bs-banner-padding-x: 1rem;
-  --bs-banner-padding-y: 1rem;
+  --bs-banner-padding-x: 16px;
+  --bs-banner-padding-y: 16px;
   --bs-banner-margin-bottom: 1rem;
   --bs-banner-color: inherit;
   --bs-banner-border-color: transparent;
@@ -16,7 +16,7 @@
   background-color: var(--bs-banner-bg);
   border: var(--bs-banner-border);
   border-radius: var(--bs-banner-border-radius);
-  border-left: .5rem solid var(--bs-banner-border-color);
+  border-left: 4px solid var(--bs-banner-border-color);
   border-top: none;
   border-right: none;
   border-bottom: none;
