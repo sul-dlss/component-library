@@ -25,23 +25,16 @@
 
 /* Banner styles */
 .banner {
-  --banner-bg: none;
   --banner-padding-x: 16px;
   --banner-padding-y: 16px;
-  --banner-margin-bottom: 1rem;
-  --banner-color: inherit;
+  --banner-margin-bottom: 16px;
   --banner-border-color: transparent;
   --banner-border: var(--bs-border-width) solid var(--banner-border-color);
   --banner-border-radius: none;
-  --banner-link-color: inherit;
 
-  position: relative;
-  padding: var(--banner-padding-y) var(--banner-padding-x);
-  margin-bottom: var(--banner-margin-bottom);
   color: var(--banner-color);
   background-color: var(--banner-bg);
   border: var(--banner-border);
-  border-radius: var(--banner-border-radius);
   border-left: 4px solid var(--banner-border-color);
   border-top: none;
   border-right: none;
@@ -100,24 +93,4 @@
   --banner-color: var(--bs-dark-text-emphasis);
   --banner-border-color: var(--bs-dark-border-subtle);
   --banner-link-color: var(--bs-dark-text-emphasis);
-}
-
-.banner h3 {
-  padding-right: var(--banner-padding-x);
-
-  .heading-tag {
-    font-weight: normal;
-    font-size: 0.8em;
-    color: var(--banner-link-color);
-    border-left: .5em solid var(--banner-border-color);
-    margin-left: 1em;
-  }
-}
-
-.banner-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1em;
-  font-weight: bold;
 }
