@@ -27,6 +27,8 @@
   --bs-alert-border-radius: none;
   --bs-alert-bg: none;
   --bs-border-width: 4px;
+  --bs-alert-border-color: none;
+  --bs-border-color: var(--bs-alert-color);
 
   a {
     color: var(--bs-link-color);
