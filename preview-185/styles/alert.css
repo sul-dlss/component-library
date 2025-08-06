@@ -25,91 +25,91 @@
 
 /* Banner styles */
 .banner {
-  --bs-banner-bg: none;
-  --bs-banner-padding-x: 16px;
-  --bs-banner-padding-y: 16px;
-  --bs-banner-margin-bottom: 1rem;
-  --bs-banner-color: inherit;
-  --bs-banner-border-color: transparent;
-  --bs-banner-border: var(--bs-border-width) solid var(--bs-banner-border-color);
-  --bs-banner-border-radius: none;
-  --bs-banner-link-color: inherit;
+  --banner-bg: none;
+  --banner-padding-x: 16px;
+  --banner-padding-y: 16px;
+  --banner-margin-bottom: 1rem;
+  --banner-color: inherit;
+  --banner-border-color: transparent;
+  --banner-border: var(--bs-border-width) solid var(--banner-border-color);
+  --banner-border-radius: none;
+  --banner-link-color: inherit;
 
   position: relative;
-  padding: var(--bs-banner-padding-y) var(--bs-banner-padding-x);
-  margin-bottom: var(--bs-banner-margin-bottom);
-  color: var(--bs-banner-color);
-  background-color: var(--bs-banner-bg);
-  border: var(--bs-banner-border);
-  border-radius: var(--bs-banner-border-radius);
-  border-left: 4px solid var(--bs-banner-border-color);
+  padding: var(--banner-padding-y) var(--banner-padding-x);
+  margin-bottom: var(--banner-margin-bottom);
+  color: var(--banner-color);
+  background-color: var(--banner-bg);
+  border: var(--banner-border);
+  border-radius: var(--banner-border-radius);
+  border-left: 4px solid var(--banner-border-color);
   border-top: none;
   border-right: none;
   border-bottom: none;
 }
 
 .banner-primary {
-  --bs-banner-color: var(--bs-primary-text-emphasis);
-  --bs-banner-border-color: var(--bs-primary-border-subtle);
-  --bs-banner-link-color: var(--bs-primary-text-emphasis);
+  --banner-color: var(--bs-primary-text-emphasis);
+  --banner-border-color: var(--bs-primary-border-subtle);
+  --banner-link-color: var(--bs-primary-text-emphasis);
 }
 
 .banner-secondary {
-  --bs-banner-color: var(--bs-secondary-text-emphasis);
-  --bs-banner-border-color: var(--bs-secondary-border-subtle);
-  --bs-banner-link-color: var(--bs-secondary-text-emphasis);
+  --banner-color: var(--bs-secondary-text-emphasis);
+  --banner-border-color: var(--bs-secondary-border-subtle);
+  --banner-link-color: var(--bs-secondary-text-emphasis);
 }
 
 .banner-success {
-  --bs-banner-color: var(--bs-success-text-emphasis);
-  --bs-banner-border-color: var(--bs-success-border-subtle);
-  --bs-banner-link-color: var(--bs-success-text-emphasis);
+  --banner-color: var(--bs-success-text-emphasis);
+  --banner-border-color: var(--bs-success-border-subtle);
+  --banner-link-color: var(--bs-success-text-emphasis);
 }
 
 .banner-info {
-  --bs-banner-color: var(--bs-info-text-emphasis);
-  --bs-banner-border-color: var(--bs-info-border-subtle);
-  --bs-banner-link-color: var(--bs-info-text-emphasis);
+  --banner-color: var(--bs-info-text-emphasis);
+  --banner-border-color: var(--bs-info-border-subtle);
+  --banner-link-color: var(--bs-info-text-emphasis);
 }
 
 .banner-note {
-  --bs-banner-color: rgb(var(--stanford-illuminating-dark-rgb));
-  --bs-banner-border-color: rgb(var(--stanford-illuminating-dark-rgb));
-  --bs-banner-link-color: var(--stanford-illuminating-dark-rgb);
+  --banner-color: rgb(var(--stanford-illuminating-dark-rgb));
+  --banner-border-color: rgb(var(--stanford-illuminating-dark-rgb));
+  --banner-link-color: var(--stanford-illuminating-dark-rgb);
 }
 
 .banner-warning {
-  --bs-banner-color: var(--bs-warning-text-emphasis);
-  --bs-banner-border-color: var(--bs-warning-border-subtle);
-  --bs-banner-link-color: var(--bs-warning-text-emphasis);
+  --banner-color: var(--bs-warning-text-emphasis);
+  --banner-border-color: var(--bs-warning-border-subtle);
+  --banner-link-color: var(--bs-warning-text-emphasis);
 }
 
 .banner-danger {
-  --bs-banner-color: var(--bs-danger-text-emphasis);
-  --bs-banner-border-color: var(--bs-danger-border-subtle);
-  --bs-banner-link-color: var(--bs-danger-text-emphasis);
+  --banner-color: var(--bs-danger-text-emphasis);
+  --banner-border-color: var(--bs-danger-border-subtle);
+  --banner-link-color: var(--bs-danger-text-emphasis);
 }
 
 .banner-light {
-  --bs-banner-color: var(--bs-light-text-emphasis);
-  --bs-banner-border-color: var(--bs-light-border-subtle);
-  --bs-banner-link-color: var(--bs-light-text-emphasis);
+  --banner-color: var(--bs-light-text-emphasis);
+  --banner-border-color: var(--bs-light-border-subtle);
+  --banner-link-color: var(--bs-light-text-emphasis);
 }
 
 .banner-dark {
-  --bs-banner-color: var(--bs-dark-text-emphasis);
-  --bs-banner-border-color: var(--bs-dark-border-subtle);
-  --bs-banner-link-color: var(--bs-dark-text-emphasis);
+  --banner-color: var(--bs-dark-text-emphasis);
+  --banner-border-color: var(--bs-dark-border-subtle);
+  --banner-link-color: var(--bs-dark-text-emphasis);
 }
 
 .banner h3 {
-  padding-right: var(--bs-banner-padding-x);;
+  padding-right: var(--banner-padding-x);
 
   .heading-tag {
     font-weight: normal;
     font-size: 0.8em;
-    color: var(--bs-banner-link-color);
-    border-left: .5em solid var(--bs-banner-border-color);
+    color: var(--banner-link-color);
+    border-left: .5em solid var(--banner-border-color);
     margin-left: 1em;
   }
 }
