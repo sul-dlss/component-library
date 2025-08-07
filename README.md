@@ -11,6 +11,7 @@ See <https://identity.stanford.edu/design-elements/color/web/>
 ## Components
 
 - [Alert](alerts/)
+- [Banner](banners/)
 - [Button](button/)
 - [Footer](footer/)
 - [Header](header/)
