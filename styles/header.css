@@ -51,6 +51,16 @@
     background-position: 0 center;
   }
 
+  &:focus-visible,
+  &:focus-visible.polychrome {
+    --bs-navbar-brand-hover-color: var(--bs-nav-link-color);
+
+    background-color: unset;
+    background-image: none;
+    mask-image: none;
+    text-indent: unset;
+  }
+
   @media (width < 575.98px) {
     &.stacked-mobile {
       --sul-logo-width: 50%;
