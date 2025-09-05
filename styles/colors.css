@@ -7,7 +7,7 @@
   --bs-success-bg-subtle: rgba(var(--bs-success-rgb), 10%);
   --bs-success-border-subtle: rgb(var(--bs-success-rgb));
   --bs-success-text-emphasis: rgb(var(--bs-success-rgb));
-  --bs-warning-rgb: var(--stanford-poppy-rgb);
+  --bs-warning-rgb: var(--stanford-poppy-dark-rgb);
   --bs-warning-bg-subtle: rgba(var(--bs-warning-rgb), 10%);
   --bs-warning-border-subtle: rgb(var(--bs-warning-rgb));
   --bs-warning-text-emphasis: rgb(var(--bs-warning-rgb));
