@@ -17,7 +17,6 @@
   --bs-link-hover-decoration: none;
 
   color: var(--identity-bar-color);
-  display: block;
   font-size: 1.25rem;
   font-family: Stanford, var(--font-family-serif);
   font-weight: 400;
