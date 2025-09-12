@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://cdn.jsdelivr.net/npm/blacklight-frontend@9.0.0-beta7/app/assets/builds/blacklight.css" rel="stylesheet">
+    <link href="../styles/sul.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1 class="m-5">Facets</h1>
+    <div class="row">
+      <section id="sidebar" aria-label="Limit your search" class="col-md-4">
+        <div id="facets" class="facets sidenav facets-toggleable-md">
+          <div class="facets-header">
+            <h2 class="facets-heading h4">Filters</h2>
+            <button class="btn btn-outline-secondary facet-toggle-button d-block d-lg-none" type="button" data-toggle="collapse" data-target="#facet-panel-collapse" data-bs-toggle="collapse" data-bs-target="#facet-panel-collapse" aria-controls="facet-panel-collapse" aria-expanded="false">
+              <span data-show-label="">Show facets</span>
+              <span data-hide-label="">Hide facets</span>
+            </button>
+          </div>
+          <div id="facet-panel-collapse" class="facets-collapse d-lg-block collapse accordion">
+            <div class="accordion-item facet-limit blacklight-access_facet facet-limit-active">
+              <h3 class="accordion-header p-0 facet-field-heading h6" id="facet-access_facet-header">
+                <button type="button" class="btn accordion-button " data-toggle="collapse" data-bs-toggle="collapse" data-target="#facet-access_facet" data-bs-target="#facet-access_facet" aria-expanded="true" aria-controls="facet-access_facet">
+                  Access
+                </button>
+              </h3>
+              <div id="facet-access_facet" role="region" aria-labelledby="facet-access_facet-header" class="panel-collapse facet-content collapse show">
+                <div class="accordion-body">
+                  <ul class="facet-values list-unstyled">
+                    <li><span class="facet-label"><span class="selected">At the Library</span><a class="remove ps-2" rel="nofollow" href="http://localhost:3000/"><span class="blacklight-icons blacklight-icons-remove" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"></path>
+                            </svg></span><span class="visually-hidden">[remove]</span></a></span><span class="selected facet-count">34</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Baccess_facet%5D%5B%5D=At+the+Library&amp;f%5Baccess_facet%5D%5B%5D=Online">Online</a></span><span class="facet-count">6</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item facet-limit blacklight-format_main_ssim ">
+              <h3 class="accordion-header p-0 facet-field-heading h6" id="facet-format_main_ssim-header">
+                <button type="button" class="btn accordion-button collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#facet-format_main_ssim" data-bs-target="#facet-format_main_ssim" aria-expanded="false" aria-controls="facet-format_main_ssim">
+                  Resource type
+                </button>
+              </h3>
+              <div id="facet-format_main_ssim" role="region" aria-labelledby="facet-format_main_ssim-header" class="panel-collapse facet-content collapse ">
+                <div class="accordion-body">
+                  <ul class="facet-values list-unstyled">
+                    <li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_main_ssim%5D%5B%5D=Archive%2FManuscript&amp;q=&amp;search_field=search">Archive/Manuscript</a></span><span class="facet-count">51,257</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_main_ssim%5D%5B%5D=Archived+website&amp;q=&amp;search_field=search">Archived website</a></span><span class="facet-count">5,463</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_main_ssim%5D%5B%5D=Book&amp;q=&amp;search_field=search">Book</a></span><span class="facet-count">9,152,317</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_main_ssim%5D%5B%5D=Database&amp;q=&amp;search_field=search">Database</a></span><span class="facet-count">3,201</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_main_ssim%5D%5B%5D=Dataset&amp;q=&amp;search_field=search">Dataset</a></span><span class="facet-count">15,502</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_main_ssim%5D%5B%5D=Equipment&amp;q=&amp;search_field=search">Equipment</a></span><span class="facet-count">80</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_main_ssim%5D%5B%5D=Image&amp;q=&amp;search_field=search">Image</a></span><span class="facet-count">541,911</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_main_ssim%5D%5B%5D=Journal%2FPeriodical&amp;q=&amp;search_field=search">Journal/Periodical</a></span><span class="facet-count">556,810</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_main_ssim%5D%5B%5D=Loose-leaf&amp;q=&amp;search_field=search">Loose-leaf</a></span><span class="facet-count">650</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_main_ssim%5D%5B%5D=Map&amp;q=&amp;search_field=search">Map</a></span><span class="facet-count">210,893</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_main_ssim%5D%5B%5D=Music+recording&amp;q=&amp;search_field=search">Music recording</a></span><span class="facet-count">344,679</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_main_ssim%5D%5B%5D=Music+score&amp;q=&amp;search_field=search">Music score</a></span><span class="facet-count">151,056</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_main_ssim%5D%5B%5D=Newspaper&amp;q=&amp;search_field=search">Newspaper</a></span><span class="facet-count">15,673</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_main_ssim%5D%5B%5D=Object&amp;q=&amp;search_field=search">Object</a></span><span class="facet-count">3,008</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_main_ssim%5D%5B%5D=Software%2FMultimedia&amp;q=&amp;search_field=search">Software/Multimedia</a></span><span class="facet-count">13,617</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_main_ssim%5D%5B%5D=Sound+recording&amp;q=&amp;search_field=search">Sound recording</a></span><span class="facet-count">27,465</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_main_ssim%5D%5B%5D=Video&amp;q=&amp;search_field=search">Video</a></span><span class="facet-count">119,735</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item facet-limit blacklight-format_physical_ssim ">
+              <h3 class="accordion-header p-0 facet-field-heading h6" id="facet-format_physical_ssim-header">
+                <button type="button" class="btn accordion-button collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#facet-format_physical_ssim" data-bs-target="#facet-format_physical_ssim" aria-expanded="false" aria-controls="facet-format_physical_ssim">
+                  Media type
+                </button>
+              </h3>
+              <div id="facet-format_physical_ssim" role="region" aria-labelledby="facet-format_physical_ssim-header" class="panel-collapse facet-content collapse ">
+                <div class="accordion-body">
+                  <ul class="facet-values list-unstyled">
+                    <li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=Microfilm&amp;q=&amp;search_field=search">Microfilm</a></span><span class="facet-count">198,070</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=Microfiche&amp;q=&amp;search_field=search">Microfiche</a></span><span class="facet-count">78,947</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=78+rpm+%28shellac%29&amp;q=&amp;search_field=search">78 rpm (shellac)</a></span><span class="facet-count">66,758</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=CD&amp;q=&amp;search_field=search">CD</a></span><span class="facet-count">55,623</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=DVD&amp;q=&amp;search_field=search">DVD</a></span><span class="facet-count">53,026</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=Other+video&amp;q=&amp;search_field=search">Other video</a></span><span class="facet-count">38,263</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=Vinyl+disc&amp;q=&amp;search_field=search">Vinyl disc</a></span><span class="facet-count">28,875</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=Videocassette+%28VHS%29&amp;q=&amp;search_field=search">Videocassette (VHS)</a></span><span class="facet-count">16,990</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=MPEG-4&amp;q=&amp;search_field=search">MPEG-4</a></span><span class="facet-count">4,920</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=Blu-ray&amp;q=&amp;search_field=search">Blu-ray</a></span><span class="facet-count">4,855</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=Audiocassette&amp;q=&amp;search_field=search">Audiocassette</a></span><span class="facet-count">4,267</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=Slide&amp;q=&amp;search_field=search">Slide</a></span><span class="facet-count">2,025</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=Piano%2FOrgan+roll&amp;q=&amp;search_field=search">Piano/Organ roll</a></span><span class="facet-count">1,863</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=Photo&amp;q=&amp;search_field=search">Photo</a></span><span class="facet-count">1,793</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=Video+CD&amp;q=&amp;search_field=search">Video CD</a></span><span class="facet-count">1,126</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=Laser+disc&amp;q=&amp;search_field=search">Laser disc</a></span><span class="facet-count">1,009</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=Remote-sensing+image&amp;q=&amp;search_field=search">Remote-sensing image</a></span><span class="facet-count">661</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=Film&amp;q=&amp;search_field=search">Film</a></span><span class="facet-count">463</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=Videocassette&amp;q=&amp;search_field=search">Videocassette</a></span><span class="facet-count">248</span></li><li><span class="facet-label"><a class="facet-select" rel="nofollow" href="/?f%5Bformat_physical_ssim%5D%5B%5D=Hi-8+mm&amp;q=&amp;search_field=search">Hi-8 mm</a></span><span class="facet-count">171</span></li>
+                  </ul>
+                  <div class="more_facets">
+                    <a data-blacklight-modal="trigger" data-turbo="false" href="/catalog/facet/format_physical_ssim?q=&amp;search_field=search">more
+                      <span class="visually-hidden">Media type</span>
+                      <i class="fa fa-angle-double-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
