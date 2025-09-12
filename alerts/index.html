@@ -1,19 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
-    />
-    <link href="../styles/sul.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="../styles/sul.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </head>
   <body class="p-5">
     <h1 class="mb-4">Alert</h1>
-
     <div
       role="alert"
       class="alert alert-danger d-flex shadow-sm align-items-center"
@@ -31,7 +25,6 @@
         </div>
       </div>
     </div>
-
     <div
       role="alert"
       class="alert alert-success d-flex shadow-sm align-items-center"
@@ -49,7 +42,6 @@
         </div>
       </div>
     </div>
-
     <div
       role="alert"
       class="alert alert-note d-flex shadow-sm align-items-center"
@@ -67,7 +59,6 @@
         </div>
       </div>
     </div>
-
     <div
       role="alert"
       class="alert alert-info d-flex shadow-sm align-items-center"
@@ -85,7 +76,6 @@
         </div>
       </div>
     </div>
-
     <div
       role="alert"
       class="alert alert-warning d-flex shadow-sm align-items-center"
@@ -103,7 +93,6 @@
         </div>
       </div>
     </div>
-
     <pre><code class="d-block " style="white-space: pre-wrap; ">
 &lt;div role=&quot;alert&quot; class=&quot;alert alert-warning d-flex shadow-sm align-items-center&quot;&gt;
   &lt;div role="img" aria-label="Warning icon" class=&quot;bi bi-exclamation-triangle-fill fs-3 me-3 align-self-center
@@ -117,16 +106,19 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-
-<p>
-  Notes:
-  <ul>
-    <li>This alert style is often used within an application body to visually distinguish content to the user. In these cases, including the <code>role="alert"</code> on the outer <code>div</code> is inappropriate, since this role is only for time-sensitive information that the screen reader should announce immediately. See <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role">ARIA: alert role</a> for more info.</li>
-  </ul>
-</p>
-
+    <p>
+      Notes:
+      <ul>
+        <li>This alert style is often used within an application body to visually distinguish content to the user. In these cases, including the
+          <code>role="alert"</code>
+          on the outer
+          <code>div</code>
+          is inappropriate, since this role is only for time-sensitive information that the screen reader should announce immediately. See
+          <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role">ARIA: alert role</a>
+          for more info.</li>
+      </ul>
+    </p>
     <h1 class="my-4">Dimissable Alert</h1>
-
     <div
       class="alert alert-warning alert-dismissible shadow-sm d-flex align-items-center"
     >
@@ -149,7 +141,6 @@
         aria-label="Close"
       ></button>
     </div>
-
     <pre><code>
   &lt;div class="alert alert-warning alert-dismissible shadow-sm d-flex align-items-center"&gt;
   &lt;div role="img" aria-label="Warning icon" class="bi bi-exclamation-triangle-fill fs-3 me-3"&gt;&lt;/div&gt;
