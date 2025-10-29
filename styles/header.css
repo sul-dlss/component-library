@@ -132,13 +132,6 @@
   }
 }
 
-#feedback {
-  label {
-    text-align: right;
-    font-weight: bold;
-  }
-}
-
 /* HRs in the navbar have to be positioned vertically relative to the nav lists,
  * but horizontally relative to the entire container. They aren't valid as
  * children of a <ul>, so they have to be siblings, and they can't be inside

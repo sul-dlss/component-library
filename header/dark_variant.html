@@ -7,7 +7,10 @@
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
-
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
     <link href="../styles/sul.css" rel="stylesheet" />
 
     <style>
@@ -96,7 +99,7 @@
                 <a
                   href="#feedback"
                   class="nav-link"
-                  data-bs-toggle="collapse"
+                  data-bs-toggle="modal"
                   data-bs-target="#feedback"
                   >Feedback</a
                 >
@@ -108,105 +111,6 @@
           </div>
         </div>
       </nav>
-
-      <div id="feedback" class="collapse">
-        <div class="container pt-3">
-          <div class="row justify-content-center">
-            <form
-              class="col-md-8"
-              action="/feedback"
-              accept-charset="UTF-8"
-              method="post"
-            >
-              <div class="alert alert-info" role="alert">
-                Reporting from:
-                https://sul-arclight-prod-a.stanford.edu/catalog?group=true&amp;q=
-              </div>
-              <div class="mb-3 row">
-                <label class="col-md-3 col-form-label" for="message"
-                  >Message</label
-                >
-                <div class="col-md-9">
-                  <textarea
-                    class="form-control"
-                    rows="5"
-                    required="required"
-                    data-form-type="other"
-                    name="message"
-                    id="message"
-                  ></textarea>
-                </div>
-              </div>
-              <div class="mb-3 row">
-                <label class="col-md-3 col-form-label" for="name"
-                  >Your name</label
-                >
-                <div class="col-md-9">
-                  <input
-                    class="form-control"
-                    required="required"
-                    data-form-type="other"
-                    autocomplete="name"
-                    type="text"
-                    name="name"
-                    id="name"
-                  />
-                </div>
-              </div>
-              <div class="mb-3 row">
-                <label class="col-md-3 col-form-label" for="email"
-                  >Your email</label
-                >
-                <div class="col-md-9">
-                  <input
-                    class="form-control"
-                    required="required"
-                    data-form-type="other"
-                    autocomplete="email"
-                    type="email"
-                    name="email"
-                    id="email"
-                  />
-                  <p class="text-secondary mt-2 mb-0">
-                    This site is protected by reCAPTCHA and the Google
-                    <a href="https://policies.google.com/privacy"
-                      >Privacy Policy</a
-                    >
-                    and
-                    <a href="https://policies.google.com/terms"
-                      >Terms of Service</a
-                    >
-                    apply.
-                  </p>
-                </div>
-              </div>
-              <div class="mb-3 row">
-                <div class="col-md-9 offset-md-3">Recaptcha stuff</div>
-              </div>
-              <div class="mb-3 row">
-                <div class="col-md-9 offset-md-3">
-                  <input
-                    type="submit"
-                    name="commit"
-                    value="Send"
-                    class="btn btn-secondary"
-                    data-disable-with="Send"
-                  />
-                  <button
-                    name="button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#feedback"
-                    class="btn btn-outline-secondary"
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
       <div class="masthead bg-dark sky-dark">
         <div class="container">
           <div
@@ -350,5 +254,89 @@
         <li>the <code>.navbar</code> and <code>.masthead</code> elements need an additional custom class to choose their background color. this example uses "sky dark" by setting the variable on <code>:root</code> and then defining a style <code>.sky-dark</code> that sets <code>--bs-dark-rgb</code> (you can see this in the <code>&lt;head&gt;</code> of this page.)</li>
       </ul>
     </p>
+    <div id="feedback" class="modal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="row w-100">
+              <div class="col-8">
+                <h3 class="fw-normal modal-title">Contact us</h3>
+              </div>
+              <div class="col-4 text-end pe-4 mt-2">
+                <a href="#"><i class="bi bi-box-arrow-up-left me-1"></i> Open form in new tab</a>
+               </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div role="alert" class="alert alert-info d-flex shadow-sm align-items-center" >
+              <div
+                class="bi bi-info-circle-fill fs-3 me-3 align-self-center d-flex justify-content-center">
+              </div>
+              <div class="text-body">
+                <div>Reporting from https://application.stanford.edu/current-page</div>
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label class="col-form-label" for="name"
+                >Name</label
+              >
+              <div>
+                <input
+                  class="form-control"
+                  required="required"
+                  data-form-type="other"
+                  autocomplete="name"
+                  type="text"
+                  name="name"
+                  id="name"
+                />
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label class="col-form-label required" for="email"
+                >Email</label
+              >
+              <div>
+                <input
+                  class="form-control"
+                  required="required"
+                  data-form-type="other"
+                  autocomplete="email"
+                  type="email"
+                  name="email"
+                  id="email"
+                />
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label class="col-form-label required" for="message"
+                >Message</label
+              >
+              <div>
+                <textarea
+                  class="form-control"
+                  rows="2"
+                  required="required"
+                  data-form-type="other"
+                  name="message"
+                  id="message"
+                ></textarea>
+                <div class="text-secondary login-message mt-4 mb-0">
+                  Stanford affiliates: <a href="#">Log in</a> to skip Captcha.
+                </div>
+                <div>
+                  Recaptcha content
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
