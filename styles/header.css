@@ -207,11 +207,6 @@
 }
 
 .navbar-collapse .dropdown-menu {
-  --bs-dropdown-padding-x: 0.125rem;
-  --bs-dropdown-padding-y: 0.125rem;
-  --bs-dropdown-item-padding-x: 0.5rem;
-  --bs-dropdown-item-padding-y: 0.125rem;
-
   &.show {
     display: flex;
     flex-direction: column;
