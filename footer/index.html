@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>
-      hljs.highlightAll();
+      window.addEventListener('load', () => {
+        const html = document.querySelector('footer').outerHTML
+        const code = document.querySelector('.language-html')
+        code.textContent = html
+        hljs.highlightAll()
+      })
+
     </script>
     <link href="../styles/sul.css" rel="stylesheet">
   </head>
@@ -205,134 +211,10 @@
         </div>
       </section>
     </footer>
-    <pre
-      class="m-5"
-    ><code class="d-block language-html" style="white-space: pre-wrap; ">
-    &lt;footer&gt;
-      &lt;div id=&quot;su-footer&quot; class=&quot;text-white bg-dark pt-4 pb-4&quot;&gt;
-        &lt;div
-          class=&quot;container d-flex flex-column flex-lg-row align-items-center align-md-normal&quot;
-          title=&quot;Common Stanford resources&quot;
-        &gt;
-          &lt;div class=&quot;mt-1 mb-2 align-self-lg-start&quot;&gt;
-            &lt;a class=&quot;su-logo&quot; href=&quot;https://www.stanford.edu&quot;
-              &gt;Stanford&lt;br /&gt;&lt;span class=&quot;su-logo-university&quot;
-                &gt;University&lt;/span
-              &gt;&lt;/a
-            &gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;ms-lg-5&quot;&gt;
-            &lt;nav
-              aria-label=&quot;global footer menu&quot;
-              class=&quot;d-flex flex-row gap-4 gap-sm-0 flex-sm-column justify-content-center justify-content-lg-start align-items-start align-items-sm-center align-items-lg-start&quot;
-            &gt;
-              &lt;ul
-                class=&quot;justify-content-center justify-content-lg-start fw-semibold gap-sm-2 gap-md-3 gap-lg-4 list-unstyled d-flex flex-column flex-sm-row&quot;
-              &gt;
-                &lt;li&gt;
-                  &lt;a href=&quot;https://www.stanford.edu&quot;&gt;
-                    Stanford Home&lt;span class=&quot;visually-hidden&quot;
-                      &gt;(link is external)&lt;/span
-                    &gt;
-                  &lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                  &lt;a href=&quot;https://visit.stanford.edu/plan/&quot;&gt;
-                    Maps &amp;amp; Directions&lt;span class=&quot;visually-hidden&quot;
-                      &gt;(link is external)&lt;/span
-                    &gt;
-                  &lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                  &lt;a href=&quot;https://www.stanford.edu/search/&quot;&gt;
-                    Search Stanford&lt;span class=&quot;visually-hidden&quot;
-                      &gt;(link is external)&lt;/span
-                    &gt;
-                  &lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                  &lt;a href=&quot;https://emergency.stanford.edu&quot;&gt;
-                    Emergency Info&lt;span class=&quot;visually-hidden&quot;
-                      &gt;(link is external)&lt;/span
-                    &gt;
-                  &lt;/a&gt;
-                &lt;/li&gt;
-              &lt;/ul&gt;
-              &lt;ul
-                class=&quot;justify-content-center justify-content-lg-start gap-sm-2 gap-md-3 gap-lg-4 list-unstyled d-flex flex-column flex-sm-row&quot;
-              &gt;
-                &lt;li&gt;
-                  &lt;a
-                    href=&quot;https://www.stanford.edu/site/terms/&quot;
-                    title=&quot;Terms of use for sites&quot;
-                  &gt;
-                    Terms of Use&lt;span class=&quot;visually-hidden&quot;
-                      &gt;(link is external)&lt;/span
-                    &gt;
-                  &lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                  &lt;a
-                    href=&quot;https://www.stanford.edu/site/privacy/&quot;
-                    title=&quot;Privacy and cookie policy&quot;
-                  &gt;
-                    Privacy&lt;span class=&quot;visually-hidden&quot;
-                      &gt;(link is external)&lt;/span
-                    &gt;
-                  &lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                  &lt;a
-                    href=&quot;https://uit.stanford.edu/security/copyright-infringement&quot;
-                    title=&quot;Report alleged copyright infringement&quot;
-                  &gt;
-                    Copyright&lt;span class=&quot;visually-hidden&quot;
-                      &gt;(link is external)&lt;/span
-                    &gt;
-                  &lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                  &lt;a
-                    href=&quot;https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4&quot;
-                    title=&quot;Ownership and use of Stanford trademarks and images&quot;
-                  &gt;
-                    Trademarks&lt;span class=&quot;visually-hidden&quot;
-                      &gt;(link is external)&lt;/span
-                    &gt;
-                  &lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                  &lt;a
-                    href=&quot;https://studentservices.stanford.edu/more-resources/student-policies/non-academic/non-discrimination&quot;
-                    title=&quot;Non-discrimination policy&quot;
-                  &gt;
-                    Non-Discrimination&lt;span class=&quot;visually-hidden&quot;
-                      &gt;(link is external)&lt;/span
-                    &gt;
-                  &lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                  &lt;a
-                    href=&quot;https://www.stanford.edu/site/accessibility&quot;
-                    title=&quot;Report web accessibility issues&quot;
-                  &gt;
-                    Accessibility&lt;span class=&quot;visually-hidden&quot;
-                      &gt;(link is external)&lt;/span
-                    &gt;
-                  &lt;/a&gt;
-                &lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/nav&gt;
-            &lt;div class=&quot;text-center text-lg-start copyright&quot;&gt;
-              &lt;span class=&quot;text-nowrap&quot;&gt;&copy; Stanford University.&lt;/span
-              &gt;&lt;span class=&quot;text-nowrap&quot;
-                &gt;&amp;nbsp; Stanford, California 94305.&lt;/span
-              &gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/footer&gt;
-</code></pre>
+
+    <pre class="m-5"><code class="d-block language-html" style="white-space: pre-wrap;"></code></pre>
+    <script>
+
+    </script>
   </body>
 </html>
