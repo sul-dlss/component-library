@@ -8,12 +8,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>
       window.addEventListener('load', () => {
-        const html = document.querySelector('footer').outerHTML
         const code = document.querySelector('.language-html')
-        code.textContent = html
+        code.textContent = cleanFooter()
         hljs.highlightAll()
       })
 
+      function cleanFooter(){
+        const footer = document.querySelector('footer').outerHTML
+        return footer.replace('    </footer>', '</footer>').replaceAll('      ', '  ')
+      }
+
+      function copyFooter(event) {
+        // Use the Clipboard API to write the text
+        navigator.clipboard.writeText(cleanFooter())
+          .then(() => {
+            event.target.textContent = 'Copied!'
+            setTimeout(() => {
+              event.target.textContent = 'Copy'
+            }, 4000);
+          })
+          .catch(err => {
+            console.error("Failed to copy text: ", err);
+          });
+      }
     </script>
     <link href="../styles/sul.css" rel="stylesheet">
   </head>
@@ -212,7 +229,11 @@
       </section>
     </footer>
 
-    <pre class="m-5"><code class="d-block language-html" style="white-space: pre-wrap;"></code></pre>
+    <pre class="m-5">
+      <button class="btn btn-primary float-end" onclick="copyFooter(event)">Copy</button>
+      <code class="d-block language-html" style="white-space: pre-wrap;">
+      </code>
+    </pre>
     <script>
 
     </script>
