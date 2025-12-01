@@ -22,7 +22,6 @@
         // Use the Clipboard API to write the text
         navigator.clipboard.writeText(cleanFooter())
           .then(() => {
-            console.log(event.target)
             event.target.textContent = 'Copied!'
             setTimeout(() => {
               event.target.textContent = 'Copy'
