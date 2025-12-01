@@ -15,7 +15,9 @@
 
       function cleanFooter(){
         const footer = document.querySelector('footer').outerHTML
-        return footer.replace('    </footer>', '</footer>').replaceAll('      ', '  ')
+        // finds all spaces that are followed by a <
+        // replace spaces with the same amount of spaces minus 4 spaces
+        return footer.replace('    </footer>', '</footer>').replaceAll(/ +(?=<)/g, m => " ".repeat(m.length - 4))
       }
 
       function copyFooter(event) {
