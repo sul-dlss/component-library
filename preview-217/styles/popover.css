@@ -1,6 +1,6 @@
 .popover {
-  --bs-popover-bg: var(--stanford-black);
-  --bs-popover-body-color: #ffffff;
+  --bs-popover-bg: var(--bs-body-color);
+  --bs-popover-body-color: var(--bs-body-bg);
   --bs-popover-body-padding-y: 0;
   --bs-popover-body-padding-x: 0.5rem 0.75rem;
   --bs-popover-border-color: transparent;
