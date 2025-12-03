@@ -1,0 +1,55 @@
+.toggle-check {
+  input {
+    appearance: none;
+  }
+
+  .toggle-check-values {
+    --toggle-check-radius: 1rem;
+    display: inline-block;
+
+    .yes,
+    .no {
+      padding-inline: 0.75rem;
+      padding-block: 0.25rem;
+
+      display: inline;
+    }
+    .yes {
+      &:hover {
+        color: var(--bs-body-bg);
+        background-color: var(--stanford-digital-blue-dark);
+      }
+      color: var(--stanford-digital-blue);
+      border-block: 1px solid var(--stanford-digital-blue);
+      border-inline-start: 1px solid var(--stanford-digital-blue);
+
+      border-start-start-radius: var(--toggle-check-radius);
+      border-end-start-radius: var(--toggle-check-radius);
+    }
+    .no {
+      color: white;
+      border-block: 1px solid var(--stanford-digital-blue);
+      border-inline-end: 1px solid var(--stanford-digital-blue);
+
+      background-color: var(--stanford-digital-blue);
+      border-start-end-radius: var(--toggle-check-radius);
+      border-end-end-radius: var(--toggle-check-radius);
+    }
+  }
+
+  input:checked + .toggle-check-values {
+    .yes {
+      color: var(--bs-body-bg);
+      background-color: var(--stanford-digital-blue);
+    }
+
+    .no {
+      &:hover {
+        color: var(--bs-body-bg);
+        background-color: var(--stanford-digital-blue-dark);
+      }
+      color: var(--stanford-digital-blue);
+      background-color: var(--bs-body-bg);
+    }
+  }
+}
