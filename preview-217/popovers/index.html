@@ -18,6 +18,12 @@
                         <div class="popover-body">
                         </div>
                         </div>`,
+            title: (btn) => `<div class="d-flex justify-content-between align-content-center">
+            <div class="fw-bold align-self-center">${btn.dataset.bsTitle}:</div>
+            <button class="btn p-0 ms-2 fs-5 lh-1" aria-label="Close this thing" onclick="bootstrap.Popover.getInstance('#${btn.id}').hide();" type="button">
+              <i class="bi bi-x"></i>
+            </button></div>`,
+            html: true,
             // tags and attributes allowed in the popover, everything not listed will be stripped
             // needed to be able to put a data-controller and data-action in popover
             allowList: {
@@ -37,14 +43,12 @@
 
 
     <div class="text-center">
-    <button class="btn btn-link fs-14 px-0 text-start" data-bs-toggle="popover" data-bs-placement="left"
-            data-bs-title="&lt;div class=&quot;d-flex justify-content-between align-content-center&quot;&gt;
-            &lt;div class=&quot;fw-bold align-self-center&quot;&gt;Title is:&lt;/div&gt;
-            &lt;button class=&quot;btn p-0 ms-2 fs-5 lh-1&quot; aria-label=&quot;Close this thing&quot; onclick=&quot;bootstrap.Popover.getInstance('[data-bs-toggle=\'popover\']').hide();&quot; type=&quot;button&quot;&gt;
-              &lt;i class=&quot;bi bi-x&quot;&gt;&lt;/i&gt;
-            &lt;/button&gt;
-          &lt;/div&gt;"
-            data-bs-content="Content goes here"  data-bs-html="true" aria-describedby="popover445982">Test button</button>
+    <button class="btn btn-link fs-14 px-0 text-start"
+      data-bs-toggle="popover"
+      data-bs-placement="left"
+      data-bs-title="The title"
+      data-bs-content="Content goes here"
+      id="popoverButton1">Test button</button>
     </div>
 
     You must initialize this with this javascript:
@@ -60,6 +64,12 @@
                         &lt;div class="popover-body"&gt;
                         &lt;/div&gt;
                         &lt;/div&gt;`,
+            title: (btn) => `&lt;div class="d-flex justify-content-between align-content-center"&gt;
+            &lt;div class="fw-bold align-self-center">${btn.dataset.bsTitle}:&lt;/div&gt;
+            &lt;button class="btn p-0 ms-2 fs-5 lh-1" aria-label="Close this thing" onclick="bootstrap.Popover.getInstance('#${btn.id}').hide();" type="button"&gt;
+              &lt;i class="bi bi-x">&lt;/i&gt;
+            &lt;/button&gt;&lt;/div&gt;`,
+            html: true,
             // tags and attributes allowed in the popover, everything not listed will be stripped
             // needed to be able to put a data-controller and data-action in popover
             allowList: {
