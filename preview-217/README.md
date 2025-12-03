@@ -21,6 +21,7 @@ See <https://identity.stanford.edu/design-elements/color/web/>
 - [Toast](toast/)
 - [Facet list](facets/)
 - [Pagination](pagination/)
+- [Popovers](popovers/)
 
 ## HTML head link
 
