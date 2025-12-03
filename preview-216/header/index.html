@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="../styles/sul.css" rel="stylesheet" />
+
+    <style>
+      iframe {
+        min-height: 450px;
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@github/auto-complete-element@latest/dist/bundle.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+    <h1>Headers</h1>
+    <ul>
+      <li><a href="#dark-variant">Dark variant</a></li>
+      <li><a href="#light-variant">Light variant</a></li>
+      <li><a href="#white-variant">White variant</a></li>
+      <li><a href="#stacked-logo">Stacked logo on mobile</a></li>
+    </ul>
+    <p>
+      Notes:
+      <ul>
+        <li>the
+          <code>data-form-type="other"</code>
+          attribute used on the
+          feedback form is a workaround for a bug in Dashlane password manager. See
+          <a
+            href="https://github.com/sul-dlss/vt-arclight/issues/495"
+          >https://github.com/sul-dlss/vt-arclight/issues/495</a></li>
+        <li>for applications not using the application subtitle
+          <code>span</code>
+          element, it can simply be removed.</li>
+        <li>for applications not using the second row of nav links, the
+          <code>.navbars</code>
+          element can be removed.</li>
+        <li>the top row of nav links must be duplicated inside the masthead's navbar, or they will not appear on mobile.</li>
+        <li>For applications using the stacked image on mobile, add the class `stacked-mobile` to the `navbar-logo`</li>
+      </ul>
+    </p>
+    </div>
+    <hr class="mb-5">
+
+    <h2 id="dark-variant" class="ms-2">Dark variant</h2>
+    <iframe
+      src="dark_variant.html"
+      title="Dark variant"
+      style="width: 100vw"
+    ></iframe>
+    <h2 id="light-variant" class="ms-2 mt-5">Light variant</h2>
+    <iframe
+      src="light_variant.html"
+      title="Light variant"
+      style="width: 100vw"
+    ></iframe>
+    <h2 id="white-variant" class="ms-2 mt-5">White variant</h2>
+    <iframe
+      src="white_variant.html"
+      title="White variant"
+      style="width: 100vw"
+    ></iframe>
+    <h2 id="stacked-logo" class="ms-2 mt-5">Stacked logo on mobile</h2>
+    <iframe
+      src="stacked_logo.html"
+      title="Stacked logo on mobile"
+      style="width: 100vw"
+    ></iframe>
+  </body>
+</html>
