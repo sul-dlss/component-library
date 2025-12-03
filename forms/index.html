@@ -7,7 +7,25 @@
       @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css) layer(framework);
       @import url(../styles/sul.css) layer(component);
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <script>
+    window.addEventListener('load', () => {
+      const code = document.querySelector('.language-html')
+      code.textContent = cleanCode()
+      hljs.highlightAll()
+    })
+
+    function cleanCode(){
+      return outdent(document.querySelector('#toggleCheckActive').outerHTML, 12)
+    }
+
+    function outdent(str, numSpaces) {
+      return str.replaceAll(/ +(?=<)/g, m => " ".repeat(m.length - numSpaces))
+    }
+    </script>
   </head>
   <body class="p-5">
     <main class="container">
@@ -60,10 +78,39 @@
         </div>
       </div>
 
+      <div class="border rounded p-3 mt-5">
+        <h2 class="h5">Toggle</h2>
+
+        <form id="formToggle">
+          <div>
+            <label class="toggle-check" id="toggleCheckActive">
+              <span class="question">Do you want a cookie?</span>
+              <input type="checkbox" name="cookie" class="toggle-check-input" role="switch" switch >
+              <div class="toggle-check-values">
+                <div class="yes">Yes</div><div class="no" aria-hidden="true">No</div>
+              </div>
+            </label>
+          </div>
+          <div>
+            <label class="toggle-check">
+              <span class="question">Do you want frosting? (disabled example)</span>
+              <input type="checkbox" name="cookie" class="toggle-check-input" role="switch" disabled switch>
+              <div class="toggle-check-values">
+                <div class="yes">Yes</div><div class="no" aria-hidden="true">No</div>
+              </div>
+            </label>
+          </div>
+        </form>
+      </div>
+
+      <h2 class="h5 mt-5">HTML</h2>
+      <pre class="bg-light rounded"><code class="d-block language-html" style="white-space: pre-wrap;">
+      </code></pre>
 
       <h2 class="h5 mt-5">Notes</h2>
       <ul>
         <li>For the most part we are just using Bootstrap, except we've modified the focus ring style.</li>
+        <li>Safari 17.4 introduced a native UI toggle switch control, a feature not yet included in the HTML specification. </li>
       </ul>
     </main>
   </body>
