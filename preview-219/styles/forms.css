@@ -8,7 +8,7 @@
   background-color: var(--bs-body-bg);
   width: 100%; /* overrides https://github.com/projectblacklight/blacklight/blob/69373f202753f04ec6aca179fdf8fa01248a9edf/app/assets/stylesheets/blacklight/_header.scss#L32 */
 
-  @media (min-width: 576px) {
+  @media (width >= 576px) {
     .input-group {
       &::before {
         content: "";
@@ -20,19 +20,24 @@
       }
     }
   }
+
   .input-group {
     container-type: inline-size;
+
     input::placeholder {
       font-style: italic;
     }
   }
+
   .search-btn {
     border-radius: 0.25rem !important;
     padding: 2px 6px;
     align-items: center;
+
     .submit-search-text {
       display: none;
     }
+
     &::before {
       content: " ";
       display: inline-block;
@@ -42,10 +47,12 @@
       mask: var(--svg-search-icon) no-repeat;
       mask-position: center 4px;
     }
-    @media (min-width: 576px) {
+
+    @media (width >= 576px) {
       .submit-search-text {
         display: inline;
       }
+
       &::before {
         display: none;
       }
@@ -55,10 +62,12 @@
   .search-field {
     display: none;
     width: 7rem;
+
     --bs-border-width: 0;
+
     margin-right: 1px;
 
-    @media (min-width: 576px) {
+    @media (width >= 576px) {
       display: block;
     }
   }
@@ -68,7 +77,7 @@
     border-inline-start: none;
     outline: none;
 
-    @media (min-width: 576px) {
+    @media (width >= 576px) {
       border-inline-start: var(--search-q-border);
     }
   }
