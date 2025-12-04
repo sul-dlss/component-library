@@ -52,11 +52,6 @@
     }
   }
 
-  input:focus,
-  select:focus {
-    box-shadow: none;
-  }
-
   .search-field {
     display: none;
     width: 7rem;
