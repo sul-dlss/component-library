@@ -1,6 +1,6 @@
-# DLSS design component library
+# DLSS design style library
 
-Reference implementation of components for DLSS. A live version is hosted via
+Reference implementation of CSS styles for design components in DLSS. A live version is hosted via
 GitHub Pages at <https://sul-dlss.github.io/component-library/>.
 
 A note about color. The primary color will always be "digital blue". A site may

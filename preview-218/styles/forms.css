@@ -1,8 +1,18 @@
 .toggle-check {
+  --inline-start-margin: 1rem;
   margin-block: 0.5rem;
+  position: relative; /* for focus ring position */
 
   input {
     appearance: none;
+    margin-inline-start: var(--inline-start-margin);
+    /* style the focus ring */
+    border-radius: 2rem;
+    height: 2.375rem;
+    width: 6.75rem;
+    position: absolute;
+    top: -0.4375rem;
+    z-index: 1;
   }
 
   .toggle-check-values {
@@ -11,6 +21,10 @@
     --toggle-check-inactive-color: var(--stanford-digital-blue);
 
     display: inline-block;
+    margin-inline-start: var(--inline-start-margin);
+    /* needed to allow hover state */
+    z-index: 2;
+    position: relative;
 
     .yes,
     .no {
