@@ -1,11 +1,13 @@
 .toggle-check {
   --inline-start-margin: 1rem;
+
   margin-block: 0.5rem;
   position: relative; /* for focus ring position */
 
   input {
     appearance: none;
     margin-inline-start: var(--inline-start-margin);
+
     /* style the focus ring */
     border-radius: 2rem;
     height: 2.375rem;
@@ -22,6 +24,7 @@
 
     display: inline-block;
     margin-inline-start: var(--inline-start-margin);
+
     /* needed to allow hover state */
     z-index: 2;
     position: relative;
