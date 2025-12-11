@@ -36,14 +36,26 @@
         })
     })
     </script>
+    <script>
+    window.addEventListener('load', () => {
+      const code = document.querySelector('.language-html')
+      code.textContent = cleanCode()
+      hljs.highlightAll()
+    })
+
+    function cleanCode(){
+      return document.querySelector('#popoverButton1').outerHTML
+    }
+    </script>
   </head>
   <body class="p-5">
-    <h1 class="mb-4">Popovers</h1>
+    <main class="container">
+    <h1>Popovers</h1>
     <p>This is a dimissible popover that doesn't disappear when users copy / interact with the popover</p>
     <p>The button/link that triggers the popover must have a unique "id" attribute</p>
 
 
-    <div class="text-center">
+    <div class="border rounded p-5 mt-5 text-center">
     <button class="btn btn-link fs-14 px-0 text-start"
       data-bs-toggle="popover"
       data-bs-placement="left"
@@ -52,36 +64,43 @@
       id="popoverButton1">Test button</button>
     </div>
 
-    You must initialize this with this javascript:
-    <pre><code>
-    window.addEventListener('load', () => {
-      const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-      popoverTriggerList.forEach((popoverTriggerEl) => {
-          let popover = new bootstrap.Popover(popoverTriggerEl, {
-            template: `&lt;div class="popover" role="tooltip" data-controller="popover"&gt;
-                        &lt;div class="popover-arrow"&gt;&lt;/div&gt;
-                        &lt;div class="popover-header"&gt;
-                        &lt;/div&gt;
-                        &lt;div class="popover-body"&gt;
-                        &lt;/div&gt;
-                        &lt;/div&gt;`,
-            title: (btn) => `&lt;div class="d-flex justify-content-between align-content-center"&gt;
-            &lt;div class="fw-semibold align-self-center">${btn.dataset.bsTitle}:&lt;/div&gt;
-            &lt;button class="btn p-0 ms-2 fs-5 lh-1" aria-label="Close this thing" onclick="bootstrap.Popover.getInstance('#${btn.id}').hide();" type="button"&gt;
-              &lt;i class="bi bi-x">&lt;/i&gt;
-            &lt;/button&gt;&lt;/div&gt;`,
-            html: true,
-            // tags and attributes allowed in the popover, everything not listed will be stripped
-            // needed to be able to put a data-controller and data-action in popover
-            allowList: {
-              '*': ['class', 'role', 'aria-*'], // allow data-custom and data-another
-              div: ['class', 'role'],
-              button: ['onclick'],
-              i: ['class']
-            }
-          })
-        })
+    <h2 class="h5 mt-5">HTML</h2>
+    <pre class="p-3 bg-light rounded">
+    <code class="d-block language-html" style="white-space: pre-wrap;">
+    </code>
+    </pre>
+
+    <strong>You must initialize this with this javascript:</strong>
+    <pre class="p-3 bg-light rounded"
+><code>window.addEventListener('load', () => {
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+  popoverTriggerList.forEach((popoverTriggerEl) => {
+      let popover = new bootstrap.Popover(popoverTriggerEl, {
+        template: `&lt;div class="popover" role="tooltip" data-controller="popover"&gt;
+                    &lt;div class="popover-arrow"&gt;&lt;/div&gt;
+                    &lt;div class="popover-header"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="popover-body"&gt;
+                    &lt;/div&gt;
+                    &lt;/div&gt;`,
+        title: (btn) => `&lt;div class="d-flex justify-content-between align-content-center"&gt;
+        &lt;div class="fw-semibold align-self-center">${btn.dataset.bsTitle}:&lt;/div&gt;
+        &lt;button class="btn p-0 ms-2 fs-5 lh-1" aria-label="Close this thing" onclick="bootstrap.Popover.getInstance('#${btn.id}').hide();" type="button"&gt;
+          &lt;i class="bi bi-x">&lt;/i&gt;
+        &lt;/button&gt;&lt;/div&gt;`,
+        html: true,
+        // tags and attributes allowed in the popover, everything not listed will be stripped
+        // needed to be able to put a data-controller and data-action in popover
+        allowList: {
+          '*': ['class', 'role', 'aria-*'], // allow data-custom and data-another
+          div: ['class', 'role'],
+          button: ['onclick'],
+          i: ['class']
+        }
+      })
     })
+})
     </code></pre>
+    </main>
   </body>
 </html>
