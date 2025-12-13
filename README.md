@@ -20,6 +20,7 @@ See <https://identity.stanford.edu/design-elements/color/web/>
 - [Selected Facet](selected_facet/)
 - [Toast](toast/)
 - [Facet list](facets/)
+- [Forms](forms/)
 - [Pagination](pagination/)
 - [Popovers](popovers/)
 
