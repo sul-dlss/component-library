@@ -26,33 +26,35 @@
             <option value="3">Three</option>
           </select>
         </form>
+
+        <h2 class="h5 mt-5">Notes</h2>
+        <ul>
+          <li>For the most part we are just using Bootstrap, except we've modified the focus ring style.</li>
+        </ul>
+
+        <h2 class="h5">Search form</h2>
+        <p>The dark background is just so that we can see the color of the search element. It is not part of the element itself.</p>
+        <div class="bg-dark">
+        <search class="search-card d-flex position-relative flex-column px-4 py-3 rounded">
+          <form class="search-query-form col-md-12 col-lg-8" accept-charset="UTF-8" method="get">
+            <label class="visually-hidden" for="search_field">Search in</label>
+            <div class="input-group">
+              <select title="Targeted search options" class="custom-select form-select search-field" name="search_field" id="search_field"><option value="search">All fields</option>
+                <option value="search_title">Title</option>
+                <option value="search_author">Author/Contributor</option>
+                <option value="subject_terms">Subject</option>
+                <option value="call_number">Call number</option>
+                <option value="search_series">Series</option>
+              </select>
+
+              <label class="visually-hidden" for="q">search for</label>
+              <input placeholder="Search..." class="search-q q form-control" aria-label="search for" type="search" name="q" id="q">
+              <button class="btn btn-primary search-btn" type="submit" id="search"><span class="submit-search-text">Search</span></button>
+            </div>
+          </form>
+        </search>
       </div>
-      <h2 class="h5 mt-5">Notes</h2>
-      <ul>
-        <li>For the most part we are just using Bootstrap, except we've modified the focus ring style.</li>
-      </ul>
 
-      <h2 class="h5">Search form</h2>
-      <p>The dark background is just so that we can see the color of the search element. It is not part of the element itself.</p>
-      <div class="bg-dark">
-      <search class="search-card d-flex position-relative flex-column px-4 py-3 rounded">
-        <form class="search-query-form col-md-12 col-lg-8" accept-charset="UTF-8" method="get">
-          <label class="visually-hidden" for="search_field">Search in</label>
-          <div class="input-group">
-            <select title="Targeted search options" class="custom-select form-select search-field" name="search_field" id="search_field"><option value="search">All fields</option>
-              <option value="search_title">Title</option>
-              <option value="search_author">Author/Contributor</option>
-              <option value="subject_terms">Subject</option>
-              <option value="call_number">Call number</option>
-              <option value="search_series">Series</option>
-            </select>
-
-            <label class="visually-hidden" for="q">search for</label>
-            <input placeholder="Search..." class="search-q q form-control" aria-label="search for" type="search" name="q" id="q">
-            <button class="btn btn-primary search-btn" type="submit" id="search"><span class="submit-search-text">Search</span></button>
-          </div>
-        </form>
-      </search>
     </main>
   </body>
 </html>
