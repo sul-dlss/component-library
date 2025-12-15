@@ -33,28 +33,31 @@
         </ul>
 
         <h2 class="h5">Search form</h2>
-        <p>The dark background is just so that we can see the color of the search element. It is not part of the element itself.</p>
-        <div class="bg-dark">
-        <search class="search-card d-flex position-relative flex-column px-4 py-3 rounded">
-          <form class="search-query-form col-md-12 col-lg-8" accept-charset="UTF-8" method="get">
-            <label class="visually-hidden" for="search_field">Search in</label>
-            <div class="input-group">
-              <select title="Targeted search options" class="custom-select form-select search-field" name="search_field" id="search_field"><option value="search">All fields</option>
-                <option value="search_title">Title</option>
-                <option value="search_author">Author/Contributor</option>
-                <option value="subject_terms">Subject</option>
-                <option value="call_number">Call number</option>
-                <option value="search_series">Series</option>
-              </select>
+        <p>The checkered background is just so that we can see the color of the search element. It is not part of the element itself.</p>
+        <div style="
+          background: repeating-conic-gradient(#eee 0% 25%, transparent 0% 50%)
+            50% / 20px 20px;
+        ">
+          <search class="search-card d-flex position-relative flex-column px-4 py-3 rounded">
+            <form class="search-query-form col-md-12 col-lg-8" accept-charset="UTF-8" method="get">
+              <label class="visually-hidden" for="search_field">Search in</label>
+              <div class="input-group">
+                <select title="Targeted search options" class="custom-select form-select search-field" name="search_field" id="search_field"><option value="search">All fields</option>
+                  <option value="search_title">Title</option>
+                  <option value="search_author">Author/Contributor</option>
+                  <option value="subject_terms">Subject</option>
+                  <option value="call_number">Call number</option>
+                  <option value="search_series">Series</option>
+                </select>
 
-              <label class="visually-hidden" for="q">search for</label>
-              <input placeholder="Search..." class="search-q q form-control" aria-label="search for" type="search" name="q" id="q">
-              <button class="btn btn-primary search-btn" type="submit" id="search"><span class="submit-search-text">Search</span></button>
-            </div>
-          </form>
-        </search>
+                <label class="visually-hidden" for="q">search for</label>
+                <input placeholder="Search..." class="search-q q form-control" aria-label="search for" type="search" name="q" id="q">
+                <button class="btn btn-primary search-btn" type="submit" id="search"><span class="submit-search-text">Search</span></button>
+              </div>
+            </form>
+          </search>
+        </div>
       </div>
-
     </main>
   </body>
 </html>
