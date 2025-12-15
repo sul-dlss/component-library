@@ -6,11 +6,7 @@
 
     <style>
       iframe {
-        min-height: 50vh;
-
-        @media (min-width: 768px) {
-          min-height: 30vh;
-        }
+        min-height: 450px;
       }
     </style>
 
@@ -20,16 +16,38 @@
       src="https://unpkg.com/@github/auto-complete-element@latest/dist/bundle.js"
     ></script>
   </head>
-  <body>
-    <h1>Headers</h1>
-    <ul>
-      <li><a href="#dark-variant">Dark variant</a></li>
-      <li><a href="#light-variant">Light variant</a></li>
-      <li><a href="#white-variant">White variant</a></li>
-      <li><a href="#stacked-logo">Stacked logo on mobile</a></li>
-    </ul>
-    <p>
-      Notes:
+  <body class="p-5">
+    <main class="container">
+      <h1>Headers</h1>
+      <div class="border rounded p-3 mt-5">
+
+        <h2 id="dark-variant" class="h5">Dark variant</h2>
+        <iframe
+          src="dark_variant.html"
+          title="Dark variant"
+          style="width: 100%"
+        ></iframe>
+        <h2 id="light-variant" class="h5 mt-5">Light variant</h2>
+        <iframe
+          src="light_variant.html"
+          title="Light variant"
+          style="width: 100%"
+        ></iframe>
+        <h2 id="white-variant" class="h5 mt-5">White variant</h2>
+        <iframe
+          src="white_variant.html"
+          title="White variant"
+          style="width: 100%"
+        ></iframe>
+        <h2 id="stacked-logo" class="h5 mt-5">Stacked logo on mobile</h2>
+        <iframe
+          src="stacked_logo.html"
+          title="Stacked logo on mobile"
+          style="width: 100%"
+        ></iframe>
+      </div>
+
+      <h2 class="h5 mt-5">Notes</h2>
       <ul>
         <li>the
           <code>data-form-type="other"</code>
@@ -47,30 +65,6 @@
         <li>the top row of nav links must be duplicated inside the masthead's navbar, or they will not appear on mobile.</li>
         <li>For applications using the stacked image on mobile, add the class `stacked-mobile` to the `navbar-logo`</li>
       </ul>
-    </p>
-    <h2 id="dark-variant">Dark variant</h2>
-    <iframe
-      src="dark_variant.html"
-      title="Dark variant"
-      style="width: 100vw"
-    ></iframe>
-    <h2 id="light-variant" class="mt-5">Light variant</h2>
-    <iframe
-      src="light_variant.html"
-      title="Light variant"
-      style="width: 100vw"
-    ></iframe>
-    <h2 id="white-variant" class="mt-5">White variant</h2>
-    <iframe
-      src="white_variant.html"
-      title="White variant"
-      style="width: 100vw"
-    ></iframe>
-    <h2 id="stacked-logo">Stacked logo on mobile</h2>
-    <iframe
-      src="stacked_logo.html"
-      title="Stacked logo on mobile"
-      style="width: 100vw"
-    ></iframe>
+    </main>
   </body>
 </html>

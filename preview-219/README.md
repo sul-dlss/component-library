@@ -20,14 +20,29 @@ See <https://identity.stanford.edu/design-elements/color/web/>
 - [Selected Facet](selected_facet/)
 - [Toast](toast/)
 - [Facet list](facets/)
+- [Forms](forms/)
 - [Pagination](pagination/)
+- [Popovers](popovers/)
 
+
+## In a css file
+```CSS
+@layer framework, components, local;
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css)
+layer(framework);
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css")
+layer(framework);
+@import url("https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-09-11/styles/sul.css")
+layer(components);
+
+@import url("my-local-file.css") layer(local);
+```
 ## HTML head link
 
 ```html
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-24/styles/icon.png" type="image/png">
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-24/styles/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-24/styles/icon.png">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-09-11/styles/icon.png" type="image/png">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-09-11/styles/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-09-11/styles/icon.png">
 ```
 
 # For developers
@@ -84,11 +99,11 @@ If you want to test everything that is currently in main, without having to cut 
 
 ## Releasing
 
-Currently these are hosted via jsDelivr which creates hosted versions of every release. The best way to update the component library is to cut a release here and then link to the primary style in the `<head>` of the HTML. `https://cdn.jsdelivr.net/gh/sul-dlss/component-library@[version]/styles/sul.css`:
+Currently these are hosted via jsDelivr which creates hosted versions of every release. The best way to update the component library is to cut a release here and then link to the primary style in the `<head>` of the HTML or in the `@import` within the css. `https://cdn.jsdelivr.net/gh/sul-dlss/component-library@[version]/styles/sul.css`:
 
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-24/styles/sul.css"
+  href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-09-11/styles/sul.css"
 />
 ```
