@@ -35,6 +35,9 @@
     input::placeholder {
       font-style: italic;
     }
+    .search-q {
+      flex-grow: 4;
+    }
   }
 
   .search-btn {
