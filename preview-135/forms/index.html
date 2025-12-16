@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="../styles/sul.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </head>
+  <body class="p-5">
+    <main class="container">
+      <h1 class="mb-4">Forms</h1>
+
+      <div class="border rounded p-3 mt-5">
+        <h2 class="h5">Input</h2>
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </form>
+      </div>
+
+
+      <div class="border rounded p-3 mt-5">
+        <h2 class="h5">Search form</h2>
+        <p>The checkered background is just so that we can see the color of the search element. It is not part of the element itself.</p>
+        <div style="
+          background: repeating-conic-gradient(#eee 0% 25%, transparent 0% 50%)
+            50% / 20px 20px;
+        ">
+          <search class="search-card d-flex position-relative flex-column px-4 py-3 rounded">
+            <form class="search-query-form col-md-12 col-lg-8" accept-charset="UTF-8" method="get">
+              <label class="visually-hidden" for="search_field">Search in</label>
+              <div class="input-group">
+                <select title="Targeted search options" class="custom-select form-select search-field" name="search_field" id="search_field"><option value="search">All fields</option>
+                  <option value="search_title">Title</option>
+                  <option value="search_author">Author/Contributor</option>
+                  <option value="subject_terms">Subject</option>
+                  <option value="call_number">Call number</option>
+                  <option value="search_series">Series</option>
+                </select>
+
+                <label class="visually-hidden" for="q">search for</label>
+                <input placeholder="Search..." class="search-q q form-control" aria-label="search for" type="search" name="q" id="q">
+                <button class="btn btn-primary search-btn" type="submit" id="search"><span class="submit-search-text">Search</span></button>
+              </div>
+            </form>
+          </search>
+        </div>
+      </div>
+
+
+      <h2 class="h5 mt-5">Notes</h2>
+      <ul>
+        <li>For the most part we are just using Bootstrap, except we've modified the focus ring style.</li>
+      </ul>
+    </main>
+  </body>
+</html>

@@ -17,7 +17,6 @@
   --bs-link-hover-decoration: none;
 
   color: var(--identity-bar-color);
-  display: block;
   font-size: 1.25rem;
   font-family: Stanford, var(--font-family-serif);
   font-weight: 400;
@@ -31,6 +30,7 @@
 .navbar-logo,
 .prefooter-logo {
   --bs-navbar-brand-padding-y: 0;
+  --sul-logo-width: 250px;
 
   background-color: var(--sul-logo-color);
   mask-image: url("StanfordLibraries-logo.svg");
@@ -39,7 +39,8 @@
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  width: 250px;
+  width: var(--sul-logo-width);
+  height: var(--sul-logo-height);
 
   &.polychrome {
     background-color: transparent;
@@ -48,6 +49,44 @@
     background-repeat: no-repeat;
     background-position: 0 center;
   }
+
+  @media (width < 575.98px) {
+    &.stacked-mobile {
+      --sul-logo-width: 50%;
+      --sul-logo-height: 40px;
+
+      mask-image: url("StanfordLibraries-stacked-logo.svg");
+
+      &.polychrome {
+        background-image: url("StanfordLibraries-stacked-poly-logo.svg");
+      }
+    }
+  }
+
+  @media (width >= 992px) {
+    &.stacked-lg {
+      --sul-logo-width: 60cqw;
+      --sul-logo-height: calc(var(--sul-logo-width) * 0.3059);
+
+      mask-image: url("StanfordLibraries-stacked-logo.svg");
+    }
+  }
+}
+
+.rosette-logo {
+  --rosette-logo-width: 45px;
+  --rosette-logo-height: 45px;
+
+  display: inline-block;
+  position: relative;
+  background-image: url("Rosette.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  width: var(--rosette-logo-width);
+  height: var(--rosette-logo-height);
 }
 
 /* Changing text color for dark-background navbar/masthead */
@@ -168,14 +207,21 @@
 }
 
 .navbar-collapse .dropdown-menu {
-  --bs-dropdown-padding-x: 0.125rem;
-  --bs-dropdown-padding-y: 0.125rem;
-  --bs-dropdown-item-padding-x: 0.5rem;
-  --bs-dropdown-item-padding-y: 0.125rem;
-
   &.show {
     display: flex;
     flex-direction: column;
     gap: 0.125rem;
   }
+}
+
+.bookmark-counter {
+  --bs-badge-color: var(--stanford-black);
+  --bs-badge-padding-x: 0.625rem;
+  --bs-badge-font-weight: 500;
+
+  background-color: var(--stanford-10-black);
+}
+
+.bg-light .bookmark-counter {
+  background-color: var(--stanford-20-black);
 }

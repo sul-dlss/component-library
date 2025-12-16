@@ -10,6 +10,53 @@
 
   padding-block-end: 0.5rem;
 
+  /* Lines 14-39 are facet settings for BL9 */
+  --bs-btn-font-weight: 400;
+
+  .accordion {
+    --bs-accordion-btn-padding-y: 0.5rem;
+    --bs-accordion-btn-padding-x: 0.5rem;
+    --bs-accordion-body-padding-y: 0.5rem 0.5rem;
+    --bs-accordion-body-padding-x: 0.7rem 0.5rem;
+    --bs-link-color-rgb: var(--bs-accordion-color);
+
+    .selected {
+      font-weight: 600;
+    }
+  }
+
+  .accordion-body {
+    --bs-link-hover-color: none;
+    --bs-link-hover-color-rgb: none;
+    .selected { --bl-facet-active-item-color: none; }
+  }
+
+  .facet-limit {
+    --bs-accordion-border-radius: 0;
+    --bs-accordion-border-color: transparent;
+    --bs-accordion-btn-bg: transparent;
+    --bs-accordion-inner-border-radius: 0;
+    --bs-btn-hover-bg: transparent;
+    --bs-accordion-active-bg: var(--stanford-fog-light);
+
+    border-top: 1px solid var(--stanford-30-black);
+
+    .accordion-button {
+      font-size: 1.125rem;
+
+      &[aria-expanded="true"] {
+        --bs-btn-font-weight: 600;
+      }
+    }
+  }
+
+  .facet-limit-active .accordion-button {
+    --bs-accordion-active-color: var(--stanford-black);
+    --bs-accordion-btn-bg: var(--stanford-fog-light);
+    --bs-btn-hover-bg: var(--stanford-fog-light);
+    --bs-btn-active-bg: var(--stanford-fog-light);
+  }
+
   .facets-header {
     /* TODO: this can become a variable when https://github.com/projectblacklight/blacklight/pull/3471 is merged */
     padding-block: 0;
