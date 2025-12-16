@@ -1,7 +1,6 @@
 #pre-footer {
   --bs-link-color-rgb: var(--stanford-90-black-rgb);
   --bs-link-hover-color-rgb: var(--stanford-90-black-rgb);
-  --sul-logo-color: black;
 
   background-color: var(--stanford-fog-light);
 

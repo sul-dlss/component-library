@@ -97,7 +97,7 @@
     font-size: var(--bs-body-font-size);
   }
 
-  .input-group {
+  .btn-group {
     .btn {
       --bs-border-radius: 2rem;
       --bs-btn-active-bg: var(--stanford-digital-blue);
@@ -128,6 +128,11 @@
       --bs-btn-border-color: var(--stanford-50-black);
 
       opacity: 1;
+    }
+
+    .btn-check:focus-visible + .btn {
+      outline: 2px solid black;
+      outline-offset: 2px;
     }
   }
 }

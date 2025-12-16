@@ -1,11 +1,6 @@
 :root {
-  --sul-logo-color: var(--stanford-black);
   --identity-bar-color: var(--stanford-cardinal);
   --identity-bar-bg-color: white;
-}
-
-.bg-dark {
-  --sul-logo-color: var(--bs-navbar-color);
 }
 
 .identity-bar {
@@ -31,23 +26,16 @@
 .prefooter-logo {
   --bs-navbar-brand-padding-y: 0;
   --sul-logo-width: 250px;
+  --sul-logo-height: 30px;
 
-  background-color: var(--sul-logo-color);
-  mask-image: url("StanfordLibraries-logo.svg");
-  mask-repeat: no-repeat;
-  mask-position: 0 center;
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
+  background-image: url("StanfordLibraries-logo.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
   width: var(--sul-logo-width);
   height: var(--sul-logo-height);
 
   &.polychrome {
-    background-color: transparent;
-    mask-image: none;
     background-image: url("StanfordLibraries-logo-poly.svg");
-    background-repeat: no-repeat;
-    background-position: 0 center;
   }
 
   @media (width < 575.98px) {
@@ -55,7 +43,7 @@
       --sul-logo-width: 50%;
       --sul-logo-height: 40px;
 
-      mask-image: url("StanfordLibraries-stacked-logo.svg");
+      background-image: url("StanfordLibraries-stacked-logo.svg");
 
       &.polychrome {
         background-image: url("StanfordLibraries-stacked-poly-logo.svg");
@@ -68,7 +56,7 @@
       --sul-logo-width: 60cqw;
       --sul-logo-height: calc(var(--sul-logo-width) * 0.3059);
 
-      mask-image: url("StanfordLibraries-stacked-logo.svg");
+      background-image: url("StanfordLibraries-stacked-logo.svg");
     }
   }
 }
@@ -104,6 +92,10 @@
   &.bg-dark {
     --bs-link-color-rgb: 255, 255, 255;
     --bs-link-hover-color-rgb: 255, 255, 255;
+
+    .navbar-logo {
+      filter: invert(100%);
+    }
   }
 }
 
