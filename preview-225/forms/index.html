@@ -13,13 +13,15 @@
 
     <script>
     window.addEventListener('load', () => {
-      const code = document.querySelector('.language-html')
-      code.textContent = cleanCode()
+      const code = document.querySelectorAll('.language-html')
+      code[0].textContent = cleanCode('toggleCheckActive')
+      code[1].textContent = cleanCode('radioCheckActive')
+
       hljs.highlightAll()
     })
 
-    function cleanCode(){
-      return outdent(document.querySelector('#toggleCheckActive').outerHTML, 12)
+    function cleanCode(id) {
+      return outdent(document.getElementById(id).outerHTML, 10)
     }
 
     function outdent(str, numSpaces) {
@@ -121,13 +123,23 @@
         <h2 class="h5">Toggle (radio)</h2>
 
         <form>
-          <fieldset>
+          <fieldset class="toggle-radio" id="radioCheckActive">
             <legend>Which road?</legend>
             <div class="input-group">
               <input type="radio" value="true" name="road" id="more" class="btn-check" checked>
               <label for="more" class="btn btn-primary">More traveled</label
               ><input type="radio" value="false" name="road" id="less" class="btn-check"
               ><label for="less" class="btn btn-primary">Less traveled</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="toggle-radio mt-3">
+            <legend>Why?</legend>
+            <div class="input-group">
+              <input type="radio" value="true" name="reason" id="exercise" class="btn-check" checked disabled>
+              <label for="exercise" class="btn btn-primary">Exercise</label
+              ><input type="radio" value="false" name="reason" id="boredom" class="btn-check" disabled
+              ><label for="boredom" class="btn btn-primary">Boredom</label>
             </div>
           </fieldset>
         </form>
