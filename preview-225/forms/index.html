@@ -14,8 +14,7 @@
     <script>
     window.addEventListener('load', () => {
       const code = document.querySelectorAll('.language-html')
-      code[0].textContent = cleanCode('toggleCheckActive')
-      code[1].textContent = cleanCode('radioCheckActive')
+      code[0].textContent = cleanCode('radioCheckActive')
 
       hljs.highlightAll()
     })
@@ -83,41 +82,6 @@
           </search>
         </div>
       </div>
-
-
-      <div class="border rounded p-3 mt-5">
-        <h2 class="h5">Toggle (checkbox)</h2>
-
-        <form>
-          <div>
-            <label class="toggle-check" id="toggleCheckActive">
-              <span class="question">Do you want a cookie?</span>
-              <input type="checkbox" name="cookie" class="toggle-check-input" role="switch" switch >
-              <div class="toggle-check-values">
-                <div class="yes">Yes</div><div class="no" aria-hidden="true">No</div>
-              </div>
-            </label>
-          </div>
-          <div>
-            <label class="toggle-check">
-              <span class="question">Do you want frosting? (disabled example)</span>
-              <input type="checkbox" name="cookie" class="toggle-check-input" role="switch" disabled switch>
-              <div class="toggle-check-values">
-                <div class="yes">Yes</div><div class="no" aria-hidden="true">No</div>
-              </div>
-            </label>
-          </div>
-        </form>
-      </div>
-
-      <h2 class="h5 mt-5">HTML</h2>
-      <pre class="bg-light rounded"><code class="d-block language-html" style="white-space: pre-wrap;">
-      </code></pre>
-
-      <h2 class="h5 mt-5">Notes</h2>
-      <ul>
-        <li>Safari 17.4 introduced a native UI toggle switch control, a feature not yet included in the HTML specification. </li>
-      </ul>
 
       <div class="border rounded p-3 mt-5">
         <h2 class="h5">Toggle (radio)</h2>
