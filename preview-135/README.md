@@ -102,7 +102,7 @@ or
   @layer framework, component;
   @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css)
   layer(framework);
-  @import url(https://sul-dlss.github.io/component-library/styles/sulsul.css) layer(component);
+  @import url(https://sul-dlss.github.io/component-library/styles/sul.css) layer(component);
 </style>
 ```
 
