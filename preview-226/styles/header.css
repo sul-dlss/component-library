@@ -36,7 +36,6 @@
   background-image: url("StanfordLibraries-logo.svg");
   background-repeat: no-repeat;
   background-position: 0 center;
-
   width: var(--sul-logo-width);
   height: var(--sul-logo-height);
 
@@ -98,6 +97,7 @@
   &.bg-dark {
     --bs-link-color-rgb: 255, 255, 255;
     --bs-link-hover-color-rgb: 255, 255, 255;
+
     .navbar-logo {
       filter: invert(100%);
     }
