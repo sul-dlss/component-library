@@ -1,11 +1,6 @@
 :root {
-  --sul-logo-color: var(--stanford-black);
   --identity-bar-color: var(--stanford-cardinal);
   --identity-bar-bg-color: white;
-}
-
-.bg-dark {
-  --sul-logo-color: var(--bs-navbar-color);
 }
 
 .identity-bar {
