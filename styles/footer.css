@@ -41,7 +41,10 @@
   --bs-dark-rgb: var(--stanford-cardinal-rgb);
   --bs-link-color-rgb: 255, 255, 255;
   --bs-link-hover-color-rgb: 255, 255, 255;
+  --bs-bg-opacity: 1;
 
+  /* This is a workaround for .bg-dark in Bootstrap 5.3.8, because it uses rgba() */
+  background-color: rgb(var(--bs-dark-rgb) / var(--bs-bg-opacity)) !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
