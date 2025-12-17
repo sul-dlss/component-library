@@ -12,21 +12,28 @@
   </head>
   <body class="p-5">
     <main class="container">
-      <h1>Links</h1>
+      <h1>Replace with page title</h1>
       <div class="border rounded p-3 mt-5" style="
         background: repeating-conic-gradient(#eee 0% 25%, transparent 0% 50%)
           50% / 20px 20px;
       ">
-        <h2 class="h5 mt-4">Default style</h2>
-        <a href="#" data-html-target="default link">Test link</a><br>
-        <button data-html-target="button as link" class="btn btn-link">Test button with link style</button><br>
-        <button class="btn btn-link disabled">
-          Test disabled button with link style
-        </button>
+        <div> <!-- delete start -->
+          Steps:
+          <ol>
+            <li>Copy this file into a folder with the name of the component, i.e. folder with the names of forms</li>
+            <li>Delete everything from delete start to delete end (commented in the file)</li>
+            <li>Replace with HTML for page. For the HTML you want to populate the HTML code section below add the variable <code>data-html-target="name_of_element"</code></li>
+          </ol>
 
-        <h2 class="h5 mt-4">Inline text (underline) style</h2>
-        <a href="#" data-html-target="underline link" class="su-underline">Test link</a><br>
-      </div>
+          <p>Notes: If you have multiples html elements on the page, i.e. banners, links, etc. make sure <code>name_of_element</code> in data-html-target is a human readable value that will go into the dropdown that gets auto generated</li>
+
+          Below you will see an example of this 
+          </p>
+
+          <div id="1" data-html-target="example 1">This is an example</div>
+          <div id="2" data-html-target="example 2">This is an example 2</div>
+        </div>
+      </div> <!-- delete end -->
 
       <h2 class="h5 mt-5">HTML</h2>
       <pre class="mt-5">
@@ -38,4 +45,3 @@
     </main>
   </body>
 </html>
-pag
