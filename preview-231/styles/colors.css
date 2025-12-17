@@ -1,0 +1,22 @@
+:root {
+  --bs-danger-rgb: var(--stanford-digital-red-dark-rgb);
+  --bs-danger-bg-subtle: rgb(var(--bs-danger-rgb) / 10%);
+  --bs-danger-border-subtle: rgb(var(--bs-danger-rgb));
+  --bs-danger-text-emphasis: rgb(var(--bs-danger-rgb));
+  --bs-success-rgb: var(--stanford-digital-green-dark-rgb);
+  --bs-success-bg-subtle: rgb(var(--bs-success-rgb) / 10%);
+  --bs-success-border-subtle: rgb(var(--bs-success-rgb));
+  --bs-success-text-emphasis: rgb(var(--bs-success-rgb));
+  --bs-warning-rgb: var(--stanford-poppy-dark-rgb);
+  --bs-warning-bg-subtle: rgb(var(--bs-warning-rgb) / 10%);
+  --bs-warning-border-subtle: rgb(var(--bs-warning-rgb));
+  --bs-warning-text-emphasis: rgb(var(--bs-warning-rgb));
+  --bs-info-rgb: var(--stanford-digital-blue-dark-rgb);
+  --bs-info-bg-subtle: rgb(var(--bs-info-rgb) / 10%);
+  --bs-info-border-subtle: rgb(var(--bs-info-rgb));
+  --bs-info-text-emphasis: rgb(var(--bs-info-rgb));
+  --bs-light-rgb: var(--stanford-fog-light-rgb);
+  --bs-secondary-rgb: var(--stanford-cardinal-rgb);
+  --bs-tertiary-bg: var(--stanford-fog-light);
+  --bs-body-color: var(--stanford-black);
+}
