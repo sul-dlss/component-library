@@ -13,16 +13,16 @@ See <https://identity.stanford.edu/design-elements/color/web/>
 - [Alert](alerts/)
 - [Banner](banners/)
 - [Button](button/)
+- [Facet list](facets/)
 - [Footer](footer/)
+- [Forms](forms/)
 - [Header](header/)
 - [Links](links/)
-- [Selected Item](selected_item/)
-- [Selected Facet](selected_facet/)
-- [Toast](toast/)
-- [Facet list](facets/)
-- [Forms](forms/)
 - [Pagination](pagination/)
 - [Popovers](popovers/)
+- [Selected Facet](selected_facet/)
+- [Selected Item](selected_item/)
+- [Toast](toast/)
 
 
 ## In a css file
