@@ -18,7 +18,7 @@
 }
 
 .alert-note {
-  --bs-alert-bg: rgba(var(--stanford-plum-light-rgb), 10%);
+  --bs-alert-bg: rgb(var(--stanford-plum-light-rgb) / 10%);
   --bs-alert-color: rgb(var(--stanford-plum-light-rgb));
   --bs-alert-border-color: rgb(var(--stanford-plum-light-rgb));
 }
