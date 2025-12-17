@@ -39,7 +39,7 @@ function cleanHTML(element=''){
   const tagElement = document.querySelector(`[data-html-target="${element}"]`).cloneNode(true);
   delete tagElement.dataset.htmlTarget;
   // finds all spaces that are followed by a <
-  // replace spaces with the same amount of spaces minus 4 spaces
+  // replace spaces with the same amount of spaces minus 8 spaces
   return tagElement.outerHTML.replaceAll(/ +(?=<)/g, m => " ".repeat(Math.max(0, m.length - 8)))
 }
 
