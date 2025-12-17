@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <style>
+      @layer framework, component;
+      @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css) layer(framework);
+      @import url(../styles/sul.css) layer(component);
+    </style>
+  </head>
+  <body class="p-4">
+    <main class="container">
+      <h1>Selected Item</h1>
+      <div class="border rounded p-3 mt-5">
+        <ul class="list-unstyled">
+          <li class="d-inline-flex gap-2 align-items-center my-2">
+            <span class="bg-light badge rounded-pill border selected-item">
+              <span class="selected-item-label">Pill Label</span>
+              <button
+                type="button"
+                class="btn-close"
+                aria-label="Remove XXXXXXX"
+              ></button>
+            </span>
+          </li>
+          <li class="d-inline-flex gap-2 align-items-center my-2">
+            <span class="bg-light badge rounded-pill border selected-item">
+              <span class="selected-item-label">
+                Pill Label 2
+              </span>
+              <button
+                type="button"
+                class="btn-close"
+                aria-label="Remove XXXXXXX"
+              ></button>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="h5 mt-5">HTML</h2>
+      <pre class="p-3 bg-light rounded">
+      <code class="d-block" style="white-space: pre-wrap;">
+        &lt;ul class="list-unstyled"&gt;
+          &lt;li class="d-inline-flex gap-2 align-items-center my-2"&gt;
+            &lt;span class="bg-light badge rounded-pill border selected-item"&gt;
+              &lt;span class="selected-item-label"&gt;
+                Pill Label
+              &lt;/span&gt;
+              &lt;button type="button" class="btn-close" aria-label="Remove XXXXXX"&gt;&lt;/button&gt;
+            &lt;/span&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      </code></pre>
+    </main>
+  </body>
+</html>

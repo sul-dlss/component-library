@@ -1,0 +1,36 @@
+.alert {
+  --bs-link-decoration: underline;
+
+  a {
+    color: var(--bs-alert-color);
+  }
+
+  a .bi::before {
+    line-height: var(--bs-body-line-height);
+  }
+}
+
+.alert-warning,
+.alert-note {
+  a {
+    color: var(--bs-body-color);
+  }
+}
+
+.alert-note {
+  --bs-alert-bg: rgb(var(--stanford-plum-light-rgb) / 10%);
+  --bs-alert-color: rgb(var(--stanford-plum-light-rgb));
+  --bs-alert-border-color: rgb(var(--stanford-plum-light-rgb));
+}
+
+.banner {
+  --bs-alert-border-radius: none;
+  --bs-alert-bg: none;
+  --bs-border-width: 4px;
+  --bs-alert-border-color: none;
+  --bs-border-color: var(--bs-alert-color);
+
+  a {
+    color: var(--bs-link-color);
+  }
+}
