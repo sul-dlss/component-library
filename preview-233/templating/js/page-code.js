@@ -25,7 +25,7 @@ function createDropdown(elements) {
     select.appendChild(option);
   });
 
-  select.classList = 'float-start'
+  select.classList = 'ms-2'
   select.addEventListener("change", function (event) {
     updateCode(event.target.value)
   })
@@ -38,9 +38,16 @@ function cleanHTML(element=''){
   document.querySelector('[data-copy-target]').dataset.copyTarget = element;
   const tagElement = document.querySelector(`[data-html-target="${element}"]`).cloneNode(true);
   delete tagElement.dataset.htmlTarget;
+  // looking at the element that has the data-html-target variable
+  // get the last line of the element.
+  // find the number of leading spaces for that element
+  // i.e. </footer> element has 8 leading spaces
+  const lines = tagElement.outerHTML.trimEnd().split('\n');
+  const lastLine = lines[lines.length - 1];
+  const outerLength = lastLine.match(/^\s*/)[0].length;
   // finds all spaces that are followed by a <
-  // replace spaces with the same amount of spaces minus 8 spaces
-  return tagElement.outerHTML.replaceAll(/ +(?=<)/g, m => " ".repeat(Math.max(0, m.length - 8)))
+  // replace spaces with the same amount of spaces minus the number of spaces for the last element
+  return tagElement.outerHTML.replaceAll(/ +(?=<)/g, m => " ".repeat(Math.max(0, m.length - outerLength)))
 }
 
 function copyHTML(event) {
