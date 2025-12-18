@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <style>
       @layer framework, component;
       @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css) layer(framework);
       @import url(../styles/sul.css) layer(component);
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../templating/js/page-code.js"></script>
   </head>
   <body class="p-5">
     <main class="container">
@@ -15,7 +16,7 @@
       <div class="border rounded p-3 mt-5">
 
       <!-- Note Banner -->
-        <section aria-labelledby="note-heading" class="alert alert-note banner d-flex shadow-sm align-items-center p-3 mb-3 border-start">
+        <section aria-labelledby="note-heading" data-html-target="Note banner" class="alert alert-note banner d-flex shadow-sm align-items-center p-3 mb-3 border-start">
           <div
             role="img"
             aria-label="Note icon"
@@ -49,7 +50,7 @@
         </section>
 
         <!-- Success Banner -->
-        <section aria-labelledby="success-heading" class="alert alert-success banner d-flex shadow-sm align-items-center p-3 mb-3 border-start">
+        <section aria-labelledby="success-heading" data-html-target="Success banner" class="alert alert-success banner d-flex shadow-sm align-items-center p-3 mb-3 border-start">
             <div
               role="img"
               aria-label="Success icon"
@@ -84,7 +85,7 @@
 
 
         <!-- Warning Banner -->
-        <section aria-labelledby="warning-heading" class="alert alert-warning banner d-flex shadow-sm align-items-center p-3 mb-3 border-start">
+        <section aria-labelledby="warning-heading" data-html-target="Warning banner" class="alert alert-warning banner d-flex shadow-sm align-items-center p-3 mb-3 border-start">
           <div
             role="img"
             aria-label="Warning icon"
@@ -118,7 +119,7 @@
         </section>
 
         <!-- Info Banner -->
-        <section aria-labelledby="info-heading" class="alert alert-info banner d-flex shadow-sm align-items-center p-3 mb-3 border-start">
+        <section aria-labelledby="info-heading" data-html-target="Info banner" class="alert alert-info banner d-flex shadow-sm align-items-center p-3 mb-3 border-start">
           <div
             role="img"
             aria-label="Info icon"
@@ -153,7 +154,7 @@
 
 
         <!-- Danger Banner -->
-        <section aria-labelledby="danger-heading" class="alert alert-danger banner d-flex shadow-sm align-items-center p-3 mb-3 border-start">
+        <section aria-labelledby="danger-heading" data-html-target="Danger banner" class="alert alert-danger banner d-flex shadow-sm align-items-center p-3 mb-3 border-start">
           <div
             role="img"
             aria-label="Danger"
@@ -186,6 +187,14 @@
           </div>
         </section>
       </div>
+      <div class="d-flex align-items-baseline">
+        <h2 class="h5 mt-5">HTML</h2>
+        <button class="btn btn-primary ms-auto" data-copy-target="" onclick="copyHTML(event)">Copy</button>
+      </div>
+      <pre>
+        <code class="d-block language-html" style="white-space: pre-wrap;">
+        </code>
+      </pre>
     </main>
   </body>
 </html>

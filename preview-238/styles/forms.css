@@ -1,6 +1,7 @@
 .form-control,
 .form-select {
-  &:focus-visible {
+  &:focus-visible,
+  &:focus {
     border-color: var(--stanford-black);
     box-shadow: 0 0 0 2px var(--stanford-black);
     outline: none;
