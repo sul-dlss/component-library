@@ -3,9 +3,20 @@ window.addEventListener('load', () => {
   updateCode(elements[0].dataset.htmlTarget)
   if (elements.length > 1) {
     createDropdown(elements)
-
   }
+  addHomeLink()
 })
+
+function addHomeLink() {
+  const main = document.querySelector('main');
+  const div = document.createElement("div");
+  div.classList = 'mb-3';
+  const path = window.location.pathname;
+  const regex = /^(\/[^\/]+(?:\/preview-[^\/]+)?)/gm;
+  const link_path = path.split('/').filter(Boolean).length < 2 ? '/' : path.match(regex);
+  div.innerHTML = `<a href="${link_path}"><i class="bi bi-arrow-left me-1"></i> Back to main menu</a>`;
+  main.insertBefore(div, main.firstChild);
+}
 
 function updateCode(target) {
   const code = document.querySelector('.language-html')
