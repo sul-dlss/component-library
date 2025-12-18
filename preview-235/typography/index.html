@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+      @layer framework, component;
+      @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css) layer(framework);
+      @import url(../styles/sul.css) layer(component);
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <script>
+    window.addEventListener('load', () => {
+      const code = document.querySelectorAll('.language-html')
+      code[0].textContent = cleanCode('typography')
+
+      hljs.highlightAll()
+    })
+
+    function cleanCode(id) {
+      return outdent(document.getElementById(id).outerHTML, 6)
+    }
+
+    function outdent(str, numSpaces) {
+      return str.replaceAll(/ +(?=<)/g, m => " ".repeat(m.length - numSpaces))
+    }
+    </script>
+  </head>
+  <body class="p-5">
+    <main class="container">
+      <h1 class="mb-4">Typography</h1>
+
+      <div class="border rounded p-3 mt-5" id="typography">
+        <h2>Headings</h2>
+
+        <div class="d-flex gap-5 mb-5">
+          <div>
+            <h1>h1. Bootstrap heading</h1>
+            <h2>h2. Bootstrap heading</h2>
+            <h3>h3. Bootstrap heading</h3>
+            <h4>h4. Bootstrap heading</h4>
+            <h5>h5. Bootstrap heading</h5>
+            <h6>h6. Bootstrap heading</h6>
+          </div>
+          <aside class="border p-3">
+            In aside
+            <h2>h2. Bootstrap heading</h2>
+            <h3>h3. Bootstrap heading</h3>
+            <h4>h4. Bootstrap heading</h4>
+          </aside>
+        </div>
+
+        <h2>Definition list</h2>
+        <dl><dt>Term</dt><dd>definition</dd></dl>
+
+        <h2>Smaller type</h2>
+        <div class="fs-15">.fs-15</div>
+        <div class="fs-14">.fs-14</div>
+      </div>
+
+      <h2 class="h5 mt-5">HTML</h2>
+      <pre class="bg-light rounded"><code class="d-block language-html" style="white-space: pre-wrap;">
+      </code></pre>
+
+    </main>
+  </body>
+</html>
