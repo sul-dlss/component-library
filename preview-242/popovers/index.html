@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <style>
+      @layer framework, component;
+      @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css) layer(framework);
+      @import url(../styles/sul.css) layer(component);
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+    window.addEventListener('load', () => {
+      const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+      popoverTriggerList.forEach((popoverTriggerEl) => {
+          let popover = new bootstrap.Popover(popoverTriggerEl, {
+            template: `<div class="popover" role="tooltip" data-controller="popover">
+                        <div class="popover-arrow"></div>
+                        <div class="popover-header">
+                        </div>
+                        <div class="popover-body">
+                        </div>
+                        </div>`,
+            title: (btn) => `<div class="d-flex justify-content-between align-content-center">
+            <div class="fw-semibold align-self-center">${btn.dataset.bsTitle}:</div>
+            <button class="btn p-0 ms-2 fs-5 lh-1" aria-label="Close this thing" onclick="bootstrap.Popover.getInstance('#${btn.id}').hide();" type="button">
+              <i class="bi bi-x"></i>
+            </button></div>`,
+            html: true,
+            // tags and attributes allowed in the popover, everything not listed will be stripped
+            // needed to be able to put a data-controller and data-action in popover
+            allowList: {
+              '*': ['class', 'role', 'aria-*'], // allow data-custom and data-another
+              div: ['class', 'role'],
+              button: ['onclick'],
+              i: ['class']
+            }
+          })
+        })
+    })
+    </script>
+    <script src="../templating/js/page-code.js"></script>
+  </head>
+  <body class="p-5">
+    <main class="container">
+    <h1>Popovers</h1>
+    <p>This is a dimissible popover that doesn't disappear when users copy / interact with the popover</p>
+    <p>The button/link that triggers the popover must have a unique "id" attribute</p>
+
+
+    <div class="border rounded p-5 mt-5 text-center">
+    <button class="btn btn-link fs-14 px-0 text-start" data-html-target="popover"
+      data-bs-toggle="popover"
+      data-bs-placement="left"
+      data-bs-title="The title"
+      data-bs-content="Content goes here"
+      id="popoverButton1">Test button</button>
+    </div>
+
+    <div class="d-flex align-items-baseline">
+      <h2 class="h5 mt-5">HTML</h2>
+      <button class="btn btn-primary ms-auto" data-copy-target="" onclick="copyHTML(event)">Copy</button>
+    </div>
+    <pre>
+      <code class="d-block language-html" style="white-space: pre-wrap;">
+      </code>
+    </pre>
+
+    <strong>You must initialize this with this javascript:</strong>
+    <pre class="p-3 bg-light rounded"
+><code>window.addEventListener('load', () => {
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+  popoverTriggerList.forEach((popoverTriggerEl) => {
+      let popover = new bootstrap.Popover(popoverTriggerEl, {
+        template: `&lt;div class="popover" role="tooltip" data-controller="popover"&gt;
+                    &lt;div class="popover-arrow"&gt;&lt;/div&gt;
+                    &lt;div class="popover-header"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="popover-body"&gt;
+                    &lt;/div&gt;
+                    &lt;/div&gt;`,
+        title: (btn) => `&lt;div class="d-flex justify-content-between align-content-center"&gt;
+        &lt;div class="fw-semibold align-self-center">${btn.dataset.bsTitle}:&lt;/div&gt;
+        &lt;button class="btn p-0 ms-2 fs-5 lh-1" aria-label="Close this thing" onclick="bootstrap.Popover.getInstance('#${btn.id}').hide();" type="button"&gt;
+          &lt;i class="bi bi-x">&lt;/i&gt;
+        &lt;/button&gt;&lt;/div&gt;`,
+        html: true,
+        // tags and attributes allowed in the popover, everything not listed will be stripped
+        // needed to be able to put a data-controller and data-action in popover
+        allowList: {
+          '*': ['class', 'role', 'aria-*'], // allow data-custom and data-another
+          div: ['class', 'role'],
+          button: ['onclick'],
+          i: ['class']
+        }
+      })
+    })
+})
+    </code></pre>
+
+    <h2 class="h5 mt-5">Notes</h2>
+    <ul>
+      <li>the arrow can be left, right, top or bottom by setting <code>data-bs-placement</code>. See <a href="https://getbootstrap.com/docs/5.3/components/popovers/#four-directions">https://getbootstrap.com/docs/5.3/components/popovers/#four-directions</a>
+      </li>
+      </ul>
+    </main>
+  </body>
+</html>
