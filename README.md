@@ -13,16 +13,18 @@ See <https://identity.stanford.edu/design-elements/color/web/>
 - [Alert](alerts/)
 - [Banner](banners/)
 - [Button](button/)
-- [Facet list](facets/)
 - [Footer](footer/)
 - [Forms](forms/)
 - [Header](header/)
 - [Links](links/)
-- [Pagination](pagination/)
 - [Popovers](popovers/)
-- [Selected Facet](selected_facet/)
 - [Selected Item](selected_item/)
 - [Toast](toast/)
+
+## Blacklight Components
+- [Facet list](facets/)
+- [Pagination](pagination/)
+- [Selected Facet](selected_facet/)
 
 
 ## In a css file
