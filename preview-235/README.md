@@ -1,4 +1,4 @@
-# DLSS design style library
+# DLSS component style library
 
 Reference implementation of CSS styles for design components in DLSS. A live version is hosted via
 GitHub Pages at <https://sul-dlss.github.io/component-library/>.
@@ -8,7 +8,7 @@ choose a secondary color like "cardinal" or "digital green".
 
 See <https://identity.stanford.edu/design-elements/color/web/>
 
-## Components
+## Component Styles
 
 - [Alert](alerts/)
 - [Banner](banners/)
