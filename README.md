@@ -23,6 +23,7 @@ See <https://identity.stanford.edu/design-elements/color/web/>
 - [Selected Facet](selected_facet/)
 - [Selected Item](selected_item/)
 - [Toast](toast/)
+- [Typography](typography/)
 
 
 ## In a css file
