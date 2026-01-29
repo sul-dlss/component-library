@@ -31,6 +31,7 @@
   background-image: url("StanfordLibraries-logo.svg");
   background-repeat: no-repeat;
   background-position: 0 center;
+  background-size: auto;
   width: var(--sul-logo-width);
   height: var(--sul-logo-height);
 
