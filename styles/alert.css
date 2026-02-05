@@ -5,6 +5,10 @@
     color: var(--bs-alert-color);
   }
 
+  .alert-link {
+    --sul-link-font-weight: 600;
+  }
+
   a .bi::before {
     line-height: var(--bs-body-line-height);
   }
