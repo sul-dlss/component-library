@@ -59,7 +59,9 @@
   --stanford-fog-light-rgb: 244, 244, 244;
   --stanford-fog-dark-rgb: 182, 177, 169;
   --stanford-fog-light: rgb(var(--stanford-fog-light-rgb));
+  --stanford-olive-rgb: 143, 153, 62;
   --stanford-olive-light-rgb: 166, 177, 104;
+  --stanford-olive-dark-rgb: 122, 134, 59;
 
   /* https://identity.stanford.edu/design-elements/color/web/ */
   --stanford-digital-blue-rgb: 0, 108, 184;
