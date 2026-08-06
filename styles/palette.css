@@ -9,15 +9,22 @@
   --stanford-black-rgb: 46, 45, 41;
   --stanford-90-black-rgb: 67, 66, 62;
   --stanford-90-black: rgb(var(--stanford-90-black-rgb));
-  --stanford-80-black: #585754;
-  --stanford-70-black: #6d6c69;
-  --stanford-60-black: #767674;
-  --stanford-50-black: #979694;
-  --stanford-40-black: #ababa9;
-  --stanford-30-black: #c0c0bf;
-  --stanford-20-black: #d5d5d4;
-  --stanford-10-black: #eaeaea;
+  --stanford-80-black-rgb: 88, 87, 84;
+  --stanford-80-black: rgb(var(--stanford-80-black-rgb));
+  --stanford-70-black-rgb: 109, 108, 105;
+  --stanford-70-black: rgb(var(--stanford-70-black-rgb));
+  --stanford-60-black-rgb: 118, 118, 116;
+  --stanford-60-black: rgb(var(--stanford-60-black-rgb));
+  --stanford-50-black-rgb: 151, 150, 148;
+  --stanford-50-black: rgb(var(--stanford-50-black-rgb));
+  --stanford-40-black-rgb: 171, 171, 169;
+  --stanford-40-black: rgb(var(--stanford-40-black-rgb));
+  --stanford-30-black-rgb: 192, 192, 191;
+  --stanford-30-black: rgb(var(--stanford-30-black-rgb));
+  --stanford-20-black-rgb: 213, 213, 212;
+  --stanford-20-black: rgb(var(--stanford-20-black-rgb));
   --stanford-10-black-rgb: 234, 234, 234;
+  --stanford-10-black: rgb(var(--stanford-10-black-rgb));
 
   /* https://identity.stanford.edu/design-elements/color/accent-colors/ */
   --stanford-palo-alto-rgb: 23, 94, 84;
@@ -36,6 +43,9 @@
   --stanford-sky-dark-rgb: 1, 104, 149;
   --stanford-sky-light: rgb(var(--stanford-sky-light-rgb));
   --stanford-sky-dark: rgb(var(--stanford-sky-dark-rgb));
+  --stanford-lagunita-rgb: 0, 124, 146;
+  --stanford-lagunita-light-rgb: 0, 154, 180;
+  --stanford-lagunita-dark-rgb: 0, 107, 129;
   --stanford-plum-rgb: 98, 0, 89;
   --stanford-plum-light-rgb: 115, 70, 117;
   --stanford-plum-dark-rgb: 53, 13, 54;
@@ -44,9 +54,15 @@
   --stanford-poppy-dark-rgb: 209, 102, 15;
   --stanford-poppy-light: rgb(var(--stanford-poppy-light-rgb));
   --stanford-poppy-dark: rgb(var(--stanford-poppy-dark-rgb));
+  --stanford-spirited-rgb: 224, 79, 57;
+  --stanford-spirited-light-rgb: 244, 121, 91;
+  --stanford-spirited-dark-rgb: 199, 70, 50;
   --stanford-illuminating-base-rgb: 254, 221, 92;
   --stanford-illuminating-light-rgb: 255, 231, 129;
   --stanford-illuminating-dark-rgb: 254, 197, 29;
+  --stanford-brick-rgb: 101, 28, 50;
+  --stanford-brick-light-rgb: 127, 45, 72;
+  --stanford-brick-dark-rgb: 66, 8, 27;
   --stanford-archway-rgb: 93, 75, 60;
   --stanford-archway-light-rgb: 118, 98, 83;
   --stanford-archway-dark-rgb: 47, 36, 36;
