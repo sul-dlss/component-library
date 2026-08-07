@@ -7,6 +7,11 @@
   background-color: var(--identity-bar-bg-color);
 }
 
+.identity-bar-dark {
+  --identity-bar-bg-color: var(--stanford-cardinal);
+  --identity-bar-color: white;
+}
+
 /* stylelint-disable selector-class-pattern */
 .su-brand-bar__logo {
   --bs-link-hover-decoration: none;
