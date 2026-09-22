@@ -1,0 +1,76 @@
+.btn {
+  --btn-hover-decoration: var(--bs-link-hover-decoration);
+  --bs-btn-disabled-opacity: 1;
+  --bs-btn-padding-y: 0.25rem;
+  --bs-btn-padding-x: 0.5rem;
+  --bs-btn-focus-box-shadow: white;
+}
+
+.btn:not(.btn-link) {
+  --bs-btn-disabled-color: var(--stanford-80-black);
+  --bs-btn-disabled-bg: var(--stanford-10-black);
+  --bs-btn-disabled-border-color: var(--stanford-30-black);
+}
+
+.btn:hover {
+  text-decoration: var(--btn-hover-decoration);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--bs-btn-focus-box-shadow); /* Outer color */
+  box-shadow: 0 0 0 4px var(--stanford-black); /* Inner color */
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--stanford-digital-blue);
+  --bs-btn-border-color: var(--stanford-digital-blue);
+  --bs-btn-hover-bg: var(--stanford-digital-blue-dark);
+  --bs-btn-hover-border-color: var(--stanford-digital-blue-dark);
+  --bs-btn-active-bg: var(--stanford-digital-blue-darker);
+  --bs-btn-active-border-color: var(--stanford-digital-blue-darker);
+}
+
+.btn-secondary {
+  --bs-btn-bg: var(--stanford-cardinal);
+  --bs-btn-border-color: var(--stanford-cardinal);
+  --bs-btn-hover-bg: var(--stanford-digital-red-dark);
+  --bs-btn-hover-border-color: var(--stanford-digital-red-dark);
+  --bs-btn-active-bg: var(--stanford-digital-red-darker);
+  --bs-btn-active-border-color: var(--stanford-digital-red-darker);
+}
+
+.btn-outline-primary {
+  --bs-btn-border-color: var(--stanford-digital-blue);
+  --bs-btn-color: var(--stanford-digital-blue);
+  --bs-btn-hover-color: var(--stanford-digital-blue-dark);
+  --bs-btn-hover-border-color: var(--stanford-digital-blue-dark);
+  --bs-btn-active-color: var(--stanford-digital-blue-darker);
+  --bs-btn-active-border-color: var(--stanford-digital-blue-darker);
+}
+
+.btn-outline-secondary {
+  --bs-btn-border-color: var(--stanford-cardinal);
+  --bs-btn-color: var(--stanford-cardinal);
+  --bs-btn-hover-color: var(--stanford-digital-red-dark);
+  --bs-btn-hover-border-color: var(--stanford-digital-red-dark);
+  --bs-btn-active-border-color: var(--stanford-digital-red-darker);
+  --bs-btn-active-color: var(--stanford-digital-red-darker);
+}
+
+.btn-outline-primary,
+.btn-outline-secondary {
+  --bs-btn-disabled-bg: white;
+  --bs-btn-hover-bg: white;
+  --bs-btn-active-bg: white;
+  --bs-btn-bg: white;
+}
+
+.btn-primary + .dropdown-menu,
+.btn-outline-primary + .dropdown-menu {
+  --bs-dropdown-link-active-bg: var(--stanford-digital-blue);
+}
+
+.btn-secondary + .dropdown-menu,
+.btn-outline-secondary + .dropdown-menu {
+  --bs-dropdown-link-active-bg: var(--stanford-cardinal);
+}
