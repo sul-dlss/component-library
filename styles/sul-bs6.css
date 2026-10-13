@@ -1,0 +1,17 @@
+/* Entry point for applications using Bootstrap 6. */
+@import "./palette.css";
+@import "./typography.css";
+@import "./accessibility.css";
+@import "./toast.css";
+@import "./bs6/colors.css";
+@import "./bs6/typography.css";
+@import "./bs6/links.css";
+@import "./bs6/header.css";
+@import "./bs6/footer.css";
+@import "./bs6/alert.css";
+@import "./bs6/button.css";
+@import "./bs6/selected-item.css";
+@import "./bs6/facets.css";
+@import "./bs6/forms.css";
+@import "./bs6/pagination.css";
+@import "./bs6/popover.css";

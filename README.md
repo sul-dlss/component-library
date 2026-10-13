@@ -10,23 +10,31 @@ See <https://identity.stanford.edu/design-elements/color/web/>
 
 ## Component Styles
 
-- [Alert](alerts/)
-- [Banner](banners/)
-- [Button](button/)
-- [Facet list](facets/)
-- [Footer](footer/)
-- [Forms](forms/)
-- [Header](header/)
-- [Links](links/)
-- [Pagination](pagination/)
-- [Popovers](popovers/)
-- [Selected Facet](selected_facet/)
-- [Selected Item](selected_item/)
-- [Toast](toast/)
-- [Typography](typography/)
+Each component has examples for Bootstrap 5 and Bootstrap 6 (currently
+6.0.0-alpha.1). The markup differs between the two versions, so pick the
+examples that match the version your application uses.
+
+| Component | Bootstrap 5 | Bootstrap 6 |
+|---|---|---|
+| Alert | [Bootstrap 5](alerts/bootstrap5.html) | [Bootstrap 6](alerts/bootstrap6.html) |
+| Banner | [Bootstrap 5](banners/bootstrap5.html) | [Bootstrap 6](banners/bootstrap6.html) |
+| Button | [Bootstrap 5](button/bootstrap5.html) | [Bootstrap 6](button/bootstrap6.html) |
+| Facet list | [Bootstrap 5](facets/bootstrap5.html) ([Blacklight 9](facets/bl9.html)) | [Bootstrap 6](facets/bootstrap6.html) |
+| Footer | [Bootstrap 5](footer/bootstrap5.html) | [Bootstrap 6](footer/bootstrap6.html) |
+| Forms | [Bootstrap 5](forms/bootstrap5.html) | [Bootstrap 6](forms/bootstrap6.html) |
+| Header | [Bootstrap 5](header/bootstrap5.html) | [Bootstrap 6](header/bootstrap6.html) |
+| Links | [Bootstrap 5](links/bootstrap5.html) | [Bootstrap 6](links/bootstrap6.html) |
+| Pagination | [Bootstrap 5](pagination/bootstrap5.html) | [Bootstrap 6](pagination/bootstrap6.html) |
+| Popovers | [Bootstrap 5](popovers/bootstrap5.html) | [Bootstrap 6](popovers/bootstrap6.html) |
+| Selected Facet | [Bootstrap 5](selected_facet/bootstrap5.html) | [Bootstrap 6](selected_facet/bootstrap6.html) |
+| Selected Item | [Bootstrap 5](selected_item/bootstrap5.html) | [Bootstrap 6](selected_item/bootstrap6.html) |
+| Toast | [Bootstrap 5](toast/bootstrap5.html) | [Bootstrap 6](toast/bootstrap6.html) |
+| Typography | [Bootstrap 5](typography/bootstrap5.html) | [Bootstrap 6](typography/bootstrap6.html) |
 
 
 ## In a css file
+
+### Bootstrap 5
 ```CSS
 @layer framework, components, local;
 @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css)
@@ -38,6 +46,32 @@ layer(components);
 
 @import url("my-local-file.css") layer(local);
 ```
+
+### Bootstrap 6
+Use `sul-bs6.css` instead of `sul.css`. It is available in releases made after
+Bootstrap 6 support was added, so replace `[version]` with one of those.
+```CSS
+@layer framework, components, local;
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css)
+layer(framework);
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css")
+layer(framework);
+@import url("https://cdn.jsdelivr.net/gh/sul-dlss/component-library@[version]/styles/sul-bs6.css")
+layer(components);
+
+@import url("my-local-file.css") layer(local);
+```
+
+Bootstrap 6's JavaScript is an ES module, so load it with `type="module"`:
+```html
+<script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+```
+
+`sul-bs6.css` maps the Stanford colors onto Bootstrap 6's theme tokens (primary is digital blue,
+secondary is cardinal), so use the `.theme-*` classes (e.g. `btn-solid theme-primary`). It also
+sets `color-scheme: light`, because the SUL styles have no dark mode.
+
 ## HTML head link
 
 ```html
@@ -106,6 +140,8 @@ or
   @import url(https://sul-dlss.github.io/component-library/styles/sul.css) layer(component);
 </style>
 ```
+
+For Bootstrap 6, use `styles/sul-bs6.css` instead of `styles/sul.css`.
 
 ## Releasing
 

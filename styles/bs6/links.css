@@ -1,0 +1,34 @@
+:root {
+  --sul-link-font-weight: 400;
+  --bs-link-color: var(--stanford-digital-blue);
+  --bs-link-hover-color: var(--stanford-digital-blue);
+  --bs-link-decoration: none;
+  --bs-link-hover-decoration: underline;
+  --bs-link-underline-offset: 0.25rem;
+}
+
+a {
+  font-weight: var(--sul-link-font-weight);
+}
+
+.btn-link {
+  --bs-btn-font-weight: var(--sul-link-font-weight);
+  --bs-btn-disabled-bg: transparent;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: var(--bs-link-hover-decoration);
+  }
+}
+
+.su-underline {
+  --underline-color: var(--stanford-50-black);
+  --bs-link-decoration: underline dotted var(--underline-color);
+  --bs-link-hover-color: var(--stanford-digital-blue-dark);
+  --bs-link-hover-decoration: underline;
+}
+
+a:not([class*="btn"]):focus-visible,
+.btn-link:focus-visible {
+  border-radius: 0.375rem;
+}

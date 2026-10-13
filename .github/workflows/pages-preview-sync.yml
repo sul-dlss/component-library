@@ -52,7 +52,9 @@ jobs:
       - name: Check if there were changes to commit
         id: check-changes
         run: |
-          if [ -z "$(git diff)" ]
+          # Stage first so new (untracked) files count as changes; plain `git diff` ignores them.
+          git add $PREVIEW_DIR
+          if git diff --cached --quiet
           then
             echo "No changes to commit"
             echo "changes=0" >> $GITHUB_OUTPUT
