@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <style>
+      @layer framework, component;
+      @import url(https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css) layer(framework);
+      @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css") layer(framework);
+      @import url(../styles/sul-bs6.css) layer(component);
+    </style>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+    <script src="../templating/js/page-code.js"></script>
+  </head>
+  <h1 class="my-7">Dimissable Alert</h1>
+  <div class="border rounded p-5 mt-12" style="
+    background: repeating-conic-gradient(#eee 0% 25%, transparent 0% 50%)
+      50% / 20px 20px;
+  ">
+    <div
+      class="alert theme-warning shadow-sm d-flex align-items-center"
+      data-html-target="dismissible alert"
+    >
+      <div
+        role="img"
+        aria-label="Warning icon"
+        class="bi bi-exclamation-triangle-fill fs-2xl"
+      ></div>
+      <div class="fg-body">
+        <div class="fw-semibold">Warning</div>
+        <div>Warning text</div>
+        <div>
+          <a href="#"><i class="bi bi-box-arrow-up-right me-1"></i>Link</a>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="btn-close ms-auto align-self-start"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+  </div>
+    <div class="d-flex align-items-baseline">
+    <h2 class="mt-12">HTML</h2>
+    <button class="btn-solid theme-primary ms-auto" data-copy-target="" onclick="copyHTML(event)">Copy</button>
+  </div>
+  <pre>
+    <code class="d-block language-html" style="white-space: pre-wrap;">
+    </code>
+  </pre>
+</html>

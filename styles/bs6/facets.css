@@ -1,0 +1,86 @@
+.facets {
+  padding-block-end: 0.5rem;
+
+  .facets-heading {
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .accordion {
+    --bs-accordion-btn-padding-y: 0.5rem;
+    --bs-accordion-btn-padding-x: 0.5rem;
+    --bs-accordion-body-padding-y: 0.5rem;
+    --bs-accordion-body-padding-x: 0.5rem;
+    --bs-accordion-border-radius: 0;
+    --bs-accordion-border-color: transparent;
+    --bs-accordion-btn-bg: transparent;
+    --bs-accordion-btn-color: var(--bs-fg-body);
+    --bs-accordion-active-bg: transparent;
+    --bs-accordion-active-color: var(--bs-fg-body);
+    --bs-accordion-btn-icon-transform: rotate(0deg);
+  }
+
+  .facet-limit {
+    border-block-start: 1px solid var(--stanford-30-black);
+
+    .accordion-icon {
+      stroke-width: 2;
+    }
+
+    /* Collapsed items point right, open items point down */
+    &:not([open]) .accordion-icon {
+      transform: rotate(-90deg);
+    }
+
+    > .accordion-header {
+      box-shadow: none;
+    }
+  }
+
+  .facet-field-label {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: var(--bs-body-line-height);
+    margin: 0;
+  }
+
+  .facet-limit-active > .accordion-header {
+    --bs-accordion-btn-bg: var(--stanford-fog-light);
+    --bs-accordion-active-bg: var(--stanford-fog-light);
+
+    .facet-field-label {
+      font-weight: 600;
+    }
+  }
+
+  .facet-values {
+    .facet-select {
+      color: var(--bs-fg-body);
+      display: inline-block;
+      width: 100%;
+    }
+
+    .facet-label {
+      flex-grow: 1; /* Necessary for selected values */
+    }
+
+    .selected {
+      font-weight: 600;
+    }
+
+    .remove {
+      color: var(--stanford-70-black);
+      text-decoration: none;
+
+      .bi {
+        width: 1em;
+        height: 1em;
+      }
+
+      &:hover {
+        color: var(--stanford-digital-red);
+      }
+    }
+  }
+}
