@@ -1,0 +1,71 @@
+/* Map the Stanford palette onto the Bootstrap 6 theme tokens.
+ * Components read these through the .theme-* classes (e.g. .theme-primary). */
+:root,
+:host {
+  /* The SUL palette has no dark mode, so opt out of Bootstrap's automatic one. */
+  color-scheme: light;
+
+  /* Primary: digital blue */
+  --bs-primary-base: var(--stanford-digital-blue);
+  --bs-primary-bg: var(--stanford-digital-blue);
+  --bs-primary-fg: var(--stanford-digital-blue);
+  --bs-primary-fg-emphasis: var(--stanford-digital-blue-dark);
+  --bs-primary-bg-subtle: rgba(var(--stanford-digital-blue-rgb), 10%);
+  --bs-primary-bg-muted: rgba(var(--stanford-digital-blue-rgb), 20%);
+  --bs-primary-border: var(--stanford-digital-blue);
+  --bs-primary-contrast: white;
+
+  /* Secondary: cardinal */
+  --bs-secondary-base: var(--stanford-cardinal);
+  --bs-secondary-bg: var(--stanford-cardinal);
+  --bs-secondary-fg: var(--stanford-cardinal);
+  --bs-secondary-fg-emphasis: var(--stanford-digital-red-dark);
+  --bs-secondary-bg-subtle: rgba(var(--stanford-cardinal-rgb), 10%);
+  --bs-secondary-bg-muted: rgba(var(--stanford-cardinal-rgb), 20%);
+  --bs-secondary-border: var(--stanford-cardinal);
+  --bs-secondary-contrast: white;
+
+  /* Danger: digital red */
+  --bs-danger-base: var(--stanford-digital-red-dark);
+  --bs-danger-bg: var(--stanford-digital-red-dark);
+  --bs-danger-fg: var(--stanford-digital-red-dark);
+  --bs-danger-fg-emphasis: var(--stanford-digital-red-dark);
+  --bs-danger-bg-subtle: rgba(var(--stanford-digital-red-dark-rgb), 10%);
+  --bs-danger-bg-muted: rgba(var(--stanford-digital-red-dark-rgb), 20%);
+  --bs-danger-border: var(--stanford-digital-red-dark);
+  --bs-danger-contrast: white;
+
+  /* Success: digital green */
+  --bs-success-base: rgb(var(--stanford-digital-green-dark-rgb));
+  --bs-success-bg: rgb(var(--stanford-digital-green-dark-rgb));
+  --bs-success-fg: rgb(var(--stanford-digital-green-dark-rgb));
+  --bs-success-fg-emphasis: rgb(var(--stanford-digital-green-dark-rgb));
+  --bs-success-bg-subtle: rgba(var(--stanford-digital-green-dark-rgb), 10%);
+  --bs-success-bg-muted: rgba(var(--stanford-digital-green-dark-rgb), 20%);
+  --bs-success-border: rgb(var(--stanford-digital-green-dark-rgb));
+  --bs-success-contrast: white;
+
+  /* Warning: poppy */
+  --bs-warning-base: var(--stanford-poppy-dark);
+  --bs-warning-bg: var(--stanford-poppy-dark);
+  --bs-warning-fg: var(--stanford-poppy-dark);
+  --bs-warning-fg-emphasis: var(--stanford-poppy-dark);
+  --bs-warning-bg-subtle: rgba(var(--stanford-poppy-dark-rgb), 10%);
+  --bs-warning-bg-muted: rgba(var(--stanford-poppy-dark-rgb), 20%);
+  --bs-warning-border: var(--stanford-poppy-dark);
+  --bs-warning-contrast: var(--stanford-black);
+
+  /* Info: dark digital blue */
+  --bs-info-base: var(--stanford-digital-blue-dark);
+  --bs-info-bg: var(--stanford-digital-blue-dark);
+  --bs-info-fg: var(--stanford-digital-blue-dark);
+  --bs-info-fg-emphasis: var(--stanford-digital-blue-dark);
+  --bs-info-bg-subtle: rgba(var(--stanford-digital-blue-dark-rgb), 10%);
+  --bs-info-bg-muted: rgba(var(--stanford-digital-blue-dark-rgb), 20%);
+  --bs-info-border: var(--stanford-digital-blue-dark);
+  --bs-info-contrast: white;
+
+  /* Neutral surfaces and text */
+  --bs-fg-body: var(--stanford-black);
+  --bs-bg-1: var(--stanford-fog-light);
+}

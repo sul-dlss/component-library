@@ -1,0 +1,27 @@
+.popover {
+  --bs-popover-bg: var(--bs-fg-body);
+  --bs-popover-body-color: var(--bs-bg-body);
+  --bs-popover-body-padding-y: 0;
+  --bs-popover-body-padding-x: 0.75rem 0.75rem;
+  --bs-popover-border-color: transparent;
+  --bs-popover-border-radius: 0.25rem;
+  --bs-popover-inner-border-radius: 0.25rem;
+  --bs-popover-max-width: 22rem;
+  --bs-popover-box-shadow: none;
+  --bs-popover-header-padding-y: 0.75rem;
+  --bs-popover-header-padding-x: 0.75rem 0;
+  --bs-popover-header-font-size: var(--bs-body-font-size);
+  --bs-popover-header-bg: transparent;
+  --bs-popover-header-color: var(--bs-popover-body-color);
+
+  .popover-header {
+    border-block-end: 0;
+  }
+
+  :is(.btn, .btn-text) {
+    --bs-btn-color: var(--bs-popover-body-color);
+    --bs-btn-hover-color: var(--bs-popover-body-color);
+    --bs-btn-hover-bg: transparent;
+    --bs-btn-min-height: auto;
+  }
+}

@@ -1,0 +1,11 @@
+/* The shared typography.css sets the Bootstrap 5 font variable; Bootstrap 6 reads this one. */
+:root {
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-heading-margin-bottom: 0.5rem;
+}
+
+/* Bootstrap 6 shrank h6; keep the Bootstrap 5 size. */
+h6,
+.h6 {
+  font-size: 1rem;
+}

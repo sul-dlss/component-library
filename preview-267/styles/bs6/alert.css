@@ -1,0 +1,54 @@
+.alert {
+  --bs-link-decoration: underline;
+  --bs-alert-border-radius: var(--bs-radius-4);
+  --bs-alert-gap: var(--bs-spacer-5);
+
+  a {
+    color: var(--bs-theme-fg, var(--bs-alert-color));
+  }
+
+  .alert-link {
+    --sul-link-font-weight: 600;
+  }
+
+  a .bi::before {
+    line-height: var(--bs-body-line-height);
+  }
+
+  .btn-close {
+    --bs-btn-close-color: var(--bs-fg-body);
+  }
+}
+
+.alert.theme-warning,
+.alert.theme-note {
+  a {
+    color: var(--bs-fg-body);
+  }
+}
+
+/* A SUL theme color, usable on any theme-aware component (e.g. .alert.theme-note) */
+.theme-note {
+  --bs-theme-base: rgb(var(--stanford-plum-light-rgb));
+  --bs-theme-fg: rgb(var(--stanford-plum-light-rgb));
+  --bs-theme-fg-emphasis: rgb(var(--stanford-plum-light-rgb));
+  --bs-theme-bg: rgb(var(--stanford-plum-light-rgb));
+  --bs-theme-bg-subtle: rgba(var(--stanford-plum-light-rgb), 10%);
+  --bs-theme-bg-muted: rgba(var(--stanford-plum-light-rgb), 20%);
+  --bs-theme-border: rgb(var(--stanford-plum-light-rgb));
+  --bs-theme-contrast: white;
+}
+
+.alert.banner {
+  --bs-alert-border-radius: 0;
+  --bs-theme-bg-subtle: transparent;
+  --bs-vr-border-width: 4px;
+
+  border: 0;
+  border-inline-start: 4px solid
+    var(--bs-theme-border, var(--bs-alert-border-color));
+
+  a {
+    color: var(--bs-link-color);
+  }
+}

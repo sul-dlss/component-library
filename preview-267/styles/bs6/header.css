@@ -1,0 +1,270 @@
+:root {
+  --identity-bar-color: var(--stanford-cardinal);
+  --identity-bar-bg-color: white;
+}
+
+.identity-bar {
+  background-color: var(--identity-bar-bg-color);
+}
+
+.identity-bar-dark {
+  --identity-bar-bg-color: var(--stanford-cardinal);
+  --identity-bar-color: white;
+}
+
+/* stylelint-disable selector-class-pattern */
+.su-brand-bar__logo {
+  --bs-link-hover-decoration: none;
+
+  color: var(--identity-bar-color);
+  font-size: 1.25rem;
+  font-family: Stanford, var(--font-family-serif);
+  font-weight: 400;
+  font-variant-ligatures: discretionary-ligatures;
+  font-feature-settings: "liga";
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+
+  &:hover {
+    color: var(--identity-bar-color);
+  }
+}
+/* stylelint-enable selector-class-pattern */
+
+.navbar-logo,
+.prefooter-logo {
+  --bs-navbar-brand-padding-y: 0;
+  --sul-logo-width: 250px;
+  --sul-logo-height: 30px;
+
+  background-image: url("../StanfordLibraries-logo.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  width: var(--sul-logo-width);
+  height: var(--sul-logo-height);
+
+  &.polychrome {
+    background-image: url("../StanfordLibraries-logo-poly.svg");
+  }
+
+  @media (width < 576px) {
+    &.stacked-mobile {
+      --sul-logo-width: 50%;
+      --sul-logo-height: 40px;
+
+      background-image: url("../StanfordLibraries-stacked-logo.svg");
+
+      &.polychrome {
+        background-image: url("../StanfordLibraries-stacked-poly-logo.svg");
+      }
+    }
+  }
+
+  @media (width >= 1024px) {
+    &.stacked-lg {
+      --sul-logo-width: 60cqw;
+      --sul-logo-height: calc(var(--sul-logo-width) * 0.3059);
+
+      background-image: url("../StanfordLibraries-stacked-logo.svg");
+    }
+  }
+}
+
+.rosette-logo {
+  --rosette-logo-width: 45px;
+  --rosette-logo-height: 45px;
+
+  display: inline-block;
+  position: relative;
+  background-image: url("../Rosette.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  width: var(--rosette-logo-width);
+  height: var(--rosette-logo-height);
+}
+
+/* The .navbars selector is because the masthead navigation isn't a .navbar:
+ * it holds the collapsible menu that the navbar's toggler opens. */
+.navbar,
+.navbars,
+.masthead {
+  --bs-link-color: var(--stanford-black);
+  --bs-link-hover-color: var(--stanford-black);
+  --bs-bg-1: var(--stanford-10-black);
+
+  /* .bg-inverse is the dark background; a site picks its color by setting --bs-inverse-bg */
+  &.bg-inverse {
+    --bs-link-color: white;
+    --bs-link-hover-color: white;
+
+    color: white;
+
+    .navbar-logo {
+      filter: invert(100%);
+    }
+  }
+}
+
+.navbar .nav-link,
+.masthead .nav-link {
+  --bs-nav-link-align: center;
+  --bs-nav-link-gap: 0.25rem;
+
+  border: 0;
+}
+
+/* Navbar-specific overrides: links and hamburger/X icon colors */
+.navbar,
+.navbars {
+  --bs-navbar-color: var(--stanford-black);
+  --bs-navbar-hover-color: var(--stanford-black);
+  --bs-navbar-active-color: var(--stanford-black);
+  --bs-navbar-brand-margin-end: 1rem;
+  --bs-navbar-nav-link-padding-x: 0.5rem;
+  --bs-navbar-toggler-border-color: rgb(0 0 0 / 10%);
+  --bs-navbar-toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath d='M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z'/%3e%3c/svg%3e");
+
+  /* Bootstrap 6 no longer sets .collapsed on the toggler; aria-expanded is the state */
+  .navbar-toggler[aria-expanded="false"] {
+    --bs-navbar-toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  .navbar-toggler {
+    --bs-btn-color: var(--bs-navbar-color);
+    --bs-btn-hover-color: var(--bs-navbar-color);
+    --bs-btn-hover-bg: transparent;
+    --bs-btn-border-color: var(--bs-navbar-toggler-border-color);
+    --bs-btn-hover-border-color: var(--bs-navbar-toggler-border-color);
+    --bs-navbar-toggler-icon-size: 1.5em;
+
+    padding: 0.25rem 0.75rem;
+    aspect-ratio: auto;
+    font-size: 1.25rem;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus-visible,
+  .menu-item:hover,
+  .menu-item:focus-visible {
+    text-decoration: var(--bs-link-hover-decoration);
+  }
+
+  &.bg-inverse {
+    --bs-navbar-color: white;
+    --bs-navbar-hover-color: white;
+    --bs-navbar-active-color: white;
+    --bs-navbar-toggler-border-color: rgb(255 255 255 / 10%);
+    --bs-navbar-toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17'%3e%3cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='1' d='M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z'/%3e%3c/svg%3e");
+  }
+}
+
+#feedback {
+  label {
+    text-align: right;
+    font-weight: bold;
+  }
+}
+
+.masthead {
+  --bs-border-color: var(--stanford-50-black);
+
+  .navbars {
+    width: 100%;
+
+    @media (width >= 768px) {
+      width: unset;
+      flex: 1 1 auto;
+    }
+  }
+
+  /* The collapsible menu opens in place on mobile and is always shown from md up.
+   * Bootstrap's .collapse rules aren't in a cascade layer, so they beat utilities
+   * like md:d-flex; show it here instead. Animating it makes the HRs below jump
+   * around, so it doesn't animate. */
+  .collapse {
+    transition: none;
+
+    &.show {
+      overflow: visible;
+    }
+
+    @media (width >= 768px) {
+      display: flex;
+      block-size: auto;
+      overflow: visible;
+    }
+  }
+
+  /* HRs in the collapsed menu have to be positioned vertically relative to the
+   * nav lists, but horizontally relative to the entire container. They aren't
+   * valid as children of a <ul>, so they have to be siblings. */
+  .collapse hr {
+    opacity: 0.5;
+    border-color: var(--bs-navbar-color);
+    margin-left: calc(var(--bs-gutter-x) * -0.5);
+
+    @media (width >= 576px) {
+      margin-left: calc(
+        (((100vw - 540px) / 2) * -1) - (var(--bs-gutter-x) * 0.5)
+      );
+    }
+  }
+
+  .bg-inverse .collapse hr {
+    opacity: 0.75;
+  }
+
+  .navbar-nav {
+    --bs-nav-gap: 0;
+    --bs-nav-link-padding-x: 0;
+    --bs-nav-link-padding-y: 0.25rem;
+
+    padding: 0.5rem 0;
+
+    @media (width >= 768px) {
+      --bs-nav-link-padding-y: 0.5rem;
+
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+      position: relative;
+    }
+
+    .nav-link {
+      justify-content: flex-start;
+    }
+  }
+
+  .h1 {
+    font-size: 2.25rem;
+
+    a {
+      font-weight: 500;
+
+      --bs-link-hover-decoration: none;
+    }
+  }
+}
+
+.navbar .menu,
+.masthead .menu {
+  --bs-menu-font-size: var(--bs-body-font-size);
+  --bs-menu-border-radius: var(--bs-radius-4);
+  --bs-menu-box-shadow: none;
+}
+
+.bookmark-counter {
+  --bs-badge-color: var(--stanford-black);
+  --bs-badge-padding-x: 0.625rem;
+  --bs-badge-font-weight: 500;
+  --bs-badge-bg: var(--stanford-10-black);
+}
+
+.bg-1 .bookmark-counter {
+  --bs-badge-bg: var(--stanford-20-black);
+}

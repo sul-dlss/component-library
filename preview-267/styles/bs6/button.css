@@ -1,0 +1,77 @@
+:is(.btn, .btn-solid, .btn-outline, .btn-subtle, .btn-text, .btn-link) {
+  --btn-hover-decoration: var(--bs-link-hover-decoration);
+  --bs-btn-disabled-opacity: 1;
+  --bs-btn-padding-y: 0.25rem;
+  --bs-btn-padding-x: 0.5rem;
+  --bs-btn-min-height: auto;
+  --bs-btn-gap: 0.25rem;
+  --bs-btn-border-radius: var(--bs-radius-4);
+
+  &:hover {
+    text-decoration: var(--btn-hover-decoration);
+  }
+
+  &:focus-visible {
+    outline: 2px solid white; /* Outer color */
+    outline-offset: 0;
+    box-shadow: 0 0 0 4px var(--stanford-black); /* Inner color */
+  }
+}
+
+.btn-sm {
+  --bs-btn-border-radius: var(--bs-radius-3);
+}
+
+.btn-lg {
+  --bs-btn-font-size: 1.25rem;
+  --bs-btn-border-radius: var(--bs-radius-5);
+}
+
+:is(.btn, .btn-solid, .btn-outline, .btn-subtle, .btn-text):is(:disabled, .disabled) {
+  --bs-btn-disabled-color: var(--stanford-80-black);
+  --bs-btn-disabled-bg: var(--stanford-10-black);
+  --bs-btn-disabled-border-color: var(--stanford-30-black);
+}
+
+.btn-solid.theme-primary {
+  --bs-btn-hover-bg: var(--stanford-digital-blue-dark);
+  --bs-btn-hover-border-color: var(--stanford-digital-blue-dark);
+  --bs-btn-hover-color: white;
+  --bs-btn-active-bg: var(--stanford-digital-blue-darker);
+  --bs-btn-active-border-color: var(--stanford-digital-blue-darker);
+  --bs-btn-active-color: white;
+}
+
+.btn-solid.theme-secondary {
+  --bs-btn-hover-bg: var(--stanford-digital-red-dark);
+  --bs-btn-hover-border-color: var(--stanford-digital-red-dark);
+  --bs-btn-hover-color: white;
+  --bs-btn-active-bg: var(--stanford-digital-red-darker);
+  --bs-btn-active-border-color: var(--stanford-digital-red-darker);
+  --bs-btn-active-color: white;
+}
+
+.btn-outline {
+  --bs-btn-bg: white;
+  --bs-btn-hover-bg: white;
+  --bs-btn-active-bg: white;
+}
+
+.btn-outline.theme-primary {
+  --bs-btn-hover-color: var(--stanford-digital-blue-dark);
+  --bs-btn-hover-border-color: var(--stanford-digital-blue-dark);
+  --bs-btn-active-color: var(--stanford-digital-blue-darker);
+  --bs-btn-active-border-color: var(--stanford-digital-blue-darker);
+}
+
+.btn-outline.theme-secondary {
+  --bs-btn-hover-color: var(--stanford-digital-red-dark);
+  --bs-btn-hover-border-color: var(--stanford-digital-red-dark);
+  --bs-btn-active-color: var(--stanford-digital-red-darker);
+  --bs-btn-active-border-color: var(--stanford-digital-red-darker);
+}
+
+/* Menus aren't inside the toggle's theme, so color their active items to match it. */
+.theme-secondary + .menu {
+  --bs-menu-item-active-bg: var(--stanford-cardinal);
+}
