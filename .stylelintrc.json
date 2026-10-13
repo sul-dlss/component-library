@@ -4,7 +4,7 @@
     "color-function-notation": ["modern", { "ignore": ["with-var-inside"] }],
     "property-no-vendor-prefix": [
       true,
-      { "ignoreProperties": ["text-decoration"] }
+      { "ignoreProperties": ["-webkit-text-decoration"] }
     ]
   }
 }
