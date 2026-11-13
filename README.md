@@ -29,7 +29,7 @@ See <https://identity.stanford.edu/design-elements/color/web/>
 ## In a css file
 ```CSS
 @layer framework, components, local;
-@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css)
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css)
 layer(framework);
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css")
 layer(framework);
@@ -101,7 +101,7 @@ or
 ```html
 <style>
   @layer framework, component;
-  @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css)
+  @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css)
   layer(framework);
   @import url(https://sul-dlss.github.io/component-library/styles/sul.css) layer(component);
 </style>
